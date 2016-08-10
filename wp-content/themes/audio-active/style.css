@@ -1,9 +1,9 @@
 /*
 Theme Name: audio-active
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme URI: http://www.audioactive.org.uk
+Author: Jana Lyon
+Author URI: http://www.icrossing.co.uk
+Description: A bespoke theme created for AudioActive
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,12 +47,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: 'Lato', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
 
 body {
+	background-color: #252525;
 	margin: 0;
 }
 

@@ -1,0 +1,47 @@
+<?php
+/**
+ * Template part for displaying single posts.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Reed Career Advice
+ */
+
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' );	?>
+
+		<!-- .entry-meta<div class="entry-meta">
+			<?php /*reed_career_advice_posted_on();*/ ?>
+		</div> -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<?php 
+			
+			$categories = get_the_category();
+			
+			the_post_thumbnail();
+			
+			echo "<p class='post-author'>by ";
+			the_author();
+			echo "</p>";
+			the_content(); 
+				
+		?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'reed-career-advice' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+	<footer class="entry-footer">
+		<?php reed_career_advice_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+

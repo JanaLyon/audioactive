@@ -45,6 +45,7 @@ function audio_active_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'audio-active' ),
+		'secondary' => esc_html__( 'Secondary Menu', 'audio-active' )
 	) );
 
 	/*
@@ -59,6 +60,18 @@ function audio_active_setup() {
 		'caption',
 	) );
 
+	/*
+	 * Enable support for Post Formats.
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+	) );
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'audio_active_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -66,6 +79,10 @@ function audio_active_setup() {
 	) ) );
 }
 endif;
+add_action( 'after_setup_theme', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+    add_post_type_support( 'page', 'excerpt' );
+}
 add_action( 'after_setup_theme', 'audio_active_setup' );
 
 /**
@@ -76,7 +93,7 @@ add_action( 'after_setup_theme', 'audio_active_setup' );
  * @global int $content_width
  */
 function audio_active_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'audio_active_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'audio_active_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'audio_active_content_width', 0 );
 
@@ -102,9 +119,11 @@ add_action( 'widgets_init', 'audio_active_widgets_init' );
  * Enqueue scripts and styles.
  */
 function audio_active_scripts() {
+	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.5', 'all' );
 	wp_enqueue_style( 'audio-active-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'audio-active-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+		wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.5', true );
 
 	wp_enqueue_script( 'audio-active-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -113,6 +132,17 @@ function audio_active_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'audio_active_scripts' );
+if( !function_exists('ie_scripts')) {
+	function ie_scripts(){
+		echo '<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->';
+		echo '<!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->';
+		echo '<!--[if lt IE 9]>';
+		echo '<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>';
+		echo '<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>';
+		echo '<![endif]-->';
+	}
+	add_action('wp_head', 'ie_scripts');
+} //end if
 
 /**
  * Implement the Custom Header feature.
