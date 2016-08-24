@@ -1,0 +1,52 @@
+/************************************************
+
+	**Contents**
+		# - Utilities
+			# - Variables
+			# - Mixins
+			# - Feature detect
+		# - Navigation
+		# - Universal
+			# - Headers
+		# - Home page
+		# - Category page
+		# - Breadcrumb
+		# - Article
+		# - Article tags
+		# - Career guides
+		# - Now hiring block
+		# - Search results
+		# - All posts
+
+************************************************/
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+	# Variables
+--------------------------------------------------------------*/
+/* break-points */
+/* NAV */
+/* Text */
+/* Container backgrounds */
+/* Lines */
+/* Text links */
+/* Buttons */
+/* Call to actions */
+/* images */
+/*grid break points*/
+/*--------------------------------------------------------------
+	# Mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+	# H tags
+--------------------------------------------------------------*/
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+.carousel-body {
+  font-size: 24px;
+  font-size: 1.333rem;
+  font-weight: 400;
+}

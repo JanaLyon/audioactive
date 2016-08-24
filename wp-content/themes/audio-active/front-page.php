@@ -12,33 +12,36 @@
 
 	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
-			
-			<h1><?php echo get_bloginfo( 'description' ); ?></h1>
-	
-				<?php
-					//get template part carousel - max 5 stories marked Hero
-				?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->			
-</div><!-- .container -->
-
-<div class="container">
-	<div>
-		<main class="site-main" role="main">	
 			<div class="row">
-			<?php
-
-			//get 3 latest news blocks and a view all button
-			//Our work block
-			//Support section
-			//Rizzle Kicks quote
-
-			?>
-			
+				<h1 class="hidden">Top stories</h1><!-- labels for semantic web -->
+				<?php get_template_part("template-parts/carousel_module", "none");	?>
+			</div><!-- .row -->
+			<div class="row">
+				<h1 class="hidden">Latest news</h1><!-- labels for semantic web -->
+				<?php
+				//get 3 latest news blocks and a view all button
+				?>
+			</div><!-- .row -->
+			<div class="row">
+				<h1 class="hidden">Our work</h1><!-- labels for semantic web -->
+				<?php
+				//Our work block
+				?>
+			</div><!-- .row -->
+			<div class="row">
+				<h1 class="hidden">Support AudioActive</h1><!-- labels for semantic web -->
+				<?php
+				//Support section
+				?>
+			</div><!-- .row -->
+			<div class="row">
+				<h1 class="hidden">Rizzle Kicks quote</h1><!-- labels for semantic web -->
+				<?php
+				//Rizzle Kicks quote
+				?>
 			</div><!-- .row -->
 		</main><!-- #main -->			
-	</div><!--  -->	
+	</div><!-- #primary  -->
 </div><!-- .container -->	
 
 

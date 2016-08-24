@@ -331,9 +331,9 @@ a {
     width: 33.33333333%;
   }
   #site-footer .footer-nav {
+    padding: 30px 15px 0;
     margin-bottom: 40px;
     text-align: left;
-	padding: 30px 15px 0;
   }
   #site-footer .footer-nav .title {
     padding: 5px 0 15px;
@@ -401,13 +401,13 @@ a {
   }
 }
 @media screen and (max-width:340px) {
-	#site-footer .footer-lower{
-		margin: 0;
-	}
-	#site-footer .footer-nav{
-		margin: 0;
-	}
-	#site-footer {
-		padding:0;
-	}
+  #site-footer .footer-lower {
+    margin: 0;
+  }
+  #site-footer .footer-nav {
+    margin: 0;
+  }
+  #site-footer {
+    padding: 0;
+  }
 }

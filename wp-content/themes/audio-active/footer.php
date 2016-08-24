@@ -15,9 +15,11 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'audio-active' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'audio-active' ), 'WordPress' ); ?></a>
+			<div class="container">
+				<p>Designed by Matt Foale
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'audio-active' ), 'audio-active', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+				Developed by Jana Lyon</p>
+			</div><!-- .container -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
