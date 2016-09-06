@@ -20,6 +20,7 @@
 				<h1 class="hidden">Latest news</h1><!-- labels for semantic web -->
 				<?php
 				//get 3 latest news blocks and a view all button
+				get_template_part("template-parts/latest_articles", "home");
 				?>
 			</div><!-- .row -->
 			<div class="row">
@@ -38,6 +39,7 @@
 				<h1 class="hidden">Rizzle Kicks quote</h1><!-- labels for semantic web -->
 				<?php
 				//Rizzle Kicks quote
+				get_template_part('template-parts/quote-block', 'none');
 				?>
 			</div><!-- .row -->
 		</main><!-- #main -->			

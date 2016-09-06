@@ -42,11 +42,325 @@
 	# H tags
 --------------------------------------------------------------*/
 h1, h2, h3, h4 {
-  font-weight: 700;
-}
+  font-weight: 700; }
 
-.carousel-body {
-  font-size: 24px;
-  font-size: 1.333rem;
-  font-weight: 400;
-}
+.btn-action {
+  font-size: 14px;
+  padding: 3px 9px 3px 15px;
+  color: #252525;
+  background-color: #0afff9;
+  border-radius: 20px; }
+  .btn-action:hover, .btn-action:focus, .btn-action.focus {
+    color: #252525;
+    text-decoration: none;
+    background-color: #09e5e0; }
+  .btn-action:active, .btn-action.active {
+    color: #0afff9;
+    background-color: #252525; }
+
+.site-branding {
+  background-color: #252525;
+  padding: 20px 85px 20px 20px;
+  max-height: 65px;
+  height: 65px; }
+
+a.top-bar-links {
+  padding: 5px 5px 0;
+  text-decoration: none;
+  color: #0afff9; }
+  a.top-bar-links:hover {
+    color: white; }
+
+.carousel-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  .carousel-text-container .carousel-text-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3f3f3f;
+    opacity: .7;
+    width: 100%;
+    height: 100%; }
+  .carousel-text-container .carousel-text {
+    padding: 15px 40px 40px 40px;
+    color: white; }
+  .carousel-text-container .carousel-body {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2; }
+
+.carousel-arrow-bottom {
+  position: relative;
+  background: #252525; }
+  .carousel-arrow-bottom:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(37, 37, 37, 0);
+    border-top-color: #252525;
+    border-width: 20px;
+    margin-left: -20px; }
+
+.latest-articles .article-module .article-date {
+  font-size: 13px;
+  margin-bottom: 5px; }
+
+.latest-articles .article-module .article-title a {
+  display: block;
+  font-size: 18px;
+  color: #252525;
+  text-decoration: none;
+  margin-bottom: 10px; }
+
+.latest-articles .article-module .article-excerpt {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 25px; }
+
+.latest-articles .article-module .image-container {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px; }
+  .latest-articles .article-module .image-container::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 30px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: white white transparent transparent; }
+  .latest-articles .article-module .image-container img {
+    width: 100%;
+    height: 100%; }
+
+.latest-arrow-bottom {
+  position: relative;
+  background: white;
+  height: 95px;
+  margin-top: 40px;
+  border-top: 1px solid #ebebeb; }
+  .latest-arrow-bottom:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(37, 37, 37, 0);
+    border-top-color: white;
+    border-width: 20px;
+    margin-left: -20px; }
+  .latest-arrow-bottom a.btn-action {
+    margin-top: 30px; }
+
+.latest-articles-post {
+  position: relative;
+  border-top: 4px solid #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 15px; }
+  .latest-articles-post::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 40px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #f5f5f5 #f5f5f5 transparent transparent; }
+  .latest-articles-post .article-module .image-container {
+    overflow: hidden;
+    position: relative; }
+    .latest-articles-post .article-module .image-container::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 20px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: white white transparent transparent; }
+
+.quote-block {
+  overflow: hidden;
+  position: relative;
+  position: relative;
+  background-color: #e6ffff;
+  text-align: center;
+  padding: 75px 20px; }
+  .quote-block::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 50px;
+    border-style: solid;
+    bottom: 0;
+    left: 0;
+    border-color: transparent transparent white white; }
+  .quote-block .fp-quote {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    width: 65%;
+    margin: 40px auto; }
+
+article .entry-header {
+  margin-top: 30px; }
+  article .entry-header .post-image-container {
+    overflow: hidden;
+    position: relative; }
+    article .entry-header .post-image-container::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 50px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: white white transparent transparent; }
+  article .entry-header .article-date {
+    margin-top: 15px; }
+
+.textwidget {
+  position: relative;
+  padding-top: 30px; }
+  .textwidget > h2 {
+    font-size: 22px;
+    font-weight: 700; }
+  .textwidget > p {
+    font-size: 16px;
+    line-height: 1.2; }
+  .textwidget .get-involved-widget {
+    overflow: hidden;
+    position: relative;
+    border: 15px solid #c3fff9;
+    padding: 0 15px 15px 15px; }
+    .textwidget .get-involved-widget::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 15px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #c3fff9 #c3fff9 transparent transparent; }
+    .textwidget .get-involved-widget .btn-action {
+      margin-top: 15px; }
+  .textwidget .award-widget {
+    overflow: hidden;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 0 30px 30px 30px; }
+    .textwidget .award-widget::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 15px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: white white transparent transparent; }
+    .textwidget .award-widget .btn-action {
+      margin-top: 15px; }
+  .textwidget .quote-widget {
+    overflow: hidden;
+    position: relative;
+    border-top: 3px solid #ebebeb;
+    border-bottom: 3px solid #ebebeb;
+    padding: 30px; }
+    .textwidget .quote-widget::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 15px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #ebebeb #ebebeb transparent transparent; }
+    .textwidget .quote-widget .widget-quote {
+      font-size: 18px;
+      width: 85%; }
+    .textwidget .quote-widget .widget-quote-author {
+      font-size: 16px;
+      margin-top: 10px; }
+    .textwidget .quote-widget .widget-quote-author-title {
+      font-size: 14px; }
+
+.site-info {
+  position: relative; }
+
+.info-symbols {
+  position: relative;
+  height: 100%;
+  display: block;
+  float: left; }
+  .info-symbols > .fa {
+    color: white; }
+  .info-symbols > .fa-map-marker {
+    margin-right: 11px;
+    font-size: 18px; }
+  .info-symbols > .fa-envelope {
+    margin-right: 5px;
+    font-size: 12px; }
+  .info-symbols > .fa-phone {
+    font-size: 16px; }
+
+.upper-footer {
+  overflow: hidden;
+  position: relative;
+  background-color: #3f3f3f;
+  padding: 20px;
+  position: relative; }
+  .upper-footer::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 30px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #252525 #252525 transparent transparent; }
+  .upper-footer * a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none; }
+  .upper-footer * .fa-chevron-right {
+    color: white;
+    font-size: 12px;
+    margin-left: 5px; }
+
+.lower-footer {
+  height: 60px;
+  padding: 20px 20px 10px 20px;
+  background-color: #252525;
+  color: white;
+  font-size: 16px; }
+
+.post-navigation {
+  display: none; }
+
+.entry-footer {
+  display: none; }

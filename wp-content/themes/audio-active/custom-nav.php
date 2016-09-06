@@ -2,11 +2,11 @@
 $menu_name = 'primary';
 $locations = get_nav_menu_locations();
 $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-$menuitems = wp_get_nav_menu_items( $menu->term_id, array() );
+$menuitems = wp_get_nav_menu_items( $menu->term_id, array('orderby' => 'menu_order') );
+//echo implode(' ', $menuitems);
 ?>
 
 	<ul class="main-nav drawer-menu">
-		<li><a class="drawer-menu-item" href="/" class="title">Branding</a></li>
 		<?php
 		$count = 0;
 		$submenu = false;
@@ -31,7 +31,7 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array() );
 					<li class="drawer-dropdown">
 
 					<a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-						<?php echo $title; ?><span class="drawer-caret"></span>
+						<?php echo $title; ?><i class="fa fa-chevron-down" aria-hidden="true"></i>
 					</a>
 
 					<ul class="drawer-dropdown-menu">
@@ -52,12 +52,12 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array() );
 			</li>
 			<?php $submenu = false; endif;
 
-			$count++; endforeach; ?>
+			$count++;
+
+			endforeach; ?>
 
 	</ul>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
-<!--script src="https://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.5/dropdown.min.js"></script-->
-<script src="/wp-content/themes/audio-active/js/drawer.min.js" charset="utf-8"></script>
 <script>
 	$(document).ready(function() {
 		$('.drawer').drawer();

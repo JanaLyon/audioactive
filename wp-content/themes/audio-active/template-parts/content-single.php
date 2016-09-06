@@ -9,39 +9,37 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' );	?>
+<div class="container">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+		</header><!-- .entry-header -->
 
-		<!-- .entry-meta<div class="entry-meta">
-			<?php /*reed_career_advice_posted_on();*/ ?>
-		</div> -->
-	</header><!-- .entry-header -->
+		<div class="entry-content">
+			<?php
 
-	<div class="entry-content">
-		<?php 
-			
 			$categories = get_the_category();
-			
+
 			the_post_thumbnail();
-			
+
 			echo "<p class='post-author'>by ";
 			the_author();
 			echo "</p>";
-			the_content(); 
-				
-		?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'reed-career-advice' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<footer class="entry-footer">
-		<?php reed_career_advice_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+			the_content();
+
+			?>
+			<?php
+			wp_link_pages(array(
+				'before' => '<div class="page-links">' . esc_html__('Pages:', 'audio_active'),
+				'after' => '</div>',
+			));
+			?>
+		</div><!-- .entry-content -->
+		<footer class="entry-footer">
+			<?php audio_active_entry_footer() ?>
+		</footer><!-- .entry-footer -->
+	</article><!-- #post-## -->
+</div><!-- .container -->
 
 
 
