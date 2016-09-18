@@ -143,8 +143,8 @@
   background-color: #0afff9;
   border: 0;
   outline: 0;
-  -webkit-transition: all .6s cubic-bezier(.190, 1.000, .220, 1.000);
-          transition: all .6s cubic-bezier(.190, 1.000, .220, 1.000);
+  -webkit-transition: transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
+          transition: transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -155,6 +155,9 @@
 }
 .drawer-hamburger:hover > .drawer-hamburger-icon, .drawer-hamburger:hover > .drawer-hamburger-icon:before, .drawer-hamburger:hover > .drawer-hamburger-icon:after {
   background-color: #0afff9;
+}
+.drawer-open .drawer-hamburger:hover > .drawer-hamburger-icon {
+  background-color: #000;
 }
 .drawer-hamburger-icon {
   position: relative;
@@ -168,10 +171,12 @@
   width: 100%;
   height: 3px;
   background-color: #252525;
-  -webkit-transition: all .6s cubic-bezier(.190, 1.000, .220, 1.000);
-          transition: all .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
-
+.drawer-hamburger-icon:before,
+.drawer-hamburger-icon:after {
+  -webkit-transition: transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
+  transition: transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
+}
 .drawer-hamburger-icon:before,
 .drawer-hamburger-icon:after {
   position: absolute;
@@ -417,7 +422,7 @@
     border: 1px solid #ddd;
   }
 
-  .drawer-navbar .drawer-dropdown-menu-item {
+  .drawer-navbar .drawer-dropdown-menu .drawer-menu-item {
     padding-left: .75rem;
   }
 }
@@ -438,7 +443,7 @@
   list-style: none;
 }
 
-.drawer-dropdown-menu-item {
+.drawer-dropdown-menu .drawer-menu-item {
   display: block;
   padding: 0;
   padding-right: .75rem;
@@ -448,7 +453,7 @@
   text-decoration: none;
 }
 
-.drawer-dropdown-menu-item:hover {
+.drawer-dropdown-menu .drawer-menu-item:hover {
   color: #555;
   text-decoration: underline;
   background-color: transparent;
