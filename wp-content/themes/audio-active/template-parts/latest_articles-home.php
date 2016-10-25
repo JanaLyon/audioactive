@@ -11,12 +11,12 @@ $recent_query = new WP_Query($recentPostArgs);
 	<div class="row">
 		<h2 class="col-xs-12">Latest Articles</h2>
 	</div>
-	<div id="latest-articles" class="latest-articles">
+	<div id="latest-articles" class="three-col-articles">
 		<div class="row">
 			<?php
 			while ($recent_query->have_posts()) {
 				$recent_query->the_post();
-				get_template_part('template-parts/article_module', 'latest_home');
+				get_template_part('template-parts/article_module', 'three_columns');
 			}
 			wp_reset_postdata();
 			?>

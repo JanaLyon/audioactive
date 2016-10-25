@@ -110,27 +110,27 @@ a.top-bar-links {
     border-width: 20px;
     margin-left: -20px; }
 
-.latest-articles .article-module .article-date {
+.three-col-articles .article-module .article-date {
   font-size: 13px;
   margin-bottom: 5px; }
 
-.latest-articles .article-module .article-title a {
+.three-col-articles .article-module .article-title a {
   display: block;
   font-size: 18px;
   color: #252525;
   text-decoration: none;
   margin-bottom: 10px; }
 
-.latest-articles .article-module .article-excerpt {
+.three-col-articles .article-module .article-excerpt {
   font-size: 16px;
   line-height: 1.2;
   margin-bottom: 25px; }
 
-.latest-articles .article-module .image-container {
+.three-col-articles .article-module .image-container {
   overflow: hidden;
   position: relative;
   margin-bottom: 10px; }
-  .latest-articles .article-module .image-container::after {
+  .three-col-articles .article-module .image-container::after {
     content: '';
     position: absolute;
     height: 0;
@@ -140,7 +140,7 @@ a.top-bar-links {
     top: 0;
     right: 0;
     border-color: white white transparent transparent; }
-  .latest-articles .article-module .image-container img {
+  .three-col-articles .article-module .image-container img {
     width: 100%;
     height: 100%; }
 
@@ -184,6 +184,8 @@ a.top-bar-links {
     top: 0;
     right: 0;
     border-color: #f5f5f5 #f5f5f5 transparent transparent; }
+  .latest-articles-post .latest-articles {
+    margin-top: 20px; }
   .latest-articles-post .article-module .image-container {
     overflow: hidden;
     position: relative; }
@@ -325,6 +327,7 @@ article .entry-header {
     margin-right: 5px;
     font-size: 12px; }
   .info-symbols > .fa-phone {
+    margin-right: 5px;
     font-size: 16px; }
 
 .upper-footer {

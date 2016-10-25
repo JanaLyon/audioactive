@@ -1,3 +1,15 @@
+<?php
+
+	function logo_link_activation (){
+		if( is_front_page() ){
+			$logo_link = "<img src='/wp-content/themes/audio-active/images/full_logo.svg' alt='AudioActive Logo' width='195px' />";
+		}else{
+			$logo_link = "<a href='/'><img src='/wp-content/themes/audio-active/images/full_logo.svg' alt='AudioActive Logo' width='195px' /></a>";
+		}
+		return $logo_link;
+	}
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -5,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<link rel="icon" type="image/png" href="wp-content/themes/audio-active/images/audioactive_favicon32x32.png">
+	<link rel="icon" type="image/png" href="/wp-content/themes/audio-active/images/audioactive_favicon32x32.png">
 	<?php wp_head(); ?>
 </head>
 
@@ -17,7 +29,7 @@
 		<div class="container-fluid">
 			<div class="row site-branding">
 				<!-- AA full logo -->
-				<img src="/wp-content/themes/audio-active/images/full_logo.svg" alt="AudioActive Logo" width="195px" />
+				<?php echo logo_link_activation(); ?>
 				<!-- container for donate and social -->
 				<div class="pull-right">
 					<!-- donate -->
