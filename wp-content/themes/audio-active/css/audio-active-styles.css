@@ -110,39 +110,61 @@ a.top-bar-links {
     border-width: 20px;
     margin-left: -20px; }
 
-.three-col-articles .article-module .article-date {
-  font-size: 13px;
-  margin-bottom: 5px; }
+.page-image img {
+  width: 100%; }
 
-.three-col-articles .article-module .article-title a {
-  display: block;
-  font-size: 18px;
-  color: #252525;
-  text-decoration: none;
-  margin-bottom: 10px; }
-
-.three-col-articles .article-module .article-excerpt {
-  font-size: 16px;
-  line-height: 1.2;
-  margin-bottom: 25px; }
-
-.three-col-articles .article-module .image-container {
+.page-content-corner {
   overflow: hidden;
   position: relative;
-  margin-bottom: 10px; }
-  .three-col-articles .article-module .image-container::after {
+  border-top: 3px solid #ebebeb;
+  padding: 10px 0;
+  margin-top: 30px; }
+  .page-content-corner::after {
     content: '';
     position: absolute;
     height: 0;
     width: 0;
-    border-width: 30px;
+    border-width: 40px;
     border-style: solid;
     top: 0;
     right: 0;
-    border-color: white white transparent transparent; }
-  .three-col-articles .article-module .image-container img {
-    width: 100%;
-    height: 100%; }
+    border-color: #ebebeb #ebebeb transparent transparent; }
+
+article p {
+  margin-bottom: 1rem; }
+
+.three-col-articles .article-module {
+  margin-bottom: 30px; }
+  .three-col-articles .article-module .article-date {
+    font-size: 13px;
+    margin-bottom: 5px; }
+  .three-col-articles .article-module .article-title a {
+    display: block;
+    font-size: 18px;
+    color: #252525;
+    text-decoration: none;
+    margin-bottom: 10px; }
+  .three-col-articles .article-module .article-excerpt {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 25px; }
+  .three-col-articles .article-module .image-container {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px; }
+    .three-col-articles .article-module .image-container::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 30px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: white white transparent transparent; }
+    .three-col-articles .article-module .image-container img {
+      width: 100%;
+      height: 100%; }
 
 .latest-arrow-bottom {
   position: relative;

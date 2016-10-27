@@ -36,17 +36,19 @@ get_header(); ?>
 					get_template_part('template-parts/category', 'news');
 					get_template_part('template-parts/pagination', 'none');
 
-				} else {
-
+				//} else if (is_category('Our work')){
 					//get template part for accordian based category page
-					get_template_part('template-parts/category', 'our_work');
+					// || is_category('Music & Artist Development') || is_category('Social Justice')
+					//get_template_part('template-parts/category', 'our_work');
 
-				}    /* switch between News and all other categories */
+				   /* switch between News and all other categories */
 
 				} else {
 					// If no content, include the "No posts found" template.
-					get_template_part('content', 'none');
+					//get_template_part('content', 'none');
+					get_template_part('template-parts/category', 'our_work');
 
+				}
 				}
 				?>
 			</div><!-- .container -->
