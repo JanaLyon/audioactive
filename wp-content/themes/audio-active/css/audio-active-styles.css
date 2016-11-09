@@ -31,7 +31,7 @@
 /* Container backgrounds */
 /* Lines */
 /* Text links */
-/* Buttons */
+/* Our work active styles */
 /* Call to actions */
 /* images */
 /*grid break points*/
@@ -221,6 +221,9 @@ article p {
       top: 0;
       right: 0;
       border-color: white white transparent transparent; }
+    .latest-articles-post .article-module .image-container a img {
+      width: 100%;
+      height: auto; }
 
 .quote-block {
   overflow: hidden;
@@ -263,6 +266,60 @@ article .entry-header {
       border-color: white white transparent transparent; }
   article .entry-header .article-date {
     margin-top: 15px; }
+
+.category-image img {
+  width: 100%; }
+
+.panel-group {
+  margin-top: 25px; }
+
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: 0; }
+
+.panel-group .panel {
+  border-radius: 0; }
+
+.btn-more {
+  margin-top: 20px;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: #4417ff;
+  display: block; }
+
+.panel-ourwork {
+  border-top: solid 2px #ebebeb; }
+  .panel-ourwork .panel-heading {
+    padding: 20px 15px; }
+  .panel-ourwork .panel-title > a {
+    text-decoration: none; }
+  .panel-ourwork:active, .panel-ourwork:focus {
+    overflow: hidden;
+    position: relative;
+    border-top: solid 2px #0afff9; }
+    .panel-ourwork:active::after, .panel-ourwork:focus::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 10px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #0afff9 #0afff9 transparent transparent; }
+  .panel-ourwork:hover {
+    overflow: hidden;
+    position: relative; }
+    .panel-ourwork:hover::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 10px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #0afff9 #0afff9 transparent transparent; }
 
 .textwidget {
   position: relative;

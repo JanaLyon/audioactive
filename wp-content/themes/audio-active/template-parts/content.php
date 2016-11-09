@@ -16,9 +16,7 @@
 
 				<header class="entry-header">
 					<div class="post-image-container">
-					<?php
-					the_post_thumbnail('article');
-					?>
+					<?php the_post_thumbnail('article'); ?>
 					</div>
 					<?php
 					if ('post' === get_post_type()) : ?>
@@ -28,7 +26,6 @@
 						<?php
 					endif;
 					the_title('<h1 class="entry-title">', '</h1>');
-
 					?>
 				</header><!-- .entry-header -->
 

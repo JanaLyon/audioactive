@@ -133,7 +133,7 @@ function custom_img_size_setup() {
  */
 function audio_active_scripts() {
 
-	wp_enqueue_script( 'iscroll-js', get_template_directory_uri() . '/js/iscroll.js', array(), '20160206', true );
+	wp_enqueue_script( 'iscroll-js', get_template_directory_uri() . '/js/iScroll.js', array(), '5.1.3', true );
 
 	wp_enqueue_script( 'drawer-js', get_template_directory_uri() . '/js/drawer.min.js', array(), '20160206', true );
 

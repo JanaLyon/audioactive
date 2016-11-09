@@ -53,7 +53,9 @@ $line-blue: #c3fff9;
 $textlink-inactive: #c3fff9;
 $textlink-hover: #2b0ea0;
 $textlink-visited: #415c7d;
-/* Buttons */
+/* Our work active styles */
+$more-info-link: #4417ff;
+
 /* Call to actions */
 /* images */
 /*grid break points*/
@@ -260,6 +262,10 @@ article p{
   & .article-module {
     & .image-container {
       @include cut-corner(20px, white, "top");
+      a img{
+        width:100%;
+        height:auto;
+      }
     }
   }
 }
@@ -293,7 +299,44 @@ article .entry-header {
     margin-top: 15px;
   }
 }
+//non news category page
+.category-image img{
+  width:100%;
+}
+.panel-group{
+  margin-top:25px;
+}
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body{
+  border-top: 0;
+}
 
+.panel-group .panel{
+  border-radius: 0;
+}
+.btn-more{
+  margin-top: 20px;
+  padding:0;
+  border-radius:0;
+  background-color:transparent;
+  color: $more-info-link;
+  display:block;
+}
+.panel-ourwork{
+  border-top: solid 2px $line-grey;
+  .panel-heading{
+    padding: 20px 15px;
+  }
+  .panel-title>a {
+    text-decoration: none;
+  }
+  &:active, &:focus{
+    @include cut-corner(10px, $bg-neon-cta, "top");
+    border-top: solid 2px $bg-neon-cta;
+  }
+  &:hover{
+    @include cut-corner(10px, $bg-neon-cta, "top");
+  }
+}
 //side bar
 .textwidget {
   position: relative;

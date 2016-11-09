@@ -6,6 +6,12 @@ $newsPostArgs = array(
 );
 $news_query = new WP_Query($newsPostArgs);
 ?>
+
+<div class="row">
+	<div class="col-xs-12">
+		<h1><?php single_cat_title('', true); ?></h1>
+	</div><!-- .col -->
+</div><!-- .row -->
 <div class="row">
 	<div class="three-col-articles">
 		<?php

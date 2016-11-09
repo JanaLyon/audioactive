@@ -21,6 +21,10 @@
 	<?php wp_head(); ?>
 </head>
 
+<style>
+	#bitnami-banner .bitnami-corner-image-div{display:none;}
+</style>
+
 <body <?php body_class(); ?>>
 <h1 class="hidden">AudioActive home page</h1>
 <div id="page" class="site">

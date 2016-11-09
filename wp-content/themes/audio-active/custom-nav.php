@@ -56,9 +56,7 @@ function menu($_menuArr, $_parent = 0) {
 ?>
 
 	<ul class="main-nav drawer-menu">
-<?php
-		addMenu();
-?>
+		<?php addMenu(); ?>
 	</ul>
 
 <script>
