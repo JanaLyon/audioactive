@@ -37,17 +37,17 @@
 				<!-- container for donate and social -->
 				<div class="pull-right">
 					<!-- donate -->
-					<a class="btn btn-action" data-toggle="tooltip" title="Donate" href="">Donate <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<a class="btn btn-action" data-toggle="tooltip" title="Donate" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive">Donate <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 					<!-- soundcloud -->
-					<a class="btn top-bar-links" data-toggle="tooltip" title="Soundcloud" href=""><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+					<a class="btn top-bar-links" data-toggle="tooltip" title="Soundcloud" href="https://soundcloud.com/audio_active"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
 					<!-- facebook -->
-					<a class="btn top-bar-links" data-toggle="tooltip" title="Facebook" href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+					<a class="btn top-bar-links" data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/likeaudioactive/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					<!-- twitter -->
-					<a class="btn top-bar-links" data-toggle="tooltip" title="Twitter" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a class="btn top-bar-links" data-toggle="tooltip" title="Twitter" href="https://twitter.com/Audio_Active"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 					<!-- instagram -->
-					<a class="btn top-bar-links" data-toggle="tooltip" title="Instagram" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a class="btn top-bar-links" data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/audioactive_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 					<!-- youtube -->
-					<a class="btn top-bar-links" data-toggle="tooltip" title="Youtube" href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					<a class="btn top-bar-links" data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UCa4IXl4cqRZLQSa-pr2zujg"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 				</div><!-- social container -->
 			</div><!-- .site-branding -->
 		</div><!-- .container -->
