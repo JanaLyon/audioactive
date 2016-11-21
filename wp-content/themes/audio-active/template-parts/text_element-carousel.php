@@ -1,6 +1,6 @@
 <div class="carousel-text-container">
 	<div class="carousel-text-background"></div>
-	<div class="col-xs-12 col-sm-4 col-md-8">
+	<div class="col-xs-12 col-sm-12 col-md-8">
 		<div class="carousel-text">
 			<h1><?php the_title(); ?></h1>
 

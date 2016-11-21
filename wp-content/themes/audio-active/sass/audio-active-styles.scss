@@ -192,10 +192,11 @@ a {
   @include triangle-bottom($bg-black);
 }
 
+
 //page template
 .page-image{
   img{
-    width:100%;
+    width:50%;
   }
 }
 .page-content-corner {

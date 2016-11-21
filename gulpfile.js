@@ -5,21 +5,10 @@ var gulp = require('gulp'),
 	rootAddress = 'wp-content/themes/audio-active/';
 
 
-gulp.task('browser-sync', function() {
-	browserSync.init({
-		proxy: "localhost:80"
-	});
-
-	gulp.watch(rootAddress+'sass/*.scss', ['sass']);
-	gulp.watch(rootAddress+'template-parts/*.php').on('change', browserSync.reload);
-	gulp.watch(rootAddress+'style.css').on('change', browserSync.reload);
-	gulp.watch(rootAddress+'*.php').on('change', browserSync.reload);
-});
-
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
 	return gulp.src(rootAddress+'sass/*.scss')
-		.pipe(sass())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(autoPrefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
@@ -28,4 +17,17 @@ gulp.task('sass', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('default', ['browser-sync']);
+gulp.task('serve', ['sass'], function() {
+	browserSync.init({
+		proxy: "localhost",
+		injectChanges: false
+	});
+
+	gulp.watch(rootAddress+'sass/*.scss', ['sass']);
+	gulp.watch(rootAddress+'css/*.css').on('change', browserSync.reload);
+	gulp.watch(rootAddress+'template-parts/*.php').on('change', browserSync.reload);
+	gulp.watch(rootAddress+'style.css').on('change', browserSync.reload);
+	gulp.watch(rootAddress+'*.php').on('change', browserSync.reload);
+});
+
+gulp.task('default', ['serve']);

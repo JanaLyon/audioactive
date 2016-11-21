@@ -5,7 +5,7 @@
 			if(has_post_thumbnail()){
 				the_post_thumbnail('article');
 			}else{
-				echo "<img src='/wp-content/themes/reed-career-advice/img/fallback_image.jpg' />";
+				echo "<img src='/wp-content/themes/audio-active/images/fallback_image.jpg' />";
 			} 
 			?>
 		</a>
