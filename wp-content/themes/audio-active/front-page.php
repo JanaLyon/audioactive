@@ -27,6 +27,7 @@
 				<h1 class="hidden">Our work</h1><!-- labels for semantic web -->
 				<?php
 				//Our work block
+				get_template_part("template-parts/our_work_block", "none");
 				?>
 			</div><!-- .row -->
 			<div class="row">

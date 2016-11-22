@@ -25,7 +25,7 @@ $recent_query = new WP_Query($recentPostArgs);
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="latest-arrow-bottom">
-				<a class="pull-right btn btn-action" href="/all-posts/" role="button">View all articles <i
+				<a class="pull-right btn btn-action" href="/category/news/" role="button">View all articles <i
 						class='fa fa-chevron-right' aria-hidden='true'></i></a>
 			</div>
 		</div>
