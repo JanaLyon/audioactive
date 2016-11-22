@@ -513,3 +513,9 @@ article .entry-header {
       color: white;
       font-size: 12px;
       margin-left: 5px; } }
+
+@media only screen and (min-width: 992px) {
+  .upper-footer {
+    padding: 20px 0px 20px 20px; }
+  .info-symbols > a {
+    margin-right: 0px; } }

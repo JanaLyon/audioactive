@@ -525,3 +525,12 @@ article .entry-header {
     }
   }
 }
+
+@media only screen and (min-width: $medium-device)  {
+  .upper-footer {
+    padding: 20px 0px 20px 20px;
+  }
+  .info-symbols > a {
+    margin-right: 0px;
+  }
+}
