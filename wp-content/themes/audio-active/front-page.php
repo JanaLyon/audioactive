@@ -34,13 +34,14 @@
 				<h1 class="hidden">Support AudioActive</h1><!-- labels for semantic web -->
 				<?php
 				//Support section
+				get_template_part("template-parts/support_block", "none");
 				?>
 			</div><!-- .row -->
 			<div class="row">
 				<h1 class="hidden">Rizzle Kicks quote</h1><!-- labels for semantic web -->
 				<?php
 				//Rizzle Kicks quote
-				get_template_part('template-parts/quote-block', 'none');
+				get_template_part('template-parts/quote_block', 'none');
 				?>
 			</div><!-- .row -->
 		</main><!-- #main -->			

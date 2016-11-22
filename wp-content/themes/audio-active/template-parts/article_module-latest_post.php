@@ -13,7 +13,6 @@
 	<div class="text-container">
 		<?php the_date('d M Y', '<p class="article-date">', '</p>'); ?>
 		<p class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-		<!--div class="article-excerpt"><?php //echo substr(get_the_excerpt(), 0,60) . '...<br>'; ?></div-->
 	</div>
 	<?php get_template_part('template-parts/read_more_btn', 'none')?>
 </div>
