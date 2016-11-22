@@ -35,7 +35,7 @@
 				<!-- AA full logo -->
 				<?php echo logo_link_activation(); ?>
 				<!-- container for donate and social -->
-				<div class="pull-right">
+				<div class="pull-right hidden-xs">
 					<!-- donate -->
 					<a class="btn btn-action" data-toggle="tooltip" title="Donate" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive">Donate <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 					<!-- soundcloud -->

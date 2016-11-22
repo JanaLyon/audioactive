@@ -22,6 +22,7 @@
 						<img src="/wp-content/themes/audio-active/images/full_logo.svg" width="75%"
 							 alt="AudioActive logo"/>
 					</div><!-- .col -->
+					<div class="footer-gap visible-xs visible-sm hidden-md hidden-lg"></div><!-- gap space -->
 					<div class="col-md-3">
 						<a class="" href="">
 							Home <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -47,7 +48,11 @@
 							Projects <i class="fa fa-chevron-right" aria-hidden="true"></i>
 						</a>
 					</div><!-- .col -->
+
+					<div class="footer-gap visible-xs visible-sm hidden-md hidden-lg"></div><!-- gap space -->
+
 					<div class="col-md-3">
+
 						<div class="info-symbols">
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
 						</div>
@@ -69,8 +74,30 @@
 						</div>
 
 					</div><!-- .col -->
-				</div><!-- .row -->
-			</div><!-- .upper-footer -->
+				</div><!-- .upper-footer -->
+			</div><!-- .row -->
+			<div class="row visible-xs social-links-bottom">
+				<div class="col-xs-2 col-xs-offset-1">
+					<!-- soundcloud -->
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Soundcloud" href="https://soundcloud.com/audio_active"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+				</div>
+				<div class="col-xs-2">
+					<!-- facebook -->
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/likeaudioactive/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				</div>
+				<div class="col-xs-2">
+					<!-- twitter -->
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Twitter" href="https://twitter.com/Audio_Active"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				</div>
+				<div class="col-xs-2">
+					<!-- instagram -->
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/audioactive_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+				<div class="col-xs-2">
+					<!-- youtube -->
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UCa4IXl4cqRZLQSa-pr2zujg"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+				</div>
+			</div>
 		</div><!-- .container -->
 		<div class="container">
 			<div class="row">
