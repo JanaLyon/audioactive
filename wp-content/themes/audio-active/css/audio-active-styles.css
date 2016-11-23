@@ -87,12 +87,21 @@ a.bottom-bar-links {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px; }
+  @media only screen and (max-width: 767px) {
+    .carousel-col-md-12 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 0px;
+      padding-left: 0px; } }
 
 .carousel-text-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .carousel-text-container {
+      position: relative; } }
   .carousel-text-container .carousel-text-background {
     position: absolute;
     top: 0;
@@ -101,6 +110,10 @@ a.bottom-bar-links {
     opacity: .7;
     width: 100%;
     height: 100%; }
+    @media only screen and (max-width: 767px) {
+      .carousel-text-container .carousel-text-background {
+        background-color: #595959;
+        opacity: 1; } }
   .carousel-text-container .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white; }
@@ -109,6 +122,18 @@ a.bottom-bar-links {
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.2; }
+
+@media only screen and (max-width: 767px) {
+  .carousel-inner {
+    max-height: 500px; } }
+
+.carousel-inner img {
+  width: 100%;
+  height: auto; }
+
+@media only screen and (max-width: 767px) {
+  .carousel-indicators {
+    display: none; } }
 
 .carousel-arrow-bottom {
   position: relative;
@@ -428,6 +453,9 @@ article .entry-header {
     font-size: 16px; }
   .info-symbols > a {
     margin-right: 20px; }
+    @media only screen and (min-width: 992px) {
+      .info-symbols > a {
+        margin-right: 0px; } }
 
 .upper-footer {
   overflow: hidden;
@@ -445,6 +473,12 @@ article .entry-header {
     top: 0;
     right: 0;
     border-color: #252525 #252525 transparent transparent; }
+  @media only screen and (max-width: 767px) {
+    .upper-footer {
+      background-color: #595959; } }
+  @media only screen and (min-width: 992px) {
+    .upper-footer {
+      padding: 20px 0px 20px 20px; } }
   .upper-footer * a {
     font-size: 16px;
     color: white;
@@ -470,88 +504,5 @@ article .entry-header {
 .footer-gap {
   margin-top: 20px; }
 
-/**********************************************************/
-/*
-.article-image > img {
-  width: 100%;
-  height: auto;
-}
-*/
 .container, .container-fluid {
   min-width: 320px; }
-
-/*********************************************************/
-@media only screen and (max-width: 767px) {
-  .carousel-col-md-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 0px;
-    padding-left: 0px; }
-  .carousel-text-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    .carousel-text-container .carousel-text-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #595959;
-      opacity: 1;
-      width: 100%;
-      height: 100%; }
-  .upper-footer {
-    overflow: hidden;
-    position: relative;
-    background-color: #595959;
-    padding: 20px;
-    position: relative; }
-    .upper-footer::after {
-      content: '';
-      position: absolute;
-      height: 0;
-      width: 0;
-      border-width: 30px;
-      border-style: solid;
-      top: 0;
-      right: 0;
-      border-color: #252525 #252525 transparent transparent; }
-    .upper-footer * a {
-      font-size: 16px;
-      color: white;
-      text-decoration: none; }
-    .upper-footer * .fa-chevron-right {
-      color: white;
-      font-size: 12px;
-      margin-left: 5px; }
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden; }
-  .carousel-inner .carousel-text-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 400px; }
-  .carousel-inner .carousel-text {
-    height: 400px; }
-  .article-image > img {
-    width: 100%;
-    height: auto; }
-  .carousel-indicators {
-    position: absolute;
-    bottom: 45%;
-    left: 45%;
-    z-index: 15;
-    width: 50%;
-    padding-left: 0;
-    text-align: right;
-    list-style: none; } }
-
-@media only screen and (min-width: 992px) {
-  .upper-footer {
-    padding: 20px 0px 20px 20px; }
-  .info-symbols > a {
-    margin-right: 0px; } }
