@@ -44,6 +44,12 @@
 h1, h2, h3, h4 {
   font-weight: 700; }
 
+h1 {
+  font-size: 40px; }
+  @media only screen and (max-width: 767px) {
+    h1 {
+      font-size: 36px; } }
+
 .btn-action {
   font-size: 14px;
   padding: 3px 9px 3px 15px;
@@ -122,6 +128,9 @@ a.bottom-bar-links {
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.2; }
+    @media only screen and (max-width: 767px) {
+      .carousel-text-container .carousel-body {
+        font-size: 16px; } }
 
 @media only screen and (max-width: 767px) {
   .carousel-inner {
@@ -267,6 +276,12 @@ article p {
       width: 100%;
       height: auto; }
 
+.support-block p {
+  font-size: 18px; }
+  @media only screen and (max-width: 767px) {
+    .support-block p {
+      font-size: 16px; } }
+
 .quote-block {
   overflow: hidden;
   position: relative;
@@ -284,12 +299,25 @@ article p {
     bottom: 0;
     left: 0;
     border-color: transparent transparent white white; }
+  @media only screen and (max-width: 767px) {
+    .quote-block {
+      padding: 0px 10px;
+      padding-bottom: 40px; } }
   .quote-block .fp-quote {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 400;
     width: 65%;
     margin: 40px auto; }
+    @media only screen and (max-width: 767px) {
+      .quote-block .fp-quote {
+        width: 100%;
+        font-size: 18px; } }
+  .quote-block .fb-signature {
+    font-size: 18px; }
+    @media only screen and (max-width: 767px) {
+      .quote-block .fb-signature {
+        font-size: 14px; } }
 
 article .entry-header {
   margin-top: 30px; }

@@ -36,6 +36,8 @@ $custom-device: 320px;
 /* NAV */
 /* Text */
 $font-stack: Lato, sans-serif;
+$mobile-p-fonts : 16px;
+$desktop-p-fonts : 24px;
 /* Container backgrounds */
 $bg-black: #252525;
 $bg-dark-grey: #3f3f3f;
@@ -118,6 +120,12 @@ $more-info-link: #4417ff;
 
 h1, h2, h3, h4 {
   font-weight: 700;
+}
+h1 {
+  font-size: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    font-size: 36px;
+  }
 }
 
 //main button style
@@ -222,10 +230,13 @@ a {
     color: white;
   }
   .carousel-body {
-    font-size: 24px;
+    font-size: $desktop-p-fonts;
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.2;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: $mobile-p-fonts;
+    }
   }
 }
 .carousel-inner {
@@ -324,7 +335,15 @@ article p{
     }
   }
 }
-
+//support block
+.support-block {
+  & p {
+    font-size: 18px;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: 16px;
+    }
+  }
+}
 //quote block
 .quote-block {
   @include cut-corner(50px, white, "bottom");
@@ -332,15 +351,26 @@ article p{
   background-color: $bg-light-blue;
   text-align: center;
   padding: 75px 20px;
+  @media only screen and (max-width: $small-device-max) {
+    padding: 0px 10px;
+    padding-bottom: 40px;
+  }
   & .fp-quote {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 400;
     width: 65%;
     margin: 40px auto;
+    @media only screen and (max-width: $small-device-max) {
+      width: 100%;
+      font-size: 18px;
+    }
   }
   & .fb-signature {
-
+    font-size: 18px;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: 14px;
+    }
   }
 }
 
