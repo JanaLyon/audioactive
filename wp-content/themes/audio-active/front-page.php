@@ -23,7 +23,7 @@
 				get_template_part("template-parts/latest_articles", "home");
 				?>
 			</div><!-- .row -->
-			<div class="row">
+			<div class="our-work-row">
 				<h1 class="hidden">Our work</h1><!-- labels for semantic web -->
 				<?php
 				//Our work block

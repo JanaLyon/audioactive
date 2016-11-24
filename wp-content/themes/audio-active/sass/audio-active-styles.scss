@@ -111,6 +111,7 @@ $more-info-link: #4417ff;
     border-top-color: $tri-colour;
     border-width: 20px;
     margin-left: -20px;
+    z-index: 1;
   }
 }
 
@@ -257,6 +258,69 @@ a {
   @include triangle-bottom($bg-black);
 }
 
+//home page our work
+// color is charcoal gray
+.our-work-topbox{
+  color: white;
+}
+.our-work-bottombox{
+  @include cut-corner(20px, $bg-charcoal-grey, "top");
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  background-color: $bg-dark-grey;
+  color: white;
+  & h2 {
+    font-size: 22px;
+  }
+  & p {
+    margin-bottom: 10px;
+  }
+}
+.our-work-row {
+  background-color: $bg-charcoal-grey;
+}
+.our-work-bottom-arrow {
+  @include triangle-bottom($bg-charcoal-grey);
+}
+
+.our-work-link-container {
+  padding: 0;
+  margin-top: 15px;
+  & li {
+    list-style: none;
+  }
+  & i {
+    font-size: 14px;
+  }
+  & a {
+    text-decoration: none;
+    color: $bg-neon-cta;
+    &:hover {
+      text-decoration: none;
+      color: $bg-neon-cta-hover;
+    }
+  }
+}
+.article-image {
+  & img {
+    width: 100%;
+  }
+}
+.set-image-padding{
+  padding-right: 0;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 0;
+  }
+}
+.set-text-padding{
+  padding-left: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 
 //page template
 .page-image{
@@ -274,6 +338,10 @@ article p{
   margin-bottom: 1rem;
 }
 //latest and news articles
+.latest-articles{
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .three-col-articles {
   & .article-module {
     margin-bottom: 30px;
@@ -303,7 +371,9 @@ article p{
     }
   }
 }
-
+.set-view-all-padding {
+  padding-right: 40px;
+}
 .latest-arrow-bottom {
   @include triangle-bottom(white);
   height: 95px;
@@ -336,6 +406,10 @@ article p{
   }
 }
 //support block
+.support-row{
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .support-block {
   & p {
     font-size: 18px;
@@ -343,7 +417,21 @@ article p{
       font-size: 16px;
     }
   }
+  & .supported-by {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  & .supported-by-images {
+    width: 100%;
+  }
+  & .btn {
+    margin-top: 20px;
+  }
+  & .donation-card-image {
+    width: 100%;
+  }
 }
+
 //quote block
 .quote-block {
   @include cut-corner(50px, white, "bottom");
@@ -354,6 +442,7 @@ article p{
   @media only screen and (max-width: $small-device-max) {
     padding: 0px 10px;
     padding-bottom: 40px;
+    background-color: $line-blue;
   }
   & .fp-quote {
     font-size: 24px;
