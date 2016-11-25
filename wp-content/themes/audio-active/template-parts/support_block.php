@@ -1,6 +1,5 @@
 <div class="row support-row">
-	<div class="col-xs-12 col-md-6">
-		<div class="support-block">
+	<div class="col-xs-12 col-md-6 support-block">
 			<div class="row">
 				<div class="col-xs-12">
 					<h2>Supported by:</h2>
@@ -18,10 +17,8 @@
 				</div>
 			</div>
 			<a class="btn btn-action" href="#">Support us <i class="fa fa-chevron-right"></i></a>
-		</div>
 	</div>
-	<div class="col-xs-12 col-md-6">
-		<div class="support-block">
+	<div class="col-xs-12 col-md-6 fund-block">
 			<h2>Help fund our work</h2>
 			<div class="row">
 				<div class="col-xs-12 col-sm-7">
@@ -29,22 +26,14 @@
 					</p>
 					<?php ?>
 				</div>
-				<div class="col-xs-12 col-sm-2">
+			</div>
+		<div class="row make-dontation">
+				<div class="col-xs-7 col-sm-2">
 					<a class="btn btn-action" href="#">Make a donation <i class="fa fa-chevron-right"></i></a>
 				</div>
-				<div class="col-xs-12 col-sm-5">
+				<div class="col-xs-5 col-sm-5">
 					<img src="/wp-content/themes/audio-active/images/mydonate.gif" alt="" width="" class="donation-card-image" />
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="grid">
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">Under me should be a DIV</div>
-			<div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">Under me should be a DIV</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">I am the last DIV</div>
 		</div>
 	</div>
 </div>

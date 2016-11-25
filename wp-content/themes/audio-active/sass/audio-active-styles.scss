@@ -175,6 +175,8 @@ a {
 .social-links-bottom {
   background-color: $bg-charcoal-grey;
   padding-bottom: 10px;
+  margin-left: -45px;
+  margin-right: -45px;
 }
 
 //bottom social links bar
@@ -229,6 +231,10 @@ a {
   .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white;
+    @media only screen and (max-width: $small-device-max) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   .carousel-body {
     font-size: $desktop-p-fonts;
@@ -256,6 +262,19 @@ a {
 }
 .carousel-arrow-bottom {
   @include triangle-bottom($bg-black);
+}
+
+.fa-chevron-left {
+  @media only screen and (max-width: $small-device-max) {
+    left: 0;
+    font-size: 20px;
+  }
+}
+.fa-chevron-right {
+  @media only screen and (max-width: $small-device-max) {
+    right: 0;
+    font-size: 20px;
+  }
 }
 
 //home page our work
@@ -317,8 +336,8 @@ a {
 .set-text-padding{
   padding-left: 40px;
   @media only screen and (max-width: $small-device-max) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -341,6 +360,10 @@ article p{
 .latest-articles{
   padding-left: 40px;
   padding-right: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .three-col-articles {
   & .article-module {
@@ -409,13 +432,16 @@ article p{
 .support-row{
   padding-left: 40px;
   padding-right: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .support-block {
-  & p {
-    font-size: 18px;
-    @media only screen and (max-width: $small-device-max) {
-      font-size: 16px;
-    }
+  padding-right: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   & .supported-by {
     margin-top: 15px;
@@ -427,9 +453,26 @@ article p{
   & .btn {
     margin-top: 20px;
   }
+}
+.fund-block {
+  padding-left: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   & .donation-card-image {
     width: 100%;
   }
+  & p {
+    font-size: 18px;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: 16px;
+    }
+  }
+}
+.make-dontation{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 //quote block
@@ -440,7 +483,7 @@ article p{
   text-align: center;
   padding: 75px 20px;
   @media only screen and (max-width: $small-device-max) {
-    padding: 0px 10px;
+    padding: 0px 20px;
     padding-bottom: 40px;
     background-color: $line-blue;
   }
@@ -600,6 +643,7 @@ article .entry-header {
   position: relative;
   @media only screen and (max-width: $small-device-max) {
     background-color: $bg-charcoal-grey;
+    padding: 20px 5px;
   }
   @media only screen and (min-width: $medium-device) {
     padding: 20px 0px 20px 20px;
@@ -619,6 +663,9 @@ article .entry-header {
 .lower-footer {
   height: 60px;
   padding: 20px 20px 10px 20px;
+  @media only screen and (max-width: $small-device-max) {
+    padding: 20px 5px 10px 5px;
+  }
   background-color: $bg-black;
   color: white;
   font-size: 16px;

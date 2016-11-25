@@ -79,7 +79,9 @@ a.top-bar-links {
 
 .social-links-bottom {
   background-color: #595959;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  margin-left: -45px;
+  margin-right: -45px; }
 
 a.bottom-bar-links {
   padding: 5px 5px 0;
@@ -123,6 +125,10 @@ a.bottom-bar-links {
   .carousel-text-container .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white; }
+    @media only screen and (max-width: 767px) {
+      .carousel-text-container .carousel-text {
+        padding-left: 5px;
+        padding-right: 5px; } }
   .carousel-text-container .carousel-body {
     font-size: 24px;
     font-weight: 400;
@@ -161,6 +167,16 @@ a.bottom-bar-links {
     border-width: 20px;
     margin-left: -20px;
     z-index: 1; }
+
+@media only screen and (max-width: 767px) {
+  .fa-chevron-left {
+    left: 0;
+    font-size: 20px; } }
+
+@media only screen and (max-width: 767px) {
+  .fa-chevron-right {
+    right: 0;
+    font-size: 20px; } }
 
 .our-work-topbox {
   color: white; }
@@ -237,8 +253,8 @@ a.bottom-bar-links {
   padding-left: 40px; }
   @media only screen and (max-width: 767px) {
     .set-text-padding {
-      padding-left: 30px;
-      padding-right: 30px; } }
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 .page-image img {
   width: 100%; }
@@ -266,6 +282,10 @@ article p {
 .latest-articles {
   padding-left: 40px;
   padding-right: 40px; }
+  @media only screen and (max-width: 767px) {
+    .latest-articles {
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 .three-col-articles .article-module {
   margin-bottom: 30px; }
@@ -366,25 +386,42 @@ article p {
 .support-row {
   padding-left: 40px;
   padding-right: 40px; }
-
-.support-block p {
-  font-size: 18px; }
   @media only screen and (max-width: 767px) {
-    .support-block p {
-      font-size: 16px; } }
+    .support-row {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
-.support-block .supported-by {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+.support-block {
+  padding-right: 40px; }
+  @media only screen and (max-width: 767px) {
+    .support-block {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  .support-block .supported-by {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .support-block .supported-by-images {
+    width: 100%; }
+  .support-block .btn {
+    margin-top: 20px; }
 
-.support-block .supported-by-images {
-  width: 100%; }
+.fund-block {
+  padding-left: 40px; }
+  @media only screen and (max-width: 767px) {
+    .fund-block {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  .fund-block .donation-card-image {
+    width: 100%; }
+  .fund-block p {
+    font-size: 18px; }
+    @media only screen and (max-width: 767px) {
+      .fund-block p {
+        font-size: 16px; } }
 
-.support-block .btn {
-  margin-top: 20px; }
-
-.support-block .donation-card-image {
-  width: 100%; }
+.make-dontation {
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 .quote-block {
   overflow: hidden;
@@ -405,7 +442,7 @@ article p {
     border-color: transparent transparent white white; }
   @media only screen and (max-width: 767px) {
     .quote-block {
-      padding: 0px 10px;
+      padding: 0px 20px;
       padding-bottom: 40px;
       background-color: #c3fff9; } }
   .quote-block .fp-quote {
@@ -608,7 +645,8 @@ article .entry-header {
     border-color: #252525 #252525 transparent transparent; }
   @media only screen and (max-width: 767px) {
     .upper-footer {
-      background-color: #595959; } }
+      background-color: #595959;
+      padding: 20px 5px; } }
   @media only screen and (min-width: 992px) {
     .upper-footer {
       padding: 20px 0px 20px 20px; } }
@@ -627,6 +665,9 @@ article .entry-header {
   background-color: #252525;
   color: white;
   font-size: 16px; }
+  @media only screen and (max-width: 767px) {
+    .lower-footer {
+      padding: 20px 5px 10px 5px; } }
 
 .post-navigation {
   display: none; }
