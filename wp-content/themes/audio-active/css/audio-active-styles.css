@@ -264,7 +264,8 @@ a.bottom-bar-links {
   position: relative;
   border-top: 3px solid #ebebeb;
   padding: 10px 0;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-left: 40px; }
   .page-content-corner::after {
     content: '';
     position: absolute;
@@ -275,6 +276,9 @@ a.bottom-bar-links {
     top: 0;
     right: 0;
     border-color: #ebebeb #ebebeb transparent transparent; }
+
+.widget-area {
+  margin-right: 40px; }
 
 article p {
   margin-bottom: 1rem; }
@@ -542,6 +546,19 @@ article .entry-header {
   .textwidget > p {
     font-size: 16px;
     line-height: 1.2; }
+  .textwidget .get-involved-triangle {
+    overflow: hidden;
+    position: relative; }
+    .textwidget .get-involved-triangle::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 17px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: white white transparent transparent; }
   .textwidget .get-involved-widget {
     overflow: hidden;
     position: relative;

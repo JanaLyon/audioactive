@@ -15,7 +15,7 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="site-info">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="upper-footer">
 					<div class="col-md-3">
@@ -99,7 +99,7 @@
 				</div>
 			</div>
 		</div><!-- .container -->
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="lower-footer">
 					<div class="col-xs-12">

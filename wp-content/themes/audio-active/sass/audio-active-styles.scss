@@ -352,7 +352,13 @@ a {
   border-top: 3px solid $line-grey;
   padding: 10px 0;
   margin-top: 30px;
+  margin-left: 40px;
 }
+
+.widget-area{
+  margin-right: 40px;
+}
+
 article p{
   margin-bottom: 1rem;
 }
@@ -565,6 +571,9 @@ article .entry-header {
   > p {
     font-size:16px;
     line-height: 1.2;
+  }
+  .get-involved-triangle {
+    @include cut-corner(17px, white, "top");
   }
   .get-involved-widget {
     @include cut-corner(15px, $line-blue, "top");
