@@ -36,6 +36,8 @@ $custom-device: 320px;
 /* NAV */
 /* Text */
 $font-stack: Lato, sans-serif;
+$mobile-p-fonts : 16px;
+$desktop-p-fonts : 24px;
 /* Container backgrounds */
 $bg-black: #252525;
 $bg-dark-grey: #3f3f3f;
@@ -109,6 +111,7 @@ $more-info-link: #4417ff;
     border-top-color: $tri-colour;
     border-width: 20px;
     margin-left: -20px;
+    z-index: 1;
   }
 }
 
@@ -118,6 +121,12 @@ $more-info-link: #4417ff;
 
 h1, h2, h3, h4 {
   font-weight: 700;
+}
+h1 {
+  font-size: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    font-size: 36px;
+  }
 }
 
 //main button style
@@ -180,12 +189,19 @@ a {
   }
 }
 
-//carousel custom col-md-12 for text
+//carousel custom-col-md-12 for text
 .carousel-col-md-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+
+  @media only screen and (max-width: $small-device-max) {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 
 //carousel
@@ -194,6 +210,9 @@ a {
   bottom: 0;
   left: 0;
   width: 100%;
+  @media only screen and (max-width: $small-device-max) {
+    position: relative;
+  }
   .carousel-text-background {
     position: absolute;
     top: 0;
@@ -202,23 +221,106 @@ a {
     opacity: .7;
     width: 100%;
     height: 100%;
+    @media only screen and (max-width: $small-device-max) {
+      background-color: $bg-charcoal-grey;
+      opacity: 1;
+    }
   }
   .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white;
   }
   .carousel-body {
-    font-size: 24px;
+    font-size: $desktop-p-fonts;
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.2;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: $mobile-p-fonts;
+    }
   }
 }
-
+.carousel-inner {
+  @media only screen and (max-width: $small-device-max) {
+    max-height: 500px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.carousel-indicators {
+  @media only screen and (max-width: $small-device-max) {
+    display: none;
+  }
+}
 .carousel-arrow-bottom {
   @include triangle-bottom($bg-black);
 }
 
+//home page our work
+// color is charcoal gray
+.our-work-topbox{
+  color: white;
+}
+.our-work-bottombox{
+  @include cut-corner(20px, $bg-charcoal-grey, "top");
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  background-color: $bg-dark-grey;
+  color: white;
+  & h2 {
+    font-size: 22px;
+  }
+  & p {
+    margin-bottom: 10px;
+  }
+}
+.our-work-row {
+  background-color: $bg-charcoal-grey;
+}
+.our-work-bottom-arrow {
+  @include triangle-bottom($bg-charcoal-grey);
+}
+
+.our-work-link-container {
+  padding: 0;
+  margin-top: 15px;
+  & li {
+    list-style: none;
+  }
+  & i {
+    font-size: 14px;
+  }
+  & a {
+    text-decoration: none;
+    color: $bg-neon-cta;
+    &:hover {
+      text-decoration: none;
+      color: $bg-neon-cta-hover;
+    }
+  }
+}
+.article-image {
+  & img {
+    width: 100%;
+  }
+}
+.set-image-padding{
+  padding-right: 0;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 0;
+  }
+}
+.set-text-padding{
+  padding-left: 40px;
+  @media only screen and (max-width: $small-device-max) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 
 //page template
 .page-image{
@@ -236,6 +338,10 @@ article p{
   margin-bottom: 1rem;
 }
 //latest and news articles
+.latest-articles{
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .three-col-articles {
   & .article-module {
     margin-bottom: 30px;
@@ -265,7 +371,9 @@ article p{
     }
   }
 }
-
+.set-view-all-padding {
+  padding-right: 40px;
+}
 .latest-arrow-bottom {
   @include triangle-bottom(white);
   height: 95px;
@@ -297,6 +405,32 @@ article p{
     }
   }
 }
+//support block
+.support-row{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.support-block {
+  & p {
+    font-size: 18px;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: 16px;
+    }
+  }
+  & .supported-by {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  & .supported-by-images {
+    width: 100%;
+  }
+  & .btn {
+    margin-top: 20px;
+  }
+  & .donation-card-image {
+    width: 100%;
+  }
+}
 
 //quote block
 .quote-block {
@@ -305,15 +439,27 @@ article p{
   background-color: $bg-light-blue;
   text-align: center;
   padding: 75px 20px;
+  @media only screen and (max-width: $small-device-max) {
+    padding: 0px 10px;
+    padding-bottom: 40px;
+    background-color: $line-blue;
+  }
   & .fp-quote {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 400;
     width: 65%;
     margin: 40px auto;
+    @media only screen and (max-width: $small-device-max) {
+      width: 100%;
+      font-size: 18px;
+    }
   }
   & .fb-signature {
-
+    font-size: 18px;
+    @media only screen and (max-width: $small-device-max) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -441,6 +587,9 @@ article .entry-header {
 
   & > a {
     margin-right: 20px;
+    @media only screen and (min-width: $medium-device)  {
+      margin-right: 0px;
+    }
   }
 }
 
@@ -449,6 +598,12 @@ article .entry-header {
   background-color: $bg-dark-grey;
   padding: 20px;
   position: relative;
+  @media only screen and (max-width: $small-device-max) {
+    background-color: $bg-charcoal-grey;
+  }
+  @media only screen and (min-width: $medium-device) {
+    padding: 20px 0px 20px 20px;
+  }
   & * a {
     font-size: 16px;
     color: white;
@@ -482,105 +637,7 @@ article .entry-header {
 .footer-gap {
   margin-top: 20px;
 }
-/**********************************************************/
 
-//desktop carousel
-/*
-.article-image > img {
-  width: 100%;
-  height: auto;
-}
-*/
 .container, .container-fluid{
   min-width: 320px;
-}
-/*********************************************************/
-//mobile responsiveness
-@media only screen and (max-width: $small-device-max)  {
-
-  .carousel-col-md-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-
-  .carousel-text-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    .carousel-text-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: $bg-charcoal-grey;
-      opacity: 1;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .upper-footer {
-    @include cut-corner(30px, $bg-black, "top");
-    background-color: $bg-charcoal-grey;
-    padding: 20px;
-    position: relative;
-    & * a {
-      font-size: 16px;
-      color: white;
-      text-decoration: none;
-    }
-    & * .fa-chevron-right {
-      color: white;
-      font-size: 12px;
-      margin-left: 5px;
-    }
-  }
-
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden;
-  }
-
-
-  .carousel-inner .carousel-text-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-  }
-  .carousel-inner .carousel-text {
-    height: 400px;
-  }
-  .article-image > img {
-    width: 100%;
-    height: auto;
-  }
-
-  .carousel-indicators {
-    position: absolute;
-    bottom: 45%;
-    left: 45%;
-    z-index: 15;
-    width: 50%;
-    padding-left: 0;
-    text-align: right;
-    list-style: none;
-  }
-
-}
-
-
-//footer social links fix
-@media only screen and (min-width: $medium-device)  {
-  .upper-footer {
-    padding: 20px 0px 20px 20px;
-  }
-  .info-symbols > a {
-    margin-right: 0px;
-  }
 }

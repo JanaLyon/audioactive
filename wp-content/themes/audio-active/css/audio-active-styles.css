@@ -44,6 +44,12 @@
 h1, h2, h3, h4 {
   font-weight: 700; }
 
+h1 {
+  font-size: 40px; }
+  @media only screen and (max-width: 767px) {
+    h1 {
+      font-size: 36px; } }
+
 .btn-action {
   font-size: 14px;
   padding: 3px 9px 3px 15px;
@@ -87,12 +93,21 @@ a.bottom-bar-links {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px; }
+  @media only screen and (max-width: 767px) {
+    .carousel-col-md-12 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 0px;
+      padding-left: 0px; } }
 
 .carousel-text-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .carousel-text-container {
+      position: relative; } }
   .carousel-text-container .carousel-text-background {
     position: absolute;
     top: 0;
@@ -101,6 +116,10 @@ a.bottom-bar-links {
     opacity: .7;
     width: 100%;
     height: 100%; }
+    @media only screen and (max-width: 767px) {
+      .carousel-text-container .carousel-text-background {
+        background-color: #595959;
+        opacity: 1; } }
   .carousel-text-container .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white; }
@@ -109,6 +128,21 @@ a.bottom-bar-links {
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.2; }
+    @media only screen and (max-width: 767px) {
+      .carousel-text-container .carousel-body {
+        font-size: 16px; } }
+
+@media only screen and (max-width: 767px) {
+  .carousel-inner {
+    max-height: 500px; } }
+
+.carousel-inner img {
+  width: 100%;
+  height: auto; }
+
+@media only screen and (max-width: 767px) {
+  .carousel-indicators {
+    display: none; } }
 
 .carousel-arrow-bottom {
   position: relative;
@@ -125,7 +159,86 @@ a.bottom-bar-links {
     border-color: rgba(37, 37, 37, 0);
     border-top-color: #252525;
     border-width: 20px;
-    margin-left: -20px; }
+    margin-left: -20px;
+    z-index: 1; }
+
+.our-work-topbox {
+  color: white; }
+
+.our-work-bottombox {
+  overflow: hidden;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  background-color: #3f3f3f;
+  color: white; }
+  .our-work-bottombox::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 20px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #595959 #595959 transparent transparent; }
+  .our-work-bottombox h2 {
+    font-size: 22px; }
+  .our-work-bottombox p {
+    margin-bottom: 10px; }
+
+.our-work-row {
+  background-color: #595959; }
+
+.our-work-bottom-arrow {
+  position: relative;
+  background: #595959; }
+  .our-work-bottom-arrow:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(37, 37, 37, 0);
+    border-top-color: #595959;
+    border-width: 20px;
+    margin-left: -20px;
+    z-index: 1; }
+
+.our-work-link-container {
+  padding: 0;
+  margin-top: 15px; }
+  .our-work-link-container li {
+    list-style: none; }
+  .our-work-link-container i {
+    font-size: 14px; }
+  .our-work-link-container a {
+    text-decoration: none;
+    color: #0afff9; }
+    .our-work-link-container a:hover {
+      text-decoration: none;
+      color: #09e5e0; }
+
+.article-image img {
+  width: 100%; }
+
+.set-image-padding {
+  padding-right: 0; }
+  @media only screen and (max-width: 767px) {
+    .set-image-padding {
+      padding-left: 0; } }
+
+.set-text-padding {
+  padding-left: 40px; }
+  @media only screen and (max-width: 767px) {
+    .set-text-padding {
+      padding-left: 30px;
+      padding-right: 30px; } }
 
 .page-image img {
   width: 100%; }
@@ -149,6 +262,10 @@ a.bottom-bar-links {
 
 article p {
   margin-bottom: 1rem; }
+
+.latest-articles {
+  padding-left: 40px;
+  padding-right: 40px; }
 
 .three-col-articles .article-module {
   margin-bottom: 30px; }
@@ -183,6 +300,9 @@ article p {
       width: 100%;
       height: 100%; }
 
+.set-view-all-padding {
+  padding-right: 40px; }
+
 .latest-arrow-bottom {
   position: relative;
   background: white;
@@ -201,7 +321,8 @@ article p {
     border-color: rgba(37, 37, 37, 0);
     border-top-color: white;
     border-width: 20px;
-    margin-left: -20px; }
+    margin-left: -20px;
+    z-index: 1; }
   .latest-arrow-bottom a.btn-action {
     margin-top: 30px; }
 
@@ -242,6 +363,29 @@ article p {
       width: 100%;
       height: auto; }
 
+.support-row {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.support-block p {
+  font-size: 18px; }
+  @media only screen and (max-width: 767px) {
+    .support-block p {
+      font-size: 16px; } }
+
+.support-block .supported-by {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.support-block .supported-by-images {
+  width: 100%; }
+
+.support-block .btn {
+  margin-top: 20px; }
+
+.support-block .donation-card-image {
+  width: 100%; }
+
 .quote-block {
   overflow: hidden;
   position: relative;
@@ -259,12 +403,26 @@ article p {
     bottom: 0;
     left: 0;
     border-color: transparent transparent white white; }
+  @media only screen and (max-width: 767px) {
+    .quote-block {
+      padding: 0px 10px;
+      padding-bottom: 40px;
+      background-color: #c3fff9; } }
   .quote-block .fp-quote {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 400;
     width: 65%;
     margin: 40px auto; }
+    @media only screen and (max-width: 767px) {
+      .quote-block .fp-quote {
+        width: 100%;
+        font-size: 18px; } }
+  .quote-block .fb-signature {
+    font-size: 18px; }
+    @media only screen and (max-width: 767px) {
+      .quote-block .fb-signature {
+        font-size: 14px; } }
 
 article .entry-header {
   margin-top: 30px; }
@@ -428,6 +586,9 @@ article .entry-header {
     font-size: 16px; }
   .info-symbols > a {
     margin-right: 20px; }
+    @media only screen and (min-width: 992px) {
+      .info-symbols > a {
+        margin-right: 0px; } }
 
 .upper-footer {
   overflow: hidden;
@@ -445,6 +606,12 @@ article .entry-header {
     top: 0;
     right: 0;
     border-color: #252525 #252525 transparent transparent; }
+  @media only screen and (max-width: 767px) {
+    .upper-footer {
+      background-color: #595959; } }
+  @media only screen and (min-width: 992px) {
+    .upper-footer {
+      padding: 20px 0px 20px 20px; } }
   .upper-footer * a {
     font-size: 16px;
     color: white;
@@ -470,88 +637,5 @@ article .entry-header {
 .footer-gap {
   margin-top: 20px; }
 
-/**********************************************************/
-/*
-.article-image > img {
-  width: 100%;
-  height: auto;
-}
-*/
 .container, .container-fluid {
   min-width: 320px; }
-
-/*********************************************************/
-@media only screen and (max-width: 767px) {
-  .carousel-col-md-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 0px;
-    padding-left: 0px; }
-  .carousel-text-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    .carousel-text-container .carousel-text-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #595959;
-      opacity: 1;
-      width: 100%;
-      height: 100%; }
-  .upper-footer {
-    overflow: hidden;
-    position: relative;
-    background-color: #595959;
-    padding: 20px;
-    position: relative; }
-    .upper-footer::after {
-      content: '';
-      position: absolute;
-      height: 0;
-      width: 0;
-      border-width: 30px;
-      border-style: solid;
-      top: 0;
-      right: 0;
-      border-color: #252525 #252525 transparent transparent; }
-    .upper-footer * a {
-      font-size: 16px;
-      color: white;
-      text-decoration: none; }
-    .upper-footer * .fa-chevron-right {
-      color: white;
-      font-size: 12px;
-      margin-left: 5px; }
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden; }
-  .carousel-inner .carousel-text-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 400px; }
-  .carousel-inner .carousel-text {
-    height: 400px; }
-  .article-image > img {
-    width: 100%;
-    height: auto; }
-  .carousel-indicators {
-    position: absolute;
-    bottom: 45%;
-    left: 45%;
-    z-index: 15;
-    width: 50%;
-    padding-left: 0;
-    text-align: right;
-    list-style: none; } }
-
-@media only screen and (min-width: 992px) {
-  .upper-footer {
-    padding: 20px 0px 20px 20px; }
-  .info-symbols > a {
-    margin-right: 0px; } }
