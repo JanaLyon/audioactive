@@ -1,1 +1,0 @@
-<h1>Silly monkey</h1>
