@@ -33,7 +33,7 @@
 					<?php
 					while ($signUp->have_posts()) {
 						$signUp->the_post();
-						get_template_part('template-parts/article_module', 'three_columns');
+						get_template_part('template-parts/article_module', 'sign_up');
 					}
 					wp_reset_postdata();
 					?>
