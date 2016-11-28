@@ -8,7 +8,7 @@
 	 */
 	get_header();
 ?>
-<div class="container">
+<div class="container-fluid">
 
 	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
