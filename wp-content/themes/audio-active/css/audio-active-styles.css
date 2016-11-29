@@ -565,6 +565,21 @@ article .entry-header {
       right: 0;
       border-color: #0afff9 #0afff9 transparent transparent; }
 
+.active-panel {
+  border-top: solid 2px #0afff9;
+  overflow: hidden;
+  position: relative; }
+  .active-panel::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 10px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #0afff9 #0afff9 transparent transparent; }
+
 .textwidget {
   position: relative;
   padding-top: 30px; }
@@ -646,30 +661,54 @@ article .entry-header {
     .textwidget .quote-widget .widget-quote-author-title {
       font-size: 14px; }
 
+/*************************************/
+.panel-ourwork:visited .panel-ourwork:active, .panel-ourwork:focus {
+  overflow: hidden;
+  position: relative;
+  border-top: solid 2px #0afff9; }
+
+/************************************/
 .site-info {
   position: relative; }
 
 @media only screen and (min-width: 768px) {
   .address {
-    padding-left: 15px;
+    margin-top: -105px;
+    padding-left: 10px;
     padding-right: 0px; } }
+
+@media only screen and (min-width: 510px) and (max-width: 767px) {
+  .address {
+    margin-top: -105px; } }
 
 @media only screen and (min-width: 992px) {
   .address {
+    margin-top: -5px;
     padding-left: 11px; } }
 
 .email {
   padding-left: 15px;
   padding-right: 15px; }
+  @media only screen and (min-width: 510px) and (max-width: 767px) {
+    .email {
+      margin-top: -25px; } }
   @media only screen and (min-width: 768px) {
     .email {
+      margin-top: -25px;
       padding-left: 0px;
       padding-right: 0px; } }
+  @media only screen and (min-width: 992px) {
+    .email {
+      margin-top: 0px; } }
 
 @media only screen and (min-width: 768px) {
   .telephone {
     padding-left: 0px;
     padding-right: 0px; } }
+
+@media only screen and (min-width: 992px) {
+  .telephone {
+    margin-top: 0px; } }
 
 .info-symbols {
   position: relative;
@@ -696,6 +735,9 @@ article .entry-header {
     @media only screen and (max-width: 767px) {
       .info-symbols > .fa-phone {
         margin-left: 0px; } }
+  @media only screen and (min-width: 510px) and (max-width: 767px) {
+    .info-symbols > .email-custom-class {
+      margin-right: 0; } }
   .info-symbols > a {
     margin-right: 20px; }
     @media only screen and (min-width: 992px) {
@@ -744,16 +786,33 @@ article .entry-header {
     .lower-footer {
       padding: 20px 5px 10px 5px; } }
 
-.block-margin {
-  margin-top: 20px; }
+@media only screen and (min-width: 320px) and (max-width: 509px) {
+  .block-margin {
+    margin-top: 20px; } }
+
+@media only screen and (min-width: 510px) and (max-width: 767px) {
+  .block-margin {
+    margin-top: 20px; } }
+
+@media only screen and (min-width: 768px) {
+  .block-margin {
+    margin-top: 20px; } }
+
+@media only screen and (min-width: 1200px) {
+  .block-margin {
+    margin-top: 0px; } }
 
 @media only screen and (min-width: 992px) {
   .adjust-margin {
-    margin-top: -100px; } }
+    margin-top: -105px; } }
 
 @media only screen and (min-width: 1200px) {
   .adjust-margin {
     margin-top: 0px; } }
+
+@media only screen and (min-width: 510px) and (max-width: 767px) {
+  .custom-breakpoint {
+    width: 50%; } }
 
 .post-navigation {
   display: none; }

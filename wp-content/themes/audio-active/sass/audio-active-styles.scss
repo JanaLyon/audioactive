@@ -597,6 +597,12 @@ article .entry-header {
     @include cut-corner(10px, $bg-neon-cta, "top");
   }
 }
+
+.active-panel{
+  border-top: solid 2px #0afff9;
+  @include cut-corner(10px, $bg-neon-cta, "top");
+}
+
 //side bar
 .textwidget {
   position: relative;
@@ -647,31 +653,58 @@ article .entry-header {
   }
 }
 
+/*************************************/
+// testing our work blue line
+.panel-ourwork:visited .panel-ourwork:active, .panel-ourwork:focus {
+  overflow: hidden;
+  position: relative;
+  border-top: solid 2px #0afff9;
+}
+
+
+
+/************************************/
+
 //footer
 .site-info {
   position: relative;
 }
 .address {
   @media only screen and (min-width: $small-device-min)  {
-    padding-left: 15px;
+    margin-top: -105px;
+    padding-left: 10px;
     padding-right: 0px;
   }
+  @media only screen and (min-width:510px) and (max-width: 767px)  {
+    margin-top: -105px;
+  }
   @media only screen and (min-width: $medium-device)  {
+    margin-top: -5px;
     padding-left: 11px;
   }
 }
 .email{
   padding-left: 15px;
   padding-right: 15px;
+  @media only screen and (min-width:510px) and (max-width: 767px)  {
+    margin-top: -25px;
+  }
   @media only screen and (min-width: $small-device-min)  {
+    margin-top: -25px;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  @media only screen and (min-width: $medium-device)  {
+    margin-top: 0px;
   }
 }
 .telephone {
   @media only screen and (min-width: $small-device-min)  {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  @media only screen and (min-width: $medium-device)  {
+    margin-top: 0px;
   }
 }
 .info-symbols {
@@ -703,7 +736,11 @@ article .entry-header {
       margin-left: 0px;
     }
   }
-
+  & > .email-custom-class {
+    @media only screen and (min-width:510px) and (max-width: 767px)  {
+      margin-right: 0;
+    }
+  }
   & > a {
     margin-right: 20px;
     @media only screen and (min-width: $medium-device)  {
@@ -711,7 +748,6 @@ article .entry-header {
     }
   }
 }
-
 .upper-footer {
   @include cut-corner(30px, $bg-black, "top");
   background-color: $bg-dark-grey;
@@ -737,7 +773,6 @@ article .entry-header {
 }
 
 .lower-footer {
-
   height: 60px;
   padding: 20px 20px 10px 20px;
   @media only screen and (max-width: $small-device-max) {
@@ -747,18 +782,36 @@ article .entry-header {
   color: white;
   font-size: 16px;
 }
+
 .block-margin {
-  margin-top: 20px;
-}
-.adjust-margin {
-  @media only screen and (min-width: $medium-device) {
-    margin-top: -100px;
+  @media only screen and (min-width:320px) and (max-width: 509px)  {
+    margin-top: 20px;
+  }
+  @media only screen and (min-width:510px) and (max-width: 767px)  {
+    margin-top: 20px;
+  }
+  @media only screen and (min-width: $small-device-min) {
+    margin-top: 20px;
   }
   @media only screen and (min-width: $large-device) {
     margin-top: 0px;
   }
 }
 
+.adjust-margin {
+  @media only screen and (min-width: $medium-device) {
+    margin-top: -105px;
+  }
+  @media only screen and (min-width: $large-device) {
+    margin-top: 0px;
+  }
+}
+
+.custom-breakpoint {
+  @media only screen and (min-width:510px) and (max-width: 767px)  {
+    width: 50%;
+  }
+}
 
 //elements i can't find to remove
 .post-navigation {

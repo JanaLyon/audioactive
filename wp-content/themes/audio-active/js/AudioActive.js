@@ -27,6 +27,18 @@
         }
     });
 
-    console.log( $('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item') );
+
+    console.log(window.location.pathname);
+    var pageName = window.location.pathname;
+    var ourWork = /our-work/;
+    if(ourWork.test(pageName)){
+        $('.panel-group .panel-ourwork a').click(function () {
+
+            console.log($('.panel-group .active-panel'));
+            $('.panel-group .active-panel').toggleClass('active-panel');
+            $(this).parent().parent().parent().toggleClass("active-panel");
+
+        });
+    }
 
 })();
