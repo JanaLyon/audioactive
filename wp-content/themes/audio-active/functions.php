@@ -86,6 +86,7 @@ function my_add_excerpts_to_pages() {
 add_filter('the_excerpt', 'do_shortcode');
 add_action( 'after_setup_theme', 'audio_active_setup' );
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
