@@ -2,6 +2,8 @@
  * Created by elainas on 28/11/2016.
  */
 (function () {
+
+    //submenu animation
     var isMenuActivated = false;
     TweenMax.set('.drawer-dropdown-menu', {overflow: "hidden", height: 0});
     TweenMax.set('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item', {marginLeft: "100%"});
@@ -26,19 +28,4 @@
             isMenuActivated = false;
         }
     });
-
-
-    console.log(window.location.pathname);
-    var pageName = window.location.pathname;
-    var ourWork = /our-work/;
-    if(ourWork.test(pageName)){
-        $('.panel-group .panel-ourwork a').click(function () {
-
-            console.log($('.panel-group .active-panel'));
-            $('.panel-group .active-panel').toggleClass('active-panel');
-            $(this).parent().parent().parent().toggleClass("active-panel");
-
-        });
-    }
-
 })();

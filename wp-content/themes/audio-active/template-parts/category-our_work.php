@@ -83,3 +83,12 @@ function is_first_active_post($counter)
 		<?php get_sidebar(); ?>
 	</div>
 </div>
+<script>
+    //js for active element
+    (function () {
+        $('.panel-group .panel-ourwork a').click(function () {
+            $('.panel-group .active-panel').toggleClass('active-panel');
+            $(this).parent().parent().parent().toggleClass("active-panel");
+        });
+    })();
+</script>
