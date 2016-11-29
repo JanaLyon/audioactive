@@ -27,6 +27,26 @@
         }
     });
 
-    console.log( $('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item') );
+
+    console.log(window.location.pathname);
+    var pageName = window.location.pathname;
+    var ourWork = /our-work/;
+    if(ourWork.test(pageName)){
+        $('.panel-group .panel-ourwork a').click(function () {
+
+            if( $('.panel-group .panel-ourwork').hasClass('active-panel')){
+                $('.panel-group .panel-ourwork').toggleClass('active-panel');
+                $(this).parent().parent().parent().toggleClass("active-panel");
+                console.log("I had an active");
+            }
+
+
+        //    if( $(this).parent().parent().parent().hasClass('active-panel') ){
+        //        $(this).parent().parent().parent().toggleClass("active-panel");
+        //    } else{
+        //        $(this).parent().parent().parent().toggleClass("active-panel");
+        //    }
+        });
+    }
 
 })();

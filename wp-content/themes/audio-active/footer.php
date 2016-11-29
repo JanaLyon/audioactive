@@ -18,12 +18,12 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="upper-footer">
-					<div class="col-md-6 col-lg-3">
+					<div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
 						<img src="/wp-content/themes/audio-active/images/full_logo.svg" width="75%"
 							 alt="AudioActive logo"/>
 					</div><!-- .col -->
 					<div class="footer-gap visible-xs visible-sm hidden-md hidden-lg"></div><!-- gap space -->
-					<div class="col-md-7 col-lg-3 block-margin">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-3 block-margin">
 						<a class="" href="">
 							Home <i class="fa fa-chevron-right" aria-hidden="true"></i>
 						</a><br>
@@ -37,7 +37,7 @@
 							Make a donation <i class="fa fa-chevron-right" aria-hidden="true"></i>
 						</a>
 					</div><!-- .col -->
-					<div class="col-md-7 col-lg-3">
+					<div class="col-xs-12 custom-breakpoint col-sm-6 col-md-7 col-lg-3">
 						<a class="" href="">
 							The Simon D'Souza Award <i class="fa fa-chevron-right" aria-hidden="true"></i>
 						</a><br>
@@ -49,11 +49,11 @@
 						</a>
 					</div><!-- .col -->
 
-					<div class="footer-gap visible-xs visible-sm hidden-md hidden-lg"></div><!-- gap space -->
+					<div class="footer-gap hidden-xs visible-sm hidden-md hidden-lg"></div><!-- gap space -->
 
-					<div class="col-md-5 col-lg-3">
+					<div class="col-xs-12 custom-breakpoint col-sm-6 col-md-5 col-lg-3">
 <div class="row adjust-margin">
-						<div class="col-xs-12 col-sm-4 col-md-12 address">
+						<div class="col-xs-12 col-sm-12 col-md-12 address">
 							<div class="info-symbols">
 								<i class="fa fa-map-marker" aria-hidden="true"></i>
 							</div>
@@ -65,13 +65,13 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-4 col-md-12 email">
+						<div class="col-xs-12 col-sm-12 col-md-12 email">
 							<div class="info-symbols">
 								<i class="fa fa-envelope" aria-hidden="true"></i>
-								<a href="mailto:office@audioactive.org.uk">office@audioactive.org.uk</a>
+								<a class="email-custom-class" href="mailto:office@audioactive.org.uk">office@audioactive.org.uk</a>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-4 col-md-12 telephone text-center">
+						<div class="col-xs-12 col-sm-12 col-md-12 telephone text-center">
 							<div class="info-symbols">
 								<i class="fa fa-phone" aria-hidden="true"></i>
 								<a href="tel://01273628414">01273 628414</a>

@@ -20,11 +20,17 @@ function is_first_post($counter)
 	$str_bool = "true";
 	$collapse_class = "collapsed";
 	if ($counter > 1) {
-		$str_bool = "false";
-		$collapse_class = "collapsed";
-	}
-	$postObj = (object)['is_expanded' => $str_bool, 'state_class' => $collapse_class];
+        $str_bool = "false";
+        $collapse_class = "collapsed";
+    }
+    $postObj = (object)['is_expanded' => $str_bool, 'state_class' => $collapse_class];
 	return $postObj;
+}
+function is_first_active_post($counter)
+{
+    if ($counter > 1) {
+        $collapse_class = "active-panel";
+    }
 }
 
 ?>
@@ -43,7 +49,7 @@ function is_first_post($counter)
 				while (have_posts()) {
 					the_post();
 					?>
-					<div class="panel panel-ourwork">
+					<div class="panel panel-ourwork <?php echo is_first_active_post($counter) ?>">
 						<div class="panel-heading" role="tab" id="heading<?php echo $counter ?>">
 							<h4 class="panel-title">
 								<a role="button" data-toggle="collapse" data-parent="#accordion"
