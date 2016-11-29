@@ -8,17 +8,12 @@
 	 */
 	get_header();
 ?>
-<div class="container">
+<div class="container-fluid">
 
 	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			$getInvolvedPostArgs = array(
-				'posts_per_page' => 12,
-				'orderby' => 'date',
-				'cat' => 'Get involved'
-			);
 			$getInvolved = new WP_Query('category_name=Get involved&posts_per_page=12');
 			?>
 

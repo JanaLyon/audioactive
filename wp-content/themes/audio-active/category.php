@@ -8,13 +8,11 @@
  */
 
 get_header(); ?>
-	<style>.breadcrumbs {
-			display: none;
-		}</style>
+	<style>.breadcrumbs {display: none;}</style>
 
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-			<div class="container">
+			<div class="container-fluid">
 				<?php
 				if (have_posts()) {
 				//check to see if this is News

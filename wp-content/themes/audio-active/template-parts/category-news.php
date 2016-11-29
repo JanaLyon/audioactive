@@ -1,17 +1,12 @@
 <?php
-$newsPostArgs = array(
-	'posts_per_page' => 12,
-	'orderby' => 'date',
-	'cat' => 'News'
-);
-$news_query = new WP_Query($newsPostArgs);
+$news_query = new WP_Query('category_name=News&posts_per_page=12');
 ?>
-
 <div class="row">
 	<div class="col-xs-12">
-		<h1><?php single_cat_title('', true); ?></h1>
-	</div><!-- .col -->
-</div><!-- .row -->
+		<?php get_template_part('template-parts/image_element', 'category'); ?>
+		<?php get_template_part('template-parts/text_element', 'category'); ?>
+	</div>
+</div>
 <div class="row">
 	<div class="three-col-articles">
 		<?php
