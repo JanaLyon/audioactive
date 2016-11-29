@@ -28,8 +28,9 @@ function is_first_post($counter)
 }
 function is_first_active_post($counter)
 {
-    if ($counter > 1) {
+    if ($counter == 1) {
         $collapse_class = "active-panel";
+        return $collapse_class;
     }
 }
 

@@ -34,18 +34,10 @@
     if(ourWork.test(pageName)){
         $('.panel-group .panel-ourwork a').click(function () {
 
-            if( $('.panel-group .panel-ourwork').hasClass('active-panel')){
-                $('.panel-group .panel-ourwork').toggleClass('active-panel');
-                $(this).parent().parent().parent().toggleClass("active-panel");
-                console.log("I had an active");
-            }
+            console.log($('.panel-group .active-panel'));
+            $('.panel-group .active-panel').toggleClass('active-panel');
+            $(this).parent().parent().parent().toggleClass("active-panel");
 
-
-        //    if( $(this).parent().parent().parent().hasClass('active-panel') ){
-        //        $(this).parent().parent().parent().toggleClass("active-panel");
-        //    } else{
-        //        $(this).parent().parent().parent().toggleClass("active-panel");
-        //    }
         });
     }
 
