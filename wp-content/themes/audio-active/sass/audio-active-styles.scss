@@ -175,8 +175,8 @@ a {
 .social-links-bottom {
   background-color: $bg-charcoal-grey;
   padding-bottom: 10px;
-  margin-left: -45px;
-  margin-right: -45px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 //bottom social links bar
@@ -188,6 +188,17 @@ a {
     &:hover {
       color: white;
     }
+  }
+}
+
+//right menu bar overrides
+.drawer-menu {
+  :focus {
+    color: white;
+    text-decoration: none;
+  }
+  .drawer-dropdown-menu {
+    background-color: #222;
   }
 }
 
@@ -207,6 +218,9 @@ a {
 }
 
 //carousel
+.hero-module > .row {
+}
+
 .carousel-text-container {
   position: absolute;
   bottom: 0;
@@ -214,6 +228,9 @@ a {
   width: 100%;
   @media only screen and (max-width: $small-device-max) {
     position: relative;
+  }
+  & .row {
+    margin-right: 0px;
   }
   .carousel-text-background {
     position: absolute;
@@ -232,8 +249,8 @@ a {
     padding: 15px 40px 40px 40px;
     color: white;
     @media only screen and (max-width: $small-device-max) {
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
   .carousel-body {
@@ -247,8 +264,9 @@ a {
   }
 }
 .carousel-inner {
+  max-height: 100%;
   @media only screen and (max-width: $small-device-max) {
-    max-height: 500px;
+    max-height: 100%;
   }
   img {
     width: 100%;
@@ -325,6 +343,7 @@ a {
 .article-image {
   & img {
     width: 100%;
+    height: auto;
   }
 }
 .set-image-padding{
@@ -345,18 +364,29 @@ a {
 .page-image{
   img{
     width:100%;
+    height: auto;
   }
+}
+.no-padding-header{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .page-content-corner {
   @include cut-corner(40px, $line-grey, "top");
   border-top: 3px solid $line-grey;
   padding: 10px 0;
   margin-top: 30px;
-  margin-left: 40px;
+  margin-left: 25px;
+  @media only screen and (max-width: $medium-device) {
+    margin-left: 0px;
+  }
 }
 
 .widget-area{
-  margin-right: 40px;
+  margin-right: 25px;
+  @media only screen and (max-width: $medium-device) {
+    margin-right: 0px;
+  }
 }
 
 article p{
@@ -436,8 +466,10 @@ article p{
 }
 //support block
 .support-row{
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
   @media only screen and (max-width: $small-device-max) {
     padding-left: 15px;
     padding-right: 15px;
@@ -446,8 +478,8 @@ article p{
 .support-block {
   padding-right: 40px;
   @media only screen and (max-width: $small-device-max) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   & .supported-by {
     margin-top: 15px;
@@ -463,8 +495,8 @@ article p{
 .fund-block {
   padding-left: 40px;
   @media only screen and (max-width: $small-device-max) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   & .donation-card-image {
     width: 100%;
@@ -474,6 +506,9 @@ article p{
     @media only screen and (max-width: $small-device-max) {
       font-size: 16px;
     }
+  }
+  & .btn {
+    margin-top: 20px;
   }
 }
 .make-dontation{
@@ -488,6 +523,8 @@ article p{
   background-color: $bg-light-blue;
   text-align: center;
   padding: 75px 20px;
+  margin-left: -15px;
+  margin-right: -15px;
   @media only screen and (max-width: $small-device-max) {
     padding: 0px 20px;
     padding-bottom: 40px;
@@ -614,7 +651,29 @@ article .entry-header {
 .site-info {
   position: relative;
 }
-
+.address {
+  @media only screen and (min-width: $small-device-min)  {
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+  @media only screen and (min-width: $medium-device)  {
+    padding-left: 11px;
+  }
+}
+.email{
+  padding-left: 15px;
+  padding-right: 15px;
+  @media only screen and (min-width: $small-device-min)  {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.telephone {
+  @media only screen and (min-width: $small-device-min)  {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 .info-symbols {
   position: relative;
   height: 100%;
@@ -631,10 +690,18 @@ article .entry-header {
   & > .fa-envelope {
     margin-right: 5px;
     font-size: 12px;
+    margin-left: 10px;
+    @media only screen and (max-width: $small-device-max)  {
+      margin-left: 0px;
+    }
   }
   & > .fa-phone {
     margin-right: 5px;
     font-size: 16px;
+    margin-left: 10px;
+    @media only screen and (max-width: $small-device-max)  {
+      margin-left: 0px;
+    }
   }
 
   & > a {
@@ -655,7 +722,7 @@ article .entry-header {
     padding: 20px 5px;
   }
   @media only screen and (min-width: $medium-device) {
-    padding: 20px 0px 20px 20px;
+    padding: 20px 25px 20px 25px;
   }
   & * a {
     font-size: 16px;
@@ -679,6 +746,18 @@ article .entry-header {
   color: white;
   font-size: 16px;
 }
+.block-margin {
+  margin-top: 20px;
+}
+.adjust-margin {
+  @media only screen and (min-width: $medium-device) {
+    margin-top: -100px;
+  }
+  @media only screen and (min-width: $large-device) {
+    margin-top: 0px;
+  }
+}
+
 
 //elements i can't find to remove
 .post-navigation {

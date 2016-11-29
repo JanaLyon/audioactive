@@ -8,9 +8,9 @@
  */
 
 ?>
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12 no-padding-header">
 			<?php get_template_part('template-parts/image_element', 'page'); ?>
 			<?php get_template_part('template-parts/text_element', 'page'); ?>
 		</div>

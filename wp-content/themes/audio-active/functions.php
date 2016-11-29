@@ -141,9 +141,9 @@ function audio_active_scripts() {
 
 	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all' );
 
-	wp_enqueue_style( 'audio-active-styles', get_template_directory_uri() . '/css/audio-active-styles.css', array() );
-
 	wp_enqueue_style( 'drawer', get_template_directory_uri() . '/css/drawer.css', array() );
+
+    wp_enqueue_style( 'audio-active-styles', get_template_directory_uri() . '/css/audio-active-styles.css', array() );
 
 	wp_enqueue_script( 'audio-active-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -159,6 +159,9 @@ function audio_active_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+    wp_enqueue_script( 'TweenMax', get_template_directory_uri() . '/js/TweenMax.min.js', array(), '1.19.0', true );
+    wp_enqueue_script( 'AudioActive.js', get_template_directory_uri() . '/js/AudioActive.js', array(), '1.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'audio_active_scripts' );
 if( !function_exists('ie_scripts')) {
