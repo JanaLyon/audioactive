@@ -4,7 +4,7 @@
 	 *	Includes multiple loops
 	 */ 
 	 /*
-	 Template Name: Sign up
+	 Template Name: Get involved
 	 */
 	get_header();
 ?>
@@ -14,26 +14,26 @@
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			$signUpPostArgs = array(
+			$getInvolvedPostArgs = array(
 				'posts_per_page' => 12,
 				'orderby' => 'date',
-				'cat' => 'Sign up forms'
+				'cat' => 'Get involved'
 			);
-			$signUp = new WP_Query($signUpPostArgs);
+			$getInvolved = new WP_Query('category_name=Get involved&posts_per_page=12');
 			?>
 
 			<div class="row">
 				<div class="col-xs-12">
-					<h1><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-				</div><!-- .col -->
-			</div><!-- .row -->
+					<?php get_template_part('template-parts/image_element', 'page'); ?>
+					<?php get_template_part('template-parts/text_element', 'page'); ?>
+				</div>
+			</div>
 			<div class="row">
 				<div class="three-col-articles">
 					<?php
-					while ($signUp->have_posts()) {
-						$signUp->the_post();
-						get_template_part('template-parts/article_module', 'sign_up');
+					while ($getInvolved->have_posts()) {
+						$getInvolved->the_post();
+						get_template_part('template-parts/article_module', 'get_involved');
 					}
 					wp_reset_postdata();
 					?>
