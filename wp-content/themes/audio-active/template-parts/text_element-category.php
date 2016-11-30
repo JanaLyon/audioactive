@@ -4,10 +4,20 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-4 col-md-8">
 				<div class="carousel-text">
-					<h1>Our work</h1>
+					<h1>
+						<?php
+							if(! in_category('Our work')){
+								single_cat_title();
+							}else{
+								echo "Our work";
+							}
+						?>
+					</h1>
 
 					<p class="carousel-body">
-						To us, music is an end in itself as well as a tool for social justice and education.
+						<?php
+							echo category_description();
+						?>
 					</p>
 				</div>
 			</div>

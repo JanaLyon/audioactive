@@ -1,5 +1,7 @@
 <?php
-$news_query = new WP_Query('category_name=News&posts_per_page=12');
+$news_query = new WP_Query('category_name=News&posts_per_page=12&paged=$paged');
+$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+$nextpost = 0;
 ?>
 <div class="row">
 	<div class="col-xs-12">
