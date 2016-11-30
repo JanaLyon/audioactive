@@ -23,15 +23,18 @@
 					<?php get_template_part('template-parts/text_element', 'page'); ?>
 				</div>
 			</div>
+
 			<div class="row">
-				<div class="three-col-articles">
-					<?php
-					while ($getInvolved->have_posts()) {
-						$getInvolved->the_post();
-						get_template_part('template-parts/article_module', 'get_involved');
-					}
-					wp_reset_postdata();
-					?>
+				<div class="get-involved-block">
+					<div class="three-col-articles">
+						<?php
+						while ($getInvolved->have_posts()) {
+							$getInvolved->the_post();
+							get_template_part('template-parts/article_module', 'get_involved');
+						}
+						wp_reset_postdata();
+						?>
+					</div>
 				</div>
 			</div>
 

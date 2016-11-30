@@ -116,7 +116,7 @@ $more-info-link: #4417ff;
 }
 //line modules up
 @mixin line-posts-up() {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
 }
 /*--------------------------------------------------------------
@@ -161,6 +161,9 @@ h1 {
   padding: 20px 85px 20px 20px;
   max-height: 65px;
   height: 65px;
+  & img {
+    width: 195px;
+  }
 }
 
 a {
@@ -371,6 +374,8 @@ a {
     height: auto;
   }
 }
+
+// we don't need this now
 .no-padding-header{
   padding-left: 0px;
   padding-right: 0px;
@@ -406,6 +411,7 @@ article p{
   }
 }
 .three-col-articles {
+  @include line-posts-up();
   & .article-module {
     margin-bottom: 30px;
     .article-date {
@@ -428,8 +434,12 @@ article p{
       @include cut-corner(30px, white, "top");
       margin-bottom: 10px;
       img {
+        /* border set below is used to hide the gap
+         * between cut-corner triangle and image
+         */
+        border-top: 1px solid white;
         width: 100%;
-        height: 100%;
+        height: auto;
       }
     }
   }
@@ -563,6 +573,15 @@ article .entry-header {
     margin-top: 15px;
   }
 }
+
+/*****************************************************************************************/
+img {
+  width:100%;
+  height:auto;
+}
+/*****************************************************************************************/
+
+
 //non news category page
 .category-image img{
   width:100%;
@@ -657,6 +676,43 @@ article .entry-header {
   }
 }
 
+//get-invovled
+.get-involved-block{
+  //margin-top: 40px;
+  & .three-col-articles{
+    & .article-module {
+      & .gray-line-container{
+        padding-top: 40px;
+        border-top: solid 1px $line-grey;
+
+        & .image-container {
+          @include cut-corner(20px, $bg-neon-cta, "top");
+          border-top: 2px $bg-neon-cta solid;
+          margin-bottom: 10px;
+          & img {
+            border-top: none;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      & .get-involved-article-buttons {
+        display: flex;
+        @media only screen and(max-width:350px) {
+          flex-wrap: wrap;
+
+        }
+        align-items: center;
+        & .btn-more {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+.align-text{
+  text-align: right;
+}
 /*************************************/
 // testing our work blue line
 .panel-ourwork:visited .panel-ourwork:active, .panel-ourwork:focus {
@@ -664,9 +720,6 @@ article .entry-header {
   position: relative;
   border-top: solid 2px #0afff9;
 }
-
-
-
 /************************************/
 
 //footer

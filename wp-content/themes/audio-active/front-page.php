@@ -13,8 +13,10 @@
 	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
 			<div class="row">
-				<h1 class="hidden">Top stories</h1><!-- labels for semantic web -->
-				<?php get_template_part("template-parts/carousel_module", "none");	?>
+				<div class="col-xs-12">
+					<h1 class="hidden">Top stories</h1><!-- labels for semantic web -->
+					<?php get_template_part("template-parts/carousel_module", "none");	?>
+				</div>
 			</div><!-- .row -->
 			<div class="row">
 				<h1 class="hidden">Latest news</h1><!-- labels for semantic web -->
