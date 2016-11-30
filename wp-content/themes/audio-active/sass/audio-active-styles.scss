@@ -114,7 +114,11 @@ $more-info-link: #4417ff;
     z-index: 1;
   }
 }
-
+//line modules up
+@mixin line-posts-up() {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
 /*--------------------------------------------------------------
 	# H tags
 --------------------------------------------------------------*/

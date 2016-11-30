@@ -84,23 +84,23 @@
 			<div class="row visible-xs social-links-bottom">
 				<div class="col-xs-2 col-xs-offset-1 text-center">
 					<!-- soundcloud -->
-					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Soundcloud" href="https://soundcloud.com/audio_active"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Soundcloud" href="https://soundcloud.com/audio_active" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
 				</div>
 				<div class="col-xs-2 text-center">
 					<!-- facebook -->
-					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/likeaudioactive/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/likeaudioactive/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 				</div>
 				<div class="col-xs-2 text-center">
 					<!-- twitter -->
-					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Twitter" href="https://twitter.com/Audio_Active"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Twitter" href="https://twitter.com/Audio_Active" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				</div>
 				<div class="col-xs-2 text-center">
 					<!-- instagram -->
-					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/audioactive_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/audioactive_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 				</div>
 				<div class="col-xs-2 text-center">
 					<!-- youtube -->
-					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UCa4IXl4cqRZLQSa-pr2zujg"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UCa4IXl4cqRZLQSa-pr2zujg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div><!-- .container -->

@@ -9,7 +9,6 @@
 <!-- full width letterbox image with text over it -->
 <!-- sidebar underneath image -->
 <!-- line with cut corner in grey -->
-<!-- Title - not sure where this is coming from..? -->
 <!-- loop through collapsible articles -->
 
 

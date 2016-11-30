@@ -6,8 +6,8 @@
  *
  * @package Reed Career Advice
  */
-
-get_header(); ?>
+get_header();
+?>
 	<style>.breadcrumbs {display: none;}</style>
 
 	<section id="primary" class="content-area">
