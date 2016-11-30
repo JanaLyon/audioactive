@@ -10,14 +10,16 @@ $nextpost = 0;
 	</div>
 </div>
 <div class="row">
-	<div class="three-col-articles">
-		<?php
-		while ($news_query->have_posts()) {
-			$news_query->the_post();
-			get_template_part('template-parts/article_module', 'three_columns');
-		}
-		wp_reset_postdata();
-		?>
+	<div class="our-work-block">
+		<div class="three-col-articles">
+			<?php
+			while ($news_query->have_posts()) {
+				$news_query->the_post();
+				get_template_part('template-parts/article_module', 'three_columns');
+			}
+			wp_reset_postdata();
+			?>
+		</div>
 	</div>
 </div>
 				

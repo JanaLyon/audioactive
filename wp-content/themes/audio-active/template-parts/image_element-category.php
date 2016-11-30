@@ -10,6 +10,8 @@
 <?php if ($category_image) : ?>
 
 <!-- category featured image -->
-<img src="<?php echo $category_image; ?>" alt="<?php single_cat_title();?>" desc="<?php echo wp_strip_all_tags( category_description() );?>"/>
+<div class="page-image">
+	<img src="<?php echo $category_image; ?>" alt="<?php single_cat_title();?>" desc="<?php echo wp_strip_all_tags( category_description() );?>"/>
+</div>
 
 <?php endif; ?>

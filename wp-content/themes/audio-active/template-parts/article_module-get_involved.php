@@ -1,5 +1,4 @@
-<div class="article-module get-involved col-xs-12 col-sm-4 col-md-4 col-lg-4">
-	<div class="gray-line-container">
+<div class="article-module col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<div class="image-container">
 			<a href="<?php the_permalink(); ?>">
 				<?php
@@ -15,13 +14,12 @@
 			<p class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 			<div class="article-excerpt"><?php echo substr(get_the_excerpt(), 0,60) . '...<br>'; ?></div>
 		</div>
-		<div class="row get-involved-article-buttons">
-			<div class="col-xs-12">
+		<div class="get-involved-article-buttons">
+			<div class="col-xs-12 get-involved-link">
 				<?php get_template_part('template-parts/read_more_link', 'get_involved')?>
 			</div>
-			<div class="col-xs-12 align-text">
+			<div class="col-xs-12 get-involved-btn">
 				<?php get_template_part('template-parts/read_more_btn', 'get_involved')?>
 			</div>
 		</div>
-	</div>
 </div>

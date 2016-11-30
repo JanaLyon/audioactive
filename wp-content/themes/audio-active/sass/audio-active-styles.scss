@@ -676,42 +676,65 @@ img {
   }
 }
 
+.our-work-block{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  .ourwork-articles-button{
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ebebeb;
+  }
+}
+
 //get-invovled
 .get-involved-block{
-  //margin-top: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
   & .three-col-articles{
     & .article-module {
-      & .gray-line-container{
-        padding-top: 40px;
-        border-top: solid 1px $line-grey;
-
-        & .image-container {
-          @include cut-corner(20px, $bg-neon-cta, "top");
-          border-top: 2px $bg-neon-cta solid;
-          margin-bottom: 10px;
-          & img {
-            border-top: none;
-            width: 100%;
-            height: 100%;
-          }
+      & .image-container {
+        @include cut-corner(20px, $bg-neon-cta, "top");
+        border-top: 2px $bg-neon-cta solid;
+        margin-bottom: 10px;
+        & img {
+          border-top: none;
+          width: 100%;
+          height: 100%;
         }
       }
       & .get-involved-article-buttons {
+        padding-bottom: 20px;
+        border-bottom: solid 1px $line-grey;
         display: flex;
         @media only screen and(max-width:350px) {
           flex-wrap: wrap;
-
+        }
+        @media only screen and (min-width:768px) and (max-width:1010px) {
+          flex-wrap: wrap;
         }
         align-items: center;
         & .btn-more {
           margin-top: 0;
         }
+        & .get-involved-link{
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        & .get-involved-btn{
+          text-align: right;
+          padding-left: 0px;
+          padding-right: 0px;
+          @media only screen and(max-width:350px) {
+            text-align: left;
+            margin-top: 20px;
+          }
+          @media only screen and (min-width:768px) and (max-width:1010px) {
+            text-align: left;
+            margin-top: 20px;
+          }
+        }
       }
     }
   }
-}
-.align-text{
-  text-align: right;
 }
 /*************************************/
 // testing our work blue line
