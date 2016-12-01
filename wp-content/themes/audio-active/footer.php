@@ -18,7 +18,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="upper-footer">
-					<div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
 						<img src="/wp-content/themes/audio-active/images/full_logo.svg" width="75%"
 							 alt="AudioActive logo"/>
 					</div><!-- .col -->
@@ -82,23 +82,23 @@
 				</div><!-- .upper-footer -->
 			</div><!-- .row -->
 			<div class="row visible-xs social-links-bottom">
-				<div class="col-xs-2 col-xs-offset-1 text-center">
+				<div class="footer-social-link-container text-center">
 					<!-- soundcloud -->
 					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Soundcloud" href="https://soundcloud.com/audio_active" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
 				</div>
-				<div class="col-xs-2 text-center">
+				<div class="footer-social-link-container text-center">
 					<!-- facebook -->
 					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/likeaudioactive/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 				</div>
-				<div class="col-xs-2 text-center">
+				<div class="footer-social-link-container text-center">
 					<!-- twitter -->
 					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Twitter" href="https://twitter.com/Audio_Active" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				</div>
-				<div class="col-xs-2 text-center">
+				<div class="footer-social-link-container text-center">
 					<!-- instagram -->
 					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/audioactive_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 				</div>
-				<div class="col-xs-2 text-center">
+				<div class="footer-social-link-container text-center">
 					<!-- youtube -->
 					<a class="btn bottom-bar-links" data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UCa4IXl4cqRZLQSa-pr2zujg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 				</div>

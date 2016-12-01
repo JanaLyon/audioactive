@@ -76,8 +76,14 @@ a.top-bar-links {
   padding: 5px 5px 0;
   text-decoration: none;
   color: #0afff9; }
+  a.top-bar-links:focus {
+    color: white; }
   a.top-bar-links:hover {
     color: white; }
+
+.footer-social-link-container {
+  width: 20%;
+  float: left; }
 
 .social-links-bottom {
   background-color: #595959;
@@ -86,11 +92,16 @@ a.top-bar-links {
   margin-right: -15px; }
 
 a.bottom-bar-links {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
   padding: 5px 5px 0;
   text-decoration: none;
   color: white; }
+  a.bottom-bar-links:focus {
+    color: #0afff9; }
   a.bottom-bar-links:hover {
-    color: white; }
+    color: #0afff9; }
 
 .drawer-menu :focus {
   color: white;
@@ -180,15 +191,19 @@ a.bottom-bar-links {
     margin-left: -20px;
     z-index: 1; }
 
-@media only screen and (max-width: 767px) {
-  .fa-chevron-left {
-    left: 0;
-    font-size: 20px; } }
+.fa-chevron-left {
+  left: 0; }
+  @media only screen and (max-width: 767px) {
+    .fa-chevron-left {
+      left: 0;
+      font-size: 20px; } }
 
-@media only screen and (max-width: 767px) {
-  .fa-chevron-right {
-    right: 0;
-    font-size: 20px; } }
+.fa-chevron-right {
+  right: 0; }
+  @media only screen and (max-width: 767px) {
+    .fa-chevron-right {
+      right: 0;
+      font-size: 20px; } }
 
 .our-work-topbox {
   color: white; }
@@ -434,8 +449,12 @@ article p {
   padding-right: 40px; }
   @media only screen and (max-width: 767px) {
     .support-block {
-      padding-left: 0px;
-      padding-right: 0px; } }
+      padding-left: 5px;
+      padding-right: 5px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .support-block {
+      padding-left: 15px;
+      padding-right: 15px; } }
   .support-block .supported-by {
     margin-top: 15px;
     margin-bottom: 15px; }
@@ -446,10 +465,14 @@ article p {
 
 .fund-block {
   padding-left: 40px; }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .fund-block {
-      padding-left: 0px;
-      padding-right: 0px; } }
+      padding-left: 5px;
+      padding-right: 5px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .fund-block {
+      padding-left: 15px;
+      padding-right: 15px; } }
   .fund-block .donation-card-image {
     width: 100%; }
   .fund-block p {

@@ -171,13 +171,20 @@ a {
     padding: 5px 5px 0;
     text-decoration: none;
     color: $bg-neon-cta;
+    &:focus {
+      color: white;
+    }
     &:hover {
       color: white;
     }
   }
 }
 
-
+//footer social link container
+.footer-social-link-container {
+  width: 20%;
+  float: left;
+}
 //bottom social links container
 .social-links-bottom {
   background-color: $bg-charcoal-grey;
@@ -189,11 +196,17 @@ a {
 //bottom social links bar
 a {
   &.bottom-bar-links {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
     padding: 5px 5px 0;
     text-decoration: none;
     color: white;
+    &:focus {
+      color: $bg-neon-cta;
+    }
     &:hover {
-      color: white;
+      color: $bg-neon-cta;
     }
   }
 }
@@ -290,12 +303,14 @@ a {
 }
 
 .fa-chevron-left {
+  left: 0;
   @media only screen and (max-width: $small-device-max) {
     left: 0;
     font-size: 20px;
   }
 }
 .fa-chevron-right {
+  right: 0;
   @media only screen and (max-width: $small-device-max) {
     right: 0;
     font-size: 20px;
@@ -492,8 +507,12 @@ article p{
 .support-block {
   padding-right: 40px;
   @media only screen and (max-width: $small-device-max) {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media only screen and (min-width: $small-device-min) and (max-width: 991px) {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   & .supported-by {
     margin-top: 15px;
@@ -508,9 +527,13 @@ article p{
 }
 .fund-block {
   padding-left: 40px;
-  @media only screen and (max-width: $small-device-max) {
-    padding-left: 0px;
-    padding-right: 0px;
+  @media only screen and (max-width: $small-device-min) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media only screen and (min-width: $small-device-min) and (max-width: 991px) {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   & .donation-card-image {
     width: 100%;
