@@ -69,8 +69,15 @@ h1 {
   padding: 20px 85px 20px 20px;
   max-height: 65px;
   height: 65px; }
+  @media only screen and (max-width: 480px) {
+    .site-branding {
+      height: 40px;
+      padding: 7px 85px 20px 20px; } }
   .site-branding img {
     width: 195px; }
+    @media only screen and (max-width: 480px) {
+      .site-branding img {
+        width: 160px; } }
 
 a.top-bar-links {
   padding: 5px 5px 0;
@@ -103,12 +110,60 @@ a.bottom-bar-links {
   a.bottom-bar-links:hover {
     color: #0afff9; }
 
+@media only screen and (max-width: 480px) {
+  .drawer .drawer-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px; } }
+
+@media only screen and (max-width: 480px) {
+  .drawer .drawer-toggle .drawer-hamburger-icon {
+    margin-top: 0; } }
+
+@media only screen and (max-width: 480px) {
+  .drawer .drawer-toggle .drawer-hamburger-icon::before {
+    top: -7px; } }
+
+@media only screen and (max-width: 480px) {
+  .drawer .drawer-toggle .drawer-hamburger-icon::after {
+    top: 7px; } }
+
+@media only screen and (max-width: 480px) {
+  .drawer.drawer-open .drawer-toggle .drawer-hamburger-icon::before {
+    top: 0; }
+  .drawer.drawer-open .drawer-toggle .drawer-hamburger-icon::after {
+    top: 0; } }
+
 .drawer-menu :focus {
   color: white;
   text-decoration: none; }
 
+@media only screen and (max-width: 480px) {
+  .drawer-menu .drawer-dropdown-menu .drawer-menu-item {
+    font-size: 18px;
+    height: auto;
+    padding: 8px 20px 7px 40px; } }
+
+@media only screen and (max-width: 480px) {
+  .drawer-menu .drawer-menu-item {
+    font-size: 18px;
+    height: auto;
+    padding: 8px 20px 7px 20px; } }
+
 .drawer-menu .drawer-dropdown-menu {
   background-color: #222; }
+
+.drawer--right.drawer-open .drawer-hamburger {
+  right: 80%; }
+  @media only screen and (min-width: 480px) {
+    .drawer--right.drawer-open .drawer-hamburger {
+      right: 365px; } }
+
+.drawer-nav {
+  width: 80%; }
+  @media only screen and (min-width: 480px) {
+    .drawer-nav {
+      width: 365px; } }
 
 .carousel-col-md-12 {
   position: relative;

@@ -60,9 +60,8 @@
 				</button>
 
 				<nav id="site-navigation" class="drawer-nav" role="navigation">
-					<h2 class="hidden">Main navigation</h2>
 					<?php get_template_part('custom-nav', ''); ?>
-
+					<h2 class="hidden">Main navigation</h2> <!-- Keep this here, interferes with drawer nav if added before template part-->
 				</nav><!-- #site-navigation -->
 
 			</div><!-- .drawer-container -->

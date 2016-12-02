@@ -12,7 +12,11 @@
 
     $('.drawer-menu > .drawer-dropdown').click(function () {
         if(!isMenuActivated){
-            TweenMax.to('.drawer-dropdown-menu', 0.5, {height: 150});
+            if(window.innerWidth > 480) {
+                TweenMax.to('.drawer-dropdown-menu', 0.5, {height: 150});
+            } else {
+                TweenMax.to('.drawer-dropdown-menu', 0.5, {height: 120});
+            }
             TweenMax.staggerTo('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item', 0.5,
                 {
                     marginLeft: "0",

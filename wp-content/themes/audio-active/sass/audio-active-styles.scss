@@ -161,8 +161,15 @@ h1 {
   padding: 20px 85px 20px 20px;
   max-height: 65px;
   height: 65px;
+  @media only screen and (max-width: $xsmall-device) {
+    height: 40px;
+    padding: 7px 85px 20px 20px;
+  }
   & img {
     width: 195px;
+    @media only screen and (max-width: $xsmall-device) {
+      width: 160px;
+    }
   }
 }
 
@@ -212,13 +219,84 @@ a {
 }
 
 //right menu bar overrides
+.drawer {
+  & .drawer-toggle {
+    @media only screen and (max-width: $xsmall-device) {
+      width: 40px;
+      height: 40px;
+      padding: 0px 10px;
+    }
+    & .drawer-hamburger-icon{
+      @media only screen and (max-width: $xsmall-device) {
+        margin-top: 0;
+      }
+      &::before {
+        @media only screen and (max-width: $xsmall-device) {
+          top: -7px;
+        }
+      }
+      &::after {
+        @media only screen and (max-width: $xsmall-device) {
+          top: 7px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $xsmall-device) {
+    &.drawer-open {
+      & .drawer-toggle {
+        & .drawer-hamburger-icon {
+          &::before {
+            top: 0;
+          }
+          &::after {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 .drawer-menu {
   :focus {
     color: white;
     text-decoration: none;
   }
+  & .drawer-dropdown-menu {
+    & .drawer-menu-item {
+      @media only screen and (max-width: $xsmall-device){
+        font-size: 18px;
+        height: auto;
+        padding: 8px 20px 7px 40px;
+      }
+    }
+  }
+  & .drawer-menu-item {
+    @media only screen and (max-width: $xsmall-device){
+      font-size: 18px;
+      height: auto;
+      padding: 8px 20px 7px 20px;
+    }
+  }
   .drawer-dropdown-menu {
     background-color: #222;
+  }
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+  right: 80%;
+  @media only screen and (min-width: $xsmall-device) {
+    right: 365px;
+  }
+}
+
+.drawer-nav {
+  width: 80%;
+  @media only screen and (min-width: $xsmall-device) {
+    width: 365px;
   }
 }
 
