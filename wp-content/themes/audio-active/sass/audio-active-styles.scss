@@ -148,7 +148,7 @@ hr {
 
 
 //main button style
-.btn-action {
+.btn-action, .wpforms-submit {
   font-size: 14px;
   padding: 3px 9px 3px 15px;
   color: $bg-black;
@@ -682,6 +682,7 @@ article p{
     }
   }
   & .fb-signature {
+    color: #252525;
     font-size: 18px;
     @media only screen and (max-width: $small-device-max) {
       font-size: 14px;

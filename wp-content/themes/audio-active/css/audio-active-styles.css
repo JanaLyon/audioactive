@@ -61,17 +61,17 @@ hr {
   font-weight: 700; }
 
 /**************************************/
-.btn-action {
+.btn-action, .wpforms-submit {
   font-size: 14px;
   padding: 3px 9px 3px 15px;
   color: #252525;
   background-color: #0afff9;
   border-radius: 20px; }
-  .btn-action:hover, .btn-action:focus, .btn-action.focus {
+  .btn-action:hover, .btn-action:focus, .btn-action.focus, .wpforms-submit:hover, .wpforms-submit:focus, .wpforms-submit.focus {
     color: #252525;
     text-decoration: none;
     background-color: #09e5e0; }
-  .btn-action:active, .btn-action.active {
+  .btn-action:active, .btn-action.active, .wpforms-submit:active, .wpforms-submit.active {
     color: #0afff9;
     background-color: #252525; }
 
@@ -602,6 +602,7 @@ article p {
         width: 100%;
         font-size: 18px; } }
   .quote-block .fb-signature {
+    color: #252525;
     font-size: 18px; }
     @media only screen and (max-width: 767px) {
       .quote-block .fb-signature {
