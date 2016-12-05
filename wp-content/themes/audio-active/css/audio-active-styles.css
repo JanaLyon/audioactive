@@ -50,6 +50,17 @@ h1 {
     h1 {
       font-size: 36px; } }
 
+/**************************************/
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 0;
+  border-top: 3px solid #ebebeb; }
+
+.bold {
+  font-weight: 700; }
+
+/**************************************/
 .btn-action {
   font-size: 14px;
   padding: 3px 9px 3px 15px;
@@ -77,7 +88,7 @@ h1 {
     width: 195px; }
     @media only screen and (max-width: 480px) {
       .site-branding img {
-        width: 160px; } }
+        width: 152px; } }
 
 a.top-bar-links {
   padding: 5px 5px 0;
@@ -183,6 +194,14 @@ a.bottom-bar-links {
       padding-right: 0px;
       padding-left: 0px; } }
 
+.hero-block {
+  padding-left: 0px;
+  padding-right: 0px; }
+  @media only screen and (min-width: 1200px) {
+    .hero-block {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
 .carousel-text-container {
   position: absolute;
   bottom: 0;
@@ -208,7 +227,7 @@ a.bottom-bar-links {
   .carousel-text-container .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 992px) {
       .carousel-text-container .carousel-text {
         padding-left: 15px;
         padding-right: 15px; } }
@@ -938,6 +957,15 @@ img {
     color: white;
     font-size: 12px;
     margin-left: 5px; }
+  @media only screen and (min-width: 730px) {
+    .upper-footer .footer-logo {
+      width: 75%; } }
+  @media only screen and (min-width: 992px) {
+    .upper-footer .footer-logo {
+      width: 70%; } }
+  @media only screen and (min-width: 1200px) {
+    .upper-footer .footer-logo {
+      width: 65%; } }
 
 .lower-footer {
   height: 60px;
@@ -988,3 +1016,6 @@ img {
 
 .container, .container-fluid {
   min-width: 320px; }
+
+.contact-us-links {
+  color: #252525; }

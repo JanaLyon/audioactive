@@ -35,7 +35,7 @@ function is_first_active_post($counter)
 
 ?>
 <div class="row">
-	<div class="col-xs-12">
+	<div class="col-xs-12 hero-block">
 		<?php get_template_part('template-parts/image_element', 'category'); ?>
 		<?php get_template_part('template-parts/text_element', 'category'); ?>
 	</div>

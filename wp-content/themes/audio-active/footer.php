@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="upper-footer">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
-						<img src="/wp-content/themes/audio-active/images/full_logo.svg" width="75%"
+						<img class="footer-logo" src="/wp-content/themes/audio-active/images/full_logo.svg" width="75%"
 							 alt="AudioActive logo"/>
 					</div><!-- .col -->
 					<div class="footer-gap visible-xs visible-sm hidden-md hidden-lg"></div><!-- gap space -->
