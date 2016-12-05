@@ -287,14 +287,20 @@ a {
 }
 
 .drawer--right.drawer-open .drawer-hamburger {
-  right: 80%;
+  right: calc(100% - 40px);
+  @media only screen and (min-width: 350px){
+    right: 293px;
+  }
   @media only screen and (min-width: $xsmall-device) {
     right: 365px;
   }
 }
 
 .drawer-nav {
-  width: 80%;
+  width: calc(100% - 40px);
+  @media only screen and (min-width: 350px){
+    width: 293px;
+  }
   @media only screen and (min-width: $xsmall-device) {
     width: 365px;
   }

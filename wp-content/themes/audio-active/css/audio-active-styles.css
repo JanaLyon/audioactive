@@ -154,13 +154,19 @@ a.bottom-bar-links {
   background-color: #222; }
 
 .drawer--right.drawer-open .drawer-hamburger {
-  right: 80%; }
+  right: calc(100% - 40px); }
+  @media only screen and (min-width: 350px) {
+    .drawer--right.drawer-open .drawer-hamburger {
+      right: 293px; } }
   @media only screen and (min-width: 480px) {
     .drawer--right.drawer-open .drawer-hamburger {
       right: 365px; } }
 
 .drawer-nav {
-  width: 80%; }
+  width: calc(100% - 40px); }
+  @media only screen and (min-width: 350px) {
+    .drawer-nav {
+      width: 293px; } }
   @media only screen and (min-width: 480px) {
     .drawer-nav {
       width: 365px; } }
