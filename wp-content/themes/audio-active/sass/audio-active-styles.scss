@@ -148,7 +148,11 @@ hr {
 
 
 //main button style
+.button-container{
+  display: inline-block;
+}
 .btn-action, .wpforms-submit {
+  display: flex;
   font-size: 14px;
   padding: 3px 9px 3px 15px;
   color: $bg-black;
@@ -166,6 +170,10 @@ hr {
   &.active {
     color: $bg-neon-cta;
     background-color: $bg-black;
+  }
+  & .fa-chevron-right {
+    margin-top: 4px;
+    margin-left: 5px;
   }
 }
 

@@ -61,7 +61,12 @@ hr {
   font-weight: 700; }
 
 /**************************************/
+.button-container {
+  display: inline-block; }
+
 .btn-action, .wpforms-submit {
+  display: -ms-flexbox;
+  display: flex;
   font-size: 14px;
   padding: 3px 9px 3px 15px;
   color: #252525;
@@ -74,6 +79,9 @@ hr {
   .btn-action:active, .btn-action.active, .wpforms-submit:active, .wpforms-submit.active {
     color: #0afff9;
     background-color: #252525; }
+  .btn-action .fa-chevron-right, .wpforms-submit .fa-chevron-right {
+    margin-top: 4px;
+    margin-left: 5px; }
 
 .site-branding {
   background-color: #252525;
