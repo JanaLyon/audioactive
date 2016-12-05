@@ -62,7 +62,7 @@ function is_first_active_post($counter)
 							</h4>
 						</div>
 						<div id="collapse<?php echo $counter;
-						?>" class="panel-collapse collapse<?php echo $counter==1?'in':''?>" role="tabpanel"
+						?>" class="panel-collapse collapse<?php echo $counter==1?' in':''?>" role="tabpanel"
 							 aria-labelledby="heading<?php echo $counter ?>">
 							<div class="panel-body">
 								<?php the_excerpt(); ?>
