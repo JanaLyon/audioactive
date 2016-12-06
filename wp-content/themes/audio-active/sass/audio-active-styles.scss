@@ -42,6 +42,11 @@ $desktop-p-fonts : 24px;
 $line-grey: #ebebeb;
 $line-blue: #c3fff9;
 
+/* Cut corner sizes*/
+$large-cut-corner: 30px;
+$medium-cut-corner: 20px;
+$small-cut-corner: 10px;
+
 /* Container backgrounds */
 $bg-black: #252525;
 $bg-dark-grey: #3f3f3f;
@@ -51,7 +56,6 @@ $bg-neon-cta: #0afff9;
 $bg-neon-cta-hover: #09e5e0;
 $bg-light-blue: #e6ffff;
 $bg-light-grey:$line-grey;
-
 
 /* Text links */
 $textlink-inactive: #c3fff9;
@@ -121,6 +125,16 @@ $more-info-link: #4417ff;
   display: flex;
   flex-wrap: wrap;
 }
+//make images grow or shrink on mouseover
+@mixin scale-effect( $size ) {
+  -webkit-transform: scale($size);
+  -moz-transform: scale($size);
+  -o-transform: scale($size);
+  transform: scale($size);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
 /*--------------------------------------------------------------
 	# H tags
 --------------------------------------------------------------*/
@@ -139,7 +153,7 @@ h1 {
 body{
   background-color: $bg-light-grey;
 }
-.site-main{
+.content-bg{
   background-color: #ffffff;
 }
 hr {
@@ -199,7 +213,9 @@ hr {
     }
   }
 }
-
+.site-content{
+  padding-top: 50px;
+}
 a {
   &.top-bar-links {
     padding: 5px 5px 0;
@@ -415,7 +431,7 @@ a {
   }
 }
 .carousel-cut-corner {
-  @include cut-corner(40px, $bg-light-grey, "top");
+  @include cut-corner($large-cut-corner, $bg-light-grey, "top");
 }
 
 .fa-chevron-left {
@@ -439,7 +455,7 @@ a {
   color: white;
 }
 .our-work-bottombox{
-  @include cut-corner(20px, $bg-charcoal-grey, "top");
+  @include cut-corner($medium-cut-corner, $bg-charcoal-grey, "top");
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -455,9 +471,12 @@ a {
 }
 .our-work-row {
   background-color: $bg-charcoal-grey;
+  margin-left: 25px;
+  margin-right: 25px;
 }
-.our-work-bottom-arrow {
-  @include triangle-bottom($bg-charcoal-grey);
+.our-work-cut-corner {
+  border-top: solid 2px $bg-neon-cta;
+  @include cut-corner($large-cut-corner, $bg-neon-cta, "top");
 }
 
 .our-work-link-container {
@@ -512,7 +531,7 @@ a {
   padding-right: 0px;
 }
 .page-content-corner {
-  @include cut-corner(40px, $line-grey, "top");
+  @include cut-corner($large-cut-corner, $line-grey, "top");
   border-top: 3px solid $line-grey;
   padding: 10px 0;
   margin-top: 30px;
@@ -562,7 +581,7 @@ article p{
       margin-bottom: 25px;
     }
     .image-container {
-      @include cut-corner(30px, white, "top");
+      @include cut-corner($large-cut-corner, white, "top");
       margin-bottom: 10px;
       img {
         /* border set below is used to hide the gap
@@ -571,6 +590,10 @@ article p{
         border-top: 1px solid white;
         width: 100%;
         height: auto;
+        @include scale-effect(1);
+        &:hover{
+          @include scale-effect(1.2);
+        }
       }
     }
   }
@@ -579,7 +602,7 @@ article p{
   padding-right: 40px;
 }
 .latest-arrow-bottom {
-  @include triangle-bottom(white);
+  //@include triangle-bottom(white);
   height: 95px;
   margin-top: 40px;
   border-top: 1px solid $line-grey;
@@ -592,7 +615,7 @@ article p{
 .latest-articles-post {
   position: relative;
   border-top: 4px solid $bg-light-grey;
-  @include cut-corner(40px, $bg-light-grey, "top");
+  @include cut-corner($large-cut-corner, $bg-light-grey, "top");
   margin-top: 40px;
   margin-bottom: 40px;
   padding-top: 15px;
@@ -601,7 +624,7 @@ article p{
   }
   & .article-module {
     & .image-container {
-      @include cut-corner(20px, white, "top");
+      @include cut-corner($medium-cut-corner, white, "top");
       a img{
         width:100%;
         height:auto;
@@ -671,17 +694,16 @@ article p{
 
 //quote block
 .quote-block {
-  @include cut-corner(50px, white, "bottom");
+  @include cut-corner($large-cut-corner, white, "top");
   position: relative;
   background-color: $bg-light-blue;
   text-align: center;
   padding: 75px 20px;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin: 30px 25px;
   @media only screen and (max-width: $small-device-max) {
     padding: 0px 20px;
     padding-bottom: 40px;
-    background-color: $line-blue;
+    background-color: $bg-light-blue;
   }
   & .fp-quote {
     font-size: 24px;
@@ -707,7 +729,7 @@ article p{
 article .entry-header {
   margin-top: 30px;
   & .post-image-container {
-    @include cut-corner(50px, white, "top");
+    @include cut-corner($large-cut-corner, white, "top");
   }
   & .article-date {
     margin-top: 15px;
@@ -753,17 +775,17 @@ img {
     text-decoration: none;
   }
   &:active, &:focus{
-    @include cut-corner(10px, $bg-neon-cta, "top");
+    @include cut-corner($small-cut-corner, $bg-neon-cta, "top");
     border-top: solid 2px $bg-neon-cta;
   }
   &:hover{
-    @include cut-corner(10px, $bg-neon-cta, "top");
+    @include cut-corner($small-cut-corner, $bg-neon-cta, "top");
   }
 }
 
 .active-panel{
-  border-top: solid 2px #0afff9;
-  @include cut-corner(10px, $bg-neon-cta, "top");
+  border-top: solid 2px $bg-neon-cta;
+  @include cut-corner($small-cut-corner, $bg-neon-cta, "top");
 }
 
 //side bar
@@ -779,10 +801,10 @@ img {
     line-height: 1.2;
   }
   .get-involved-triangle {
-    @include cut-corner(17px, white, "top");
+    @include cut-corner($medium-cut-corner, white, "top");
   }
   .get-involved-widget {
-    @include cut-corner(15px, $line-blue, "top");
+    @include cut-corner($medium-cut-corner, $line-blue, "top");
     border: 15px solid $line-blue;
     padding: 0 15px 15px 15px;
     .btn-action {
@@ -790,7 +812,7 @@ img {
     }
   }
   .award-widget {
-    @include cut-corner(15px, white, "top");
+    @include cut-corner($medium-cut-corner, white, "top");
     background-color: $bg-light-grey;
     padding: 0 30px 30px 30px;
     .btn-action {
@@ -798,7 +820,7 @@ img {
     }
   }
   .quote-widget{
-    @include cut-corner(15px, $line-grey, "top");
+    @include cut-corner($medium-cut-corner, $line-grey, "top");
     border-top: 3px solid $line-grey;
     border-bottom: 3px solid $line-grey;
     padding: 30px;
@@ -832,7 +854,7 @@ img {
   & .three-col-articles{
     & .article-module {
       & .image-container {
-        @include cut-corner(20px, $bg-neon-cta, "top");
+        @include cut-corner($medium-cut-corner, $bg-neon-cta, "top");
         border-top: 2px $bg-neon-cta solid;
         margin-bottom: 10px;
         & img {
