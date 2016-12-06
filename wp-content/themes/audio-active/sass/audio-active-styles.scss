@@ -318,9 +318,6 @@ a {
     }
   }
   & .drawer-menu-item {
-    &:hover{
-      @include cut-corner($small-cut-corner, $bg-dark-grey, "top");
-    }
     @media only screen and (max-width: $xsmall-device){
       font-size: 18px;
       height: auto;
@@ -330,9 +327,30 @@ a {
   .drawer-dropdown-menu {
     background-color: #222;
   }
+  > .item > .drawer-menu-item{
+    &:hover{
+      @include cut-corner($small-cut-corner, $bg-dark-grey, "top");
+    }
+  }
+  > .drawer-dropdown > .drawer-menu-item {
+    &:hover, &:focus{
+      @include cut-corner($small-cut-corner, $bg-dark-grey, "top");
+    }
+  }
 }
 
 .drawer--right.drawer-open .drawer-hamburger {
+  &:focus {
+    background-color: $bg-dark-grey;
+    > .drawer-hamburger-icon{
+      &::before{
+        background-color: $bg-neon-cta;
+      }
+      &::after{
+        background-color: $bg-neon-cta;
+      }
+    }
+  }
   right: calc(100% - 40px);
   @media only screen and (min-width: 350px){
     right: 293px;
@@ -352,12 +370,19 @@ a {
   }
 }
 
-.drawer-hamburger:visited{
-  background-color: $bg-dark-grey;
+.drawer-hamburger{
+  &:visited{
+    background-color: $bg-dark-grey;
+  }
+  &:active{
+    background-color: $bg-dark-grey;
+  }
+  &:hover {
+    background-color: $bg-dark-grey;
+  }
 }
-.drawer-hamburger:active{
-  background-color: $bg-dark-grey;
-}
+
+
 //carousel custom-col-md-12 for text
 .carousel-col-md-12 {
   position: relative;
@@ -374,6 +399,11 @@ a {
 }
 
 //carousel
+.hero-module{
+  @media only screen and (max-width: 767px) {
+    background-color: $bg-charcoal-grey;
+  }
+}
 .hero-block{
   padding-left: 0px;
   padding-right: 0px;
@@ -447,17 +477,49 @@ a {
   left: 0;
   @media only screen and (max-width: $small-device-max) {
     left: 0;
-    font-size: 20px;
+    //font-size: 20px;
   }
 }
 .fa-chevron-right {
   right: 0;
   @media only screen and (max-width: $small-device-max) {
     right: 0;
-    font-size: 20px;
+    //font-size: 20px;
+  }
+}
+.carousel-control {
+  width: 45px;
+  & .fa{
+    bottom: 5%;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: $bg-neon-cta;
+    opacity: 1;
+    &.fa-chevron-right{
+      padding-top: 4px;
+      padding-left: 4px;
+    }
+    &.fa-chevron-left{
+      padding-top: 4px;
+      padding-right: 4px;
+    }
   }
 }
 
+.left.carousel-control{
+  right: 0;
+  left: auto;
+  margin-right: calc(3% + 45px);
+}
+.right.carousel-control{
+  margin-right: 3%;
+}
+.carousel-indicators {
+  display: none;
+}
 //home page our work
 // color is charcoal gray
 .our-work-topbox{
