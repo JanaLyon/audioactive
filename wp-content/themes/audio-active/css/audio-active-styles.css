@@ -28,8 +28,8 @@
 /* break-points */
 /* NAV */
 /* Text */
-/* Container backgrounds */
 /* Lines */
+/* Container backgrounds */
 /* Text links */
 /* Our work active styles */
 /* Call to actions */
@@ -51,6 +51,12 @@ h1 {
       font-size: 36px; } }
 
 /**************************************/
+body {
+  background-color: #ebebeb; }
+
+.site-main {
+  background-color: #ffffff; }
+
 hr {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -261,23 +267,19 @@ a.bottom-bar-links {
   .carousel-indicators {
     display: none; } }
 
-.carousel-arrow-bottom {
-  position: relative;
-  background: #252525; }
-  .carousel-arrow-bottom:after {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
+.carousel-cut-corner {
+  overflow: hidden;
+  position: relative; }
+  .carousel-cut-corner::after {
+    content: '';
+    position: absolute;
     height: 0;
     width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(37, 37, 37, 0);
-    border-top-color: #252525;
-    border-width: 20px;
-    margin-left: -20px;
-    z-index: 1; }
+    border-width: 40px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #ebebeb #ebebeb transparent transparent; }
 
 .fa-chevron-left {
   left: 0; }
@@ -488,7 +490,7 @@ article p {
 
 .latest-articles-post {
   position: relative;
-  border-top: 4px solid #f5f5f5;
+  border-top: 4px solid #ebebeb;
   overflow: hidden;
   position: relative;
   margin-top: 40px;
@@ -503,7 +505,7 @@ article p {
     border-style: solid;
     top: 0;
     right: 0;
-    border-color: #f5f5f5 #f5f5f5 transparent transparent; }
+    border-color: #ebebeb #ebebeb transparent transparent; }
   .latest-articles-post .latest-articles {
     margin-top: 20px; }
   .latest-articles-post .article-module .image-container {
@@ -751,7 +753,7 @@ img {
   .textwidget .award-widget {
     overflow: hidden;
     position: relative;
-    background-color: #f5f5f5;
+    background-color: #ebebeb;
     padding: 0 30px 30px 30px; }
     .textwidget .award-widget::after {
       content: '';
@@ -860,7 +862,12 @@ img {
 
 /************************************/
 .site-info {
-  position: relative; }
+  position: relative;
+  background-color: #3f3f3f; }
+
+.site-copyright {
+  position: relative;
+  background-color: #252525; }
 
 @media only screen and (min-width: 768px) {
   .address {
@@ -936,21 +943,8 @@ img {
         margin-right: 0px; } }
 
 .upper-footer {
-  overflow: hidden;
-  position: relative;
-  background-color: #3f3f3f;
   padding: 20px;
   position: relative; }
-  .upper-footer::after {
-    content: '';
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-width: 30px;
-    border-style: solid;
-    top: 0;
-    right: 0;
-    border-color: #252525 #252525 transparent transparent; }
   @media only screen and (max-width: 767px) {
     .upper-footer {
       background-color: #595959;
@@ -979,7 +973,6 @@ img {
 .lower-footer {
   height: 60px;
   padding: 20px 20px 10px 20px;
-  background-color: #252525;
   color: white;
   font-size: 16px; }
   @media only screen and (max-width: 767px) {

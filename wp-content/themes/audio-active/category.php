@@ -12,7 +12,7 @@ get_header();
 
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-			<div class="container-fluid">
+			<div class="container">
 				<?php
 				if (have_posts()) {
 				//check to see if this is News

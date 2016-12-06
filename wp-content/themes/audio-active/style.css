@@ -894,3 +894,18 @@ object {
 .gallery-caption {
 	display: block;
 }
+/**/
+div.wpforms-container-full .wpforms-form button[type=submit] {
+	font-size: 14px;
+	padding: 3px 9px 3px 15px;
+	color: #252525;
+	background-color: #0afff9;
+	border-radius: 20px; }
+div.wpforms-container-full .wpforms-form button[type=submit]:hover, div.wpforms-container-full .wpforms-form button[type=submit]:focus, div.wpforms-container-full .wpforms-form button[type=submit].focus {
+	color: #252525;
+	text-decoration: none;
+	background-color: #09e5e0; }
+div.wpforms-container-full .wpforms-form button[type=submit]:active, div.wpforms-container-full .wpforms-form button[type=submit].active {
+	color: #0afff9;
+	background-color: #252525;
+}

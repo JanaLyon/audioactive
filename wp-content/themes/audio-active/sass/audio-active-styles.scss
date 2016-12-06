@@ -38,6 +38,10 @@ $custom-device: 320px;
 $font-stack: Lato, sans-serif;
 $mobile-p-fonts : 16px;
 $desktop-p-fonts : 24px;
+/* Lines */
+$line-grey: #ebebeb;
+$line-blue: #c3fff9;
+
 /* Container backgrounds */
 $bg-black: #252525;
 $bg-dark-grey: #3f3f3f;
@@ -46,10 +50,8 @@ $bg-light-grey: #f5f5f5;
 $bg-neon-cta: #0afff9;
 $bg-neon-cta-hover: #09e5e0;
 $bg-light-blue: #e6ffff;
+$bg-light-grey:$line-grey;
 
-/* Lines */
-$line-grey: #ebebeb;
-$line-blue: #c3fff9;
 
 /* Text links */
 $textlink-inactive: #c3fff9;
@@ -134,6 +136,12 @@ h1 {
 }
 
 /**************************************/
+body{
+  background-color: $bg-light-grey;
+}
+.site-main{
+  background-color: #ffffff;
+}
 hr {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -144,9 +152,6 @@ hr {
   font-weight: 700;
 }
 /**************************************/
-
-
-
 //main button style
 .button-container{
   display: inline-block;
@@ -409,8 +414,8 @@ a {
     display: none;
   }
 }
-.carousel-arrow-bottom {
-  @include triangle-bottom($bg-black);
+.carousel-cut-corner {
+  @include cut-corner(40px, $bg-light-grey, "top");
 }
 
 .fa-chevron-left {
@@ -883,6 +888,11 @@ img {
 //footer
 .site-info {
   position: relative;
+  background-color: $bg-dark-grey;
+}
+.site-copyright {
+  position: relative;
+  background-color: $bg-black;
 }
 .address {
   @media only screen and (min-width: $small-device-min)  {
@@ -964,8 +974,6 @@ img {
   }
 }
 .upper-footer {
-  @include cut-corner(30px, $bg-black, "top");
-  background-color: $bg-dark-grey;
   padding: 20px;
   position: relative;
   @media only screen and (max-width: $small-device-max) {
@@ -1004,7 +1012,6 @@ img {
   @media only screen and (max-width: $small-device-max) {
     padding: 20px 5px 10px 5px;
   }
-  background-color: $bg-black;
   color: white;
   font-size: 16px;
 }

@@ -7,7 +7,7 @@ $number_of_posts = $hero_query->post_count;
 $counter = 0;
 ?>
 
-<div id="slider" class="carousel slide carousel-arrow-bottom" data-interval="6000" data-ride="carousel">
+<div id="slider" class="carousel slide carousel-cut-corner" data-interval="6000" data-ride="carousel">
 	<!-- Indicators -->
 
 	<ol class="carousel-indicators">

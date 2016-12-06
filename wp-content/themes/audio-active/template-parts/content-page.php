@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-xs-12 hero-block">
 			<?php get_template_part('template-parts/image_element', 'page'); ?>

@@ -1,6 +1,9 @@
 <div class="our-work-bottom-arrow">
 	<div class="row our-work-row">
-		<div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-8 set-image-padding">
+		<div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-4 set-text-padding">
+			<?php the_content(); ?>
+		</div>
+		<div class="col-xs-12 col-sm-8 col-sm-pull-4 col-md-8 set-image-padding">
 			<a class="article-image"">
 			<?php
 			if (has_post_thumbnail()) {
@@ -10,9 +13,6 @@
 			}
 			?>
 			</a>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-4 set-text-padding">
-			<?php the_content(); ?>
 		</div>
 	</div>
 </div>
