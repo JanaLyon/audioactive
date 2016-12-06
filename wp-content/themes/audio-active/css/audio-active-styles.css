@@ -173,6 +173,20 @@ a.bottom-bar-links {
     height: auto;
     padding: 8px 20px 7px 40px; } }
 
+.drawer-menu .drawer-menu-item:hover {
+  overflow: hidden;
+  position: relative; }
+  .drawer-menu .drawer-menu-item:hover::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 10px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #3f3f3f #3f3f3f transparent transparent; }
+
 @media only screen and (max-width: 480px) {
   .drawer-menu .drawer-menu-item {
     font-size: 18px;
@@ -199,6 +213,12 @@ a.bottom-bar-links {
   @media only screen and (min-width: 480px) {
     .drawer-nav {
       width: 365px; } }
+
+.drawer-hamburger:visited {
+  background-color: #3f3f3f; }
+
+.drawer-hamburger:active {
+  background-color: #3f3f3f; }
 
 .carousel-col-md-12 {
   position: relative;
