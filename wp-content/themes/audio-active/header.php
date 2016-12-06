@@ -37,7 +37,9 @@
 				<!-- container for donate and social -->
 				<div class="pull-right hidden-xs">
 					<!-- donate -->
-					<a class="btn btn-action" data-toggle="tooltip" title="Donate" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive" target="_blank">Donate <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<div class="button-container">
+						<a class="btn btn-action" data-toggle="tooltip" title="Donate" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive" target="_blank">Donate <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					</div>
 					<!-- soundcloud -->
 					<a class="btn top-bar-links" data-toggle="tooltip" title="Soundcloud" href="https://soundcloud.com/audio_active" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
 					<!-- facebook -->

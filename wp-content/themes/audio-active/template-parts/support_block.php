@@ -16,7 +16,9 @@
 					<a href="https://www.youthmusic.org.uk/"><img src="/wp-content/themes/audio-active/images/youthMakers_logo.jpg" alt="Youth Makers Logo" width="" class="supported-by-images" /></a>
 				</div>
 			</div>
-			<a class="btn btn-action" href="#">Support us <i class="fa fa-chevron-right"></i></a>
+			<div class="button-container">
+				<a class="btn btn-action" href="#"><p>Support us </p><i class="fa fa-chevron-right"></i></a>
+			</div>
 	</div>
 	<div class="col-xs-12 col-md-6 fund-block">
 		<div class="row">
@@ -25,7 +27,9 @@
 					<p>Much of our work can only materialise as a result of the generous donations we have received from members of the public and businesses alike.
 					</p>
 					<?php ?>
-					<a class="btn btn-action" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive">Make a donation <i class="fa fa-chevron-right"></i></a>
+					<div class="button-container">
+						<a class="btn btn-action" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive"><p>Make a donation </p><i class="fa fa-chevron-right"></i></a>
+					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 make-dontation">
 					<a href="https://mydonate.bt.com/donation/donate.html?charity=audioactive"><img src="/wp-content/themes/audio-active/images/mydonate.gif" alt="Donate to AudioActive" width="" class="donation-card-image" /></a>
