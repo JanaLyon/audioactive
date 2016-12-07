@@ -54,7 +54,7 @@ $counter = 0;
 <!-- Controls -->
 <div class="carousel-counter">
 	<div class="slide-number-text-container">
-		<p id="countNumb">1&nbsp;</p><p><?php echo "of " .$counter; ?></p>
+		<i id="countNumb">1&nbsp;</i><i><?php echo "of " .$counter; ?></i>
 	</div>
 </div>
 <a class="left carousel-control" href="#slider" role="button" data-slide="prev">

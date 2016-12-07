@@ -29,6 +29,7 @@
 /* NAV */
 /* Text */
 /* Lines */
+/* Carousel*/
 /* Cut corner sizes*/
 /* Container backgrounds */
 /* Text links */
@@ -122,8 +123,8 @@ a.top-bar-links {
   float: left; }
 
 .social-links-bottom {
-  background-color: #595959;
   padding-bottom: 10px;
+  margin-top: 10px;
   margin-left: -15px;
   margin-right: -15px; }
 
@@ -257,9 +258,9 @@ a.bottom-bar-links {
       padding-right: 0px;
       padding-left: 0px; } }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .hero-module {
-    background-color: #595959; } }
+    background-color: #515151; } }
 
 .hero-block {
   padding-left: 0px;
@@ -361,6 +362,8 @@ a.bottom-bar-links {
     bottom: 6%;
     top: auto;
     color: white; }
+    .carousel-counter > .slide-number-text-container > i {
+      font-size: 0.8em; }
 
 .carousel-control {
   width: 45px; }
@@ -671,6 +674,8 @@ article p {
         font-size: 16px; } }
   .fund-block .btn {
     margin-top: 20px; }
+    .fund-block .btn p {
+      font-size: 14px; }
 
 .make-dontation {
   margin-top: 20px;
@@ -981,7 +986,7 @@ img {
     padding-left: 10px;
     padding-right: 0px; } }
 
-@media only screen and (min-width: 510px) and (max-width: 767px) {
+@media only screen and (min-width: 540px) and (max-width: 767px) {
   .address {
     margin-top: -105px; } }
 
@@ -1053,7 +1058,6 @@ img {
   position: relative; }
   @media only screen and (max-width: 767px) {
     .upper-footer {
-      background-color: #595959;
       padding: 20px 5px; } }
   @media only screen and (min-width: 992px) {
     .upper-footer {
