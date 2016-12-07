@@ -52,6 +52,11 @@ $counter = 0;
 </div>
 
 <!-- Controls -->
+<div class="carousel-counter">
+	<div class="slide-number-text-container">
+		<p id="countNumb">1&nbsp;</p><p><?php echo "of " .$counter; ?></p>
+	</div>
+</div>
 <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
 	<i class="fa fa-chevron-left" aria-hidden="true"></i>
 	<span class="sr-only">Previous</span>
@@ -68,6 +73,12 @@ $counter = 0;
 		});
 		jQuery("#slider").swipeleft(function () {
 			jQuery(this).carousel('next');
+		});
+		jQuery("#slider").on('slide.bs.carousel', function (e) {
+			var slideFrom = $(this).find('.active').index();
+			var slideTo = $(e.relatedTarget).index();
+			var countText = slideTo + 1 + "&nbsp";
+			document.getElementById("countNumb").innerHTML = countText;
 		});
 	});
 </script>

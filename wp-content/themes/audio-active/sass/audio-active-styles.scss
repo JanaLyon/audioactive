@@ -351,6 +351,11 @@ a {
       }
     }
   }
+  &:hover {
+    > .drawer-hamburger-icon {
+      background-color: $bg-dark-grey;
+    }
+  }
   right: calc(100% - 40px);
   @media only screen and (min-width: 350px){
     right: 293px;
@@ -487,6 +492,24 @@ a {
     //font-size: 20px;
   }
 }
+
+.carousel-counter{
+  width: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  margin-right: calc(45px + 45px + 3%);
+  & > .slide-number-text-container{
+    display: flex;
+    position: absolute;
+    bottom: 6%;
+    top: auto;
+    color: white;
+  }
+}
+
 .carousel-control {
   width: 45px;
   & .fa{

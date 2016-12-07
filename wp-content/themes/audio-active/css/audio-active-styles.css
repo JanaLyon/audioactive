@@ -218,6 +218,8 @@ a.bottom-bar-links {
       background-color: #0afff9; }
     .drawer--right.drawer-open .drawer-hamburger:focus > .drawer-hamburger-icon::after {
       background-color: #0afff9; }
+  .drawer--right.drawer-open .drawer-hamburger:hover > .drawer-hamburger-icon {
+    background-color: #3f3f3f; }
   @media only screen and (min-width: 350px) {
     .drawer--right.drawer-open .drawer-hamburger {
       right: 293px; } }
@@ -343,6 +345,22 @@ a.bottom-bar-links {
   @media only screen and (max-width: 767px) {
     .fa-chevron-right {
       right: 0; } }
+
+.carousel-counter {
+  width: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  margin-right: calc(45px + 45px + 3%); }
+  .carousel-counter > .slide-number-text-container {
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 6%;
+    top: auto;
+    color: white; }
 
 .carousel-control {
   width: 45px; }
