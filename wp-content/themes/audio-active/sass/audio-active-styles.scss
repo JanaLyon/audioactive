@@ -231,6 +231,11 @@ a {
   }
 }
 
+.site-footer{
+  @media only screen and (max-width: $small-device-min) {
+    @include  cut-corner($large-cut-corner, $bg-black, "top");
+  }
+}
 //footer social link container
 .footer-social-link-container {
   width: 20%;
