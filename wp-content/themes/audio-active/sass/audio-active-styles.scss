@@ -1016,6 +1016,9 @@ img {
 //footer
 .site-info {
   position: relative;
+  @media only screen and (min-width: $small-device-min){
+    margin-bottom: 20px;
+  }
 }
 .site-copyright {
   position: relative;
@@ -1043,7 +1046,7 @@ img {
 .email{
   padding-left: 15px;
   padding-right: 15px;
-  @media only screen and (min-width:510px) and (max-width: 767px)  {
+  @media only screen and (min-width:540px) and (max-width: 767px)  {
     margin-top: -25px;
   }
   @media only screen and (min-width: $small-device-min)  {
@@ -1094,7 +1097,7 @@ img {
     }
   }
   & > .email-custom-class {
-    @media only screen and (min-width:510px) and (max-width: 767px)  {
+    @media only screen and (min-width:540px) and (max-width: 767px)  {
       margin-right: 0;
     }
   }
@@ -1148,10 +1151,10 @@ img {
 }
 
 .block-margin {
-  @media only screen and (min-width:320px) and (max-width: 509px)  {
+  @media only screen and (min-width:320px) and (max-width: 539px)  {
     margin-top: 20px;
   }
-  @media only screen and (min-width:510px) and (max-width: 767px)  {
+  @media only screen and (min-width:540px) and (max-width: 767px)  {
     margin-top: 20px;
   }
   @media only screen and (min-width: $small-device-min) {
@@ -1172,7 +1175,7 @@ img {
 }
 
 .custom-breakpoint {
-  @media only screen and (min-width:510px) and (max-width: 767px)  {
+  @media only screen and (min-width:540px) and (max-width: 767px)  {
     width: 50%;
   }
 }
