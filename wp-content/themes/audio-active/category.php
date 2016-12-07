@@ -11,8 +11,8 @@ get_header();
 	<style>.breadcrumbs {display: none;}</style>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-			<div class="container">
+		<div id="content" role="main">
+			<div class="container content-bg">
 				<?php
 				if (have_posts()) {
 				//check to see if this is News

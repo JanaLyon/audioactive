@@ -4,10 +4,8 @@ $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 $nextpost = 0;
 ?>
 <div class="row">
-	<div class="col-xs-12 hero-block">
 		<?php get_template_part('template-parts/image_element', 'category'); ?>
 		<?php get_template_part('template-parts/text_element', 'category'); ?>
-	</div>
 </div>
 <div class="row">
 	<div class="our-work-block">

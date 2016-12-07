@@ -6,12 +6,6 @@
  * Time: 16:04
  */
 ?>
-<!-- full width letterbox image with text over it -->
-<!-- sidebar underneath image -->
-<!-- line with cut corner in grey -->
-<!-- loop through collapsible articles -->
-
-
 <?php
 $counter = 1;
 function is_first_post($counter)
@@ -19,26 +13,25 @@ function is_first_post($counter)
 	$str_bool = "true";
 	$collapse_class = "collapsed";
 	if ($counter > 1) {
-        $str_bool = "false";
-        $collapse_class = "collapsed";
-    }
-    $postObj = (object)['is_expanded' => $str_bool, 'state_class' => $collapse_class];
+		$str_bool = "false";
+		$collapse_class = "collapsed";
+	}
+	$postObj = (object)['is_expanded' => $str_bool, 'state_class' => $collapse_class];
 	return $postObj;
 }
+
 function is_first_active_post($counter)
 {
-    if ($counter == 1) {
-        $collapse_class = "active-panel";
-        return $collapse_class;
-    }
+	if ($counter == 1) {
+		$collapse_class = "active-panel";
+		return $collapse_class;
+	}
 }
 
 ?>
 <div class="row">
-	<div class="col-xs-12 hero-block">
-		<?php get_template_part('template-parts/image_element', 'category'); ?>
-		<?php get_template_part('template-parts/text_element', 'category'); ?>
-	</div>
+	<?php get_template_part('template-parts/image_element', 'category'); ?>
+	<?php get_template_part('template-parts/text_element', 'category'); ?>
 </div>
 <div class="row">
 	<div class="col-md-8">
@@ -57,16 +50,17 @@ function is_first_active_post($counter)
 								   aria-expanded="<?php echo is_first_post($counter)->is_expanded; ?>"
 								   aria-controls="collapse<?php echo $counter; ?>"
 								   class="<?php echo is_first_post($counter)->state_class; ?>">
-									<?php the_title(); ?><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+									<?php the_title(); ?><i
+											class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
 								</a>
 							</h4>
 						</div>
 						<div id="collapse<?php echo $counter;
-						?>" class="panel-collapse collapse<?php echo $counter==1?' in':''?>" role="tabpanel"
+						?>" class="panel-collapse collapse<?php echo $counter == 1 ? ' in' : '' ?>" role="tabpanel"
 							 aria-labelledby="heading<?php echo $counter ?>">
 							<div class="panel-body">
 								<?php the_excerpt(); ?>
-								<?php get_template_part('template-parts/read_more_link', 'none')?>
+								<?php get_template_part('template-parts/read_more_link', 'none') ?>
 							</div>
 						</div>
 					</div>
@@ -83,11 +77,11 @@ function is_first_active_post($counter)
 	</div>
 </div>
 <script>
-    //js for active element
-    (function () {
-        $('.panel-group .panel-ourwork a').click(function () {
-            $('.panel-group .active-panel').toggleClass('active-panel');
-            $(this).parent().parent().parent().toggleClass("active-panel");
-        });
-    })();
+	//js for active element
+	(function () {
+		$('.panel-group .panel-ourwork a').click(function () {
+			$('.panel-group .active-panel').toggleClass('active-panel');
+			$(this).parent().parent().parent().toggleClass("active-panel");
+		});
+	})();
 </script>

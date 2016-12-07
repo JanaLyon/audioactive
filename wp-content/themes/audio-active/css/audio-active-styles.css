@@ -451,9 +451,22 @@ a.bottom-bar-links {
       padding-left: 20px;
       padding-right: 20px; } }
 
-.page-image img {
-  width: 100%;
-  height: auto; }
+.page-image {
+  overflow: hidden;
+  position: relative; }
+  .page-image::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 30px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #ebebeb #ebebeb transparent transparent; }
+  .page-image img {
+    width: 100%;
+    height: auto; }
 
 .no-padding-header {
   padding-left: 0px;
@@ -649,10 +662,10 @@ article p {
   overflow: hidden;
   position: relative;
   position: relative;
-  background-color: #e6ffff;
+  background-color: #0afff9;
   text-align: center;
-  padding: 75px 20px;
-  margin: 30px 25px; }
+  padding: 35px 15px;
+  margin: 40px 25px; }
   .quote-block::after {
     content: '';
     position: absolute;
@@ -667,13 +680,13 @@ article p {
     .quote-block {
       padding: 0px 20px;
       padding-bottom: 40px;
-      background-color: #e6ffff; } }
+      background-color: #0afff9; } }
   .quote-block .fp-quote {
     font-size: 24px;
     line-height: 1.2;
     font-weight: 400;
-    width: 65%;
-    margin: 40px auto; }
+    width: 90%;
+    margin: 30px auto; }
     @media only screen and (max-width: 767px) {
       .quote-block .fp-quote {
         width: 100%;
@@ -861,14 +874,18 @@ img {
 
 .our-work-block {
   margin-top: 40px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px; }
   .our-work-block .ourwork-articles-button {
     padding-bottom: 20px;
     border-bottom: solid 1px #ebebeb; }
 
 .get-involved-block {
   margin-top: 40px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px; }
   .get-involved-block .three-col-articles .article-module .image-container {
     overflow: hidden;
     position: relative;
@@ -929,11 +946,15 @@ img {
 
 /************************************/
 .site-info {
-  position: relative;
-  background-color: #3f3f3f; }
+  position: relative; }
 
 .site-copyright {
-  position: relative;
+  position: relative; }
+
+.site-info-bg {
+  background-color: #3f3f3f; }
+
+.site-copyright-bg {
   background-color: #252525; }
 
 @media only screen and (min-width: 768px) {

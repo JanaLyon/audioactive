@@ -1,5 +1,5 @@
-<div class="row">
 <div class="our-work-cut-corner">
+	<div class="row">
 		<div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-4 set-text-padding">
 			<?php the_content(); ?>
 		</div>
@@ -14,5 +14,5 @@
 			?>
 			</a>
 		</div>
-		</div>
+	</div>
 </div>

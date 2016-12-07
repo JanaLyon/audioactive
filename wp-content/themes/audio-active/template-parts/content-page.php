@@ -8,12 +8,10 @@
  */
 
 ?>
-<div class="container">
+<div class="container content-bg">
 	<div class="row">
-		<div class="col-xs-12 hero-block">
 			<?php get_template_part('template-parts/image_element', 'page'); ?>
 			<?php get_template_part('template-parts/text_element', 'page'); ?>
-		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8">

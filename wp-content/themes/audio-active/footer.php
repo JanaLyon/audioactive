@@ -14,7 +14,7 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="container-fluid">
+	<div class="container-fluid site-info-bg">
 		<div class="site-info">
 			<div class="row">
 				<div class="col-xs-12">
@@ -123,7 +123,9 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .site-info -->
+	</div><!-- .container-fluid -->
 		<!-- .container -->
+	<div class="container-fluid site-copyright-bg">
 		<div class="site-copyright">
 			<div class="row">
 				<div class="col-xs-12">
