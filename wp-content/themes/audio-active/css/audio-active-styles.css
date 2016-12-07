@@ -118,6 +118,21 @@ a.top-bar-links {
   a.top-bar-links:hover {
     color: white; }
 
+@media only screen and (max-width: 768px) {
+  .site-footer {
+    overflow: hidden;
+    position: relative; }
+    .site-footer::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 30px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #252525 #252525 transparent transparent; } }
+
 .footer-social-link-container {
   width: 20%;
   float: left; }
@@ -983,20 +998,20 @@ img {
 .site-copyright-bg {
   background-color: #252525; }
 
-@media only screen and (min-width: 768px) {
-  .address {
-    margin-top: -105px;
-    padding-left: 10px;
-    padding-right: 0px; } }
-
-@media only screen and (min-width: 540px) and (max-width: 767px) {
-  .address {
-    margin-top: -105px; } }
-
-@media only screen and (min-width: 992px) {
-  .address {
-    margin-top: -5px;
-    padding-left: 11px; } }
+.address {
+  margin-top: 10px; }
+  @media only screen and (min-width: 768px) {
+    .address {
+      margin-top: -105px;
+      padding-left: 10px;
+      padding-right: 0px; } }
+  @media only screen and (min-width: 540px) and (max-width: 767px) {
+    .address {
+      margin-top: -105px; } }
+  @media only screen and (min-width: 992px) {
+    .address {
+      margin-top: -5px;
+      padding-left: 11px; } }
 
 .email {
   padding-left: 15px;
@@ -1047,9 +1062,11 @@ img {
     @media only screen and (max-width: 767px) {
       .info-symbols > .fa-phone {
         margin-left: 0px; } }
-  @media only screen and (min-width: 540px) and (max-width: 767px) {
-    .info-symbols > .email-custom-class {
-      margin-right: 0; } }
+  .info-symbols > .email-custom-class {
+    text-decoration: underline; }
+    @media only screen and (min-width: 540px) and (max-width: 767px) {
+      .info-symbols > .email-custom-class {
+        margin-right: 0; } }
   .info-symbols > a {
     margin-right: 20px; }
     @media only screen and (min-width: 992px) {

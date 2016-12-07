@@ -231,6 +231,11 @@ a {
   }
 }
 
+.site-footer{
+  @media only screen and (max-width: $small-device-min) {
+    @include  cut-corner($large-cut-corner, $bg-black, "top");
+  }
+}
 //footer social link container
 .footer-social-link-container {
   width: 20%;
@@ -1030,6 +1035,7 @@ img {
   background-color: $bg-black;
 }
 .address {
+  margin-top: 10px;
   @media only screen and (min-width: $small-device-min)  {
     margin-top: -105px;
     padding-left: 10px;
@@ -1097,6 +1103,7 @@ img {
     }
   }
   & > .email-custom-class {
+    text-decoration: underline;
     @media only screen and (min-width:540px) and (max-width: 767px)  {
       margin-right: 0;
     }
