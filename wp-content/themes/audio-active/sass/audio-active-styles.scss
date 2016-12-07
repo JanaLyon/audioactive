@@ -1098,6 +1098,7 @@ img {
     }
   }
   & > .email-custom-class {
+    text-decoration: underline;
     @media only screen and (min-width:540px) and (max-width: 767px)  {
       margin-right: 0;
     }
