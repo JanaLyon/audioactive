@@ -1030,6 +1030,7 @@ img {
   background-color: $bg-black;
 }
 .address {
+  margin-top: 10px;
   @media only screen and (min-width: $small-device-min)  {
     margin-top: -105px;
     padding-left: 10px;
