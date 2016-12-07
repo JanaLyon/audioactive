@@ -29,7 +29,7 @@ get_header(); ?>
 					if( is_category('Career Guides') ) :
 					
 						get_template_part( 'template-parts/career-guide-portal', 'none' );				
-						get_template_part( 'template-parts/pagination', 'none' );
+						//get_template_part( 'template-parts/ca-pagination', 'none' );
 
 					else :
 
