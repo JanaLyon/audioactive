@@ -179,6 +179,9 @@ a.bottom-bar-links {
   .drawer.drawer-open .drawer-toggle .drawer-hamburger-icon::after {
     top: 0; } }
 
+.drawer-open .drawer-overlay {
+  display: none; }
+
 .drawer-menu :focus {
   color: white;
   text-decoration: none; }
@@ -411,6 +414,10 @@ a.bottom-bar-links {
 
 .our-work-topbox {
   color: white; }
+  @media only screen and (max-width: 768px) {
+    .our-work-topbox {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .our-work-bottombox {
   overflow: hidden;
@@ -438,8 +445,12 @@ a.bottom-bar-links {
 
 .our-work-row {
   background-color: #595959;
-  margin-left: 25px;
-  margin-right: 25px; }
+  margin-left: -15px;
+  margin-right: -15px; }
+  @media only screen and (min-width: 768px) {
+    .our-work-row {
+      margin-left: 25px;
+      margin-right: 25px; } }
 
 .our-work-cut-corner {
   border-top: solid 2px #0afff9;

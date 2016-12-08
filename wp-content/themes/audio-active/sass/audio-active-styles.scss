@@ -307,7 +307,9 @@ a {
   }
 }
 
-
+.drawer-open .drawer-overlay {
+  display: none;
+}
 
 .drawer-menu {
   :focus {
@@ -556,6 +558,10 @@ a {
 // color is charcoal gray
 .our-work-topbox{
   color: white;
+  @media only screen and (max-width: $small-device-min){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .our-work-bottombox{
   @include cut-corner($medium-cut-corner, $bg-charcoal-grey, "top");
@@ -574,8 +580,12 @@ a {
 }
 .our-work-row {
   background-color: $bg-charcoal-grey;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+  @media only screen and (min-width: $small-device-min) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 }
 .our-work-cut-corner {
   border-top: solid 2px $bg-neon-cta;
