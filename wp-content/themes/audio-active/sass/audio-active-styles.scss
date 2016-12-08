@@ -435,6 +435,7 @@ a {
   }
   & .row {
     margin-right: 0px;
+    margin-left: 0px;
   }
   .carousel-text-background {
     position: absolute;
@@ -452,9 +453,9 @@ a {
   .carousel-text {
     padding: 15px 40px 40px 40px;
     color: white;
-    @media only screen and (max-width: $medium-device) {
-      padding-left: 15px;
-      padding-right: 15px;
+    @media only screen and (max-width: $small-device-max) {
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
   .carousel-body {
@@ -512,9 +513,12 @@ a {
   & > .slide-number-text-container{
     display: flex;
     position: absolute;
-    bottom: 6%;
+    bottom: 8%;
     top: auto;
     color: white;
+    @media only screen and (max-width: $small-device-min) {
+      bottom: 5%;
+    }
     > i {
       font-size: 0.8em;
     }
@@ -528,6 +532,9 @@ a {
   bottom: 6%;
   top: auto;
   font-size: 25px;
+  @media only screen and (max-width: $small-device-max) {
+    bottom: 3%;
+  }
   & .fa, .glyphicon{
     width: 40px;
     height: 40px;
@@ -629,8 +636,9 @@ a {
   }
 }
 .set-text-padding{
-  padding-left: 40px;
-  @media only screen and (max-width: $small-device-max) {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media only screen and (max-width: $small-device-min) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -739,16 +747,43 @@ article p{
   margin-top: 40px;
   margin-bottom: 40px;
   padding-top: 15px;
+  @media only screen and (max-width: $medium-device) {
+    margin-bottom: 10px;
+  }
   & .latest-articles {
     margin-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   & .article-module {
+    @media only screen and (max-width: $small-device-min) {
+      margin-bottom: 20px;
+    }
     & .image-container {
-      @include cut-corner($medium-cut-corner, white, "top");
+      @include cut-corner($small-cut-corner, white, "top");
       a img{
         width:100%;
         height:auto;
+        @include scale-effect(1);
+        &:hover {
+          @include scale-effect(1.2);
+        }
       }
+    }
+  }
+  & .button-container{
+    margin-top: 10px;
+    & p {
+      margin-bottom: 0;
+    }
+  }
+  & .article-title{
+    margin-top: 10px;
+    margin-bottom: 0;
+    & a {
+      margin-bottom: 0;
+      color: #252525;
+      text-decoration: none;
     }
   }
 }
@@ -813,6 +848,11 @@ article p{
 .make-dontation{
   margin-top: 20px;
   margin-bottom: 20px;
+  @media only screen and (max-width: $small-device-max) {
+    width: 50%;
+    margin-top: -29px;
+    margin-left: 50%;
+  }
 }
 
 //quote block
@@ -824,9 +864,11 @@ article p{
   padding: 35px 15px;
   margin: 40px 25px;
   @media only screen and (max-width: $small-device-max) {
-    padding: 0px 20px;
+    @include cut-corner($medium-cut-corner, white, "top");
+    padding: 10px 20px 0px 20px;
     padding-bottom: 40px;
     background-color: $bg-light-blue;
+    margin: 0px 5px 40px 5px;
   }
   & .fp-quote {
     font-size: 24px;
@@ -960,12 +1002,16 @@ img {
     }
   }
 }
-
+//for news page
 .our-work-block{
   margin-top: 40px;
   margin-bottom: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  @media only screen and (min-width: $small-device-min) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .ourwork-articles-button{
     padding-bottom: 20px;
     border-bottom: solid 1px #ebebeb;
@@ -1039,13 +1085,23 @@ img {
   position: relative;
   @media only screen and (min-width: $small-device-min){
     margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 .site-copyright {
   position: relative;
+  @media only screen and (max-width: $small-device-min){
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 .site-info-bg {
   background-color: $bg-dark-grey;
+  @media only screen and (max-width: $small-device-min) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .site-copyright-bg {
   background-color: $bg-black;
