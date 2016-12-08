@@ -58,11 +58,11 @@ $counter = 0;
 	</div>
 </div>
 <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
-	<i class="fa fa-chevron-left" aria-hidden="true"></i>
+	<span class="glyphicon glyphicon-menu-left"></span>
 	<span class="sr-only">Previous</span>
 </a>
 <a class="right carousel-control" href="#slider" role="button" data-slide="next">
-	<i class="fa fa-chevron-right" aria-hidden="true"></i>
+	<span class="glyphicon glyphicon-menu-right"></span>
 	<span class="sr-only">Next</span>
 </a>
 </div>

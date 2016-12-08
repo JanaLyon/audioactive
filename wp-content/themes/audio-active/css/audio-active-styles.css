@@ -350,16 +350,16 @@ a.bottom-bar-links {
     right: 0;
     border-color: #ebebeb #ebebeb transparent transparent; }
 
-.fa-chevron-left {
+.fa-chevron-left, .glyphicon-menu-left {
   left: 0; }
   @media only screen and (max-width: 767px) {
-    .fa-chevron-left {
+    .fa-chevron-left, .glyphicon-menu-left {
       left: 0; } }
 
-.fa-chevron-right {
+.fa-chevron-right, .glyphicon-menu-right {
   right: 0; }
   @media only screen and (max-width: 767px) {
-    .fa-chevron-right {
+    .fa-chevron-right, .glyphicon-menu-right {
       right: 0; } }
 
 .carousel-counter {
@@ -381,22 +381,29 @@ a.bottom-bar-links {
       font-size: 0.8em; }
 
 .carousel-control {
-  width: 45px; }
-  .carousel-control .fa {
-    bottom: 5%;
-    top: auto;
+  width: 45px;
+  width: 45px;
+  position: absolute;
+  bottom: 6%;
+  top: auto;
+  font-size: 25px; }
+  .carousel-control .fa, .carousel-control .glyphicon {
     width: 40px;
     height: 40px;
     border: 1px solid white;
     border-radius: 50%;
     color: #0afff9;
     opacity: 1; }
-    .carousel-control .fa.fa-chevron-right {
-      padding-top: 4px;
-      padding-left: 4px; }
-    .carousel-control .fa.fa-chevron-left {
-      padding-top: 4px;
-      padding-right: 4px; }
+
+.glyphicon-menu-left:before {
+  position: absolute;
+  top: 6px;
+  left: 7px; }
+
+.glyphicon-menu-right:before {
+  position: absolute;
+  top: 6px;
+  left: 7px; }
 
 .left.carousel-control {
   right: 0;
