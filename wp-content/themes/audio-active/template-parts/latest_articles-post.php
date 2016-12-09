@@ -16,7 +16,7 @@ $recent_query = new WP_Query($recentPostArgs);
 			<?php
 			while ($recent_query->have_posts()) {
 				$recent_query->the_post();
-				get_template_part('template-parts/article_module', 'latest_post');
+				get_template_part('template-parts/article_module', 'post_latest_post');
 			}
 			wp_reset_postdata();
 			?>

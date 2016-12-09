@@ -127,6 +127,7 @@ function custom_img_size_setup() {
 	add_image_size( 'article', 770, 433, array( 'center', 'center' ) );
 	add_image_size( 'our-work-home', 856, 482, array( 'center', 'center' ) );
 	add_image_size( 'our-work-about', 370, 278, array( 'center', 'center' ) );
+    add_image_size( 'latest-articles-post', 370, 208, array( 'center', 'center' ) );
 }
 
 /**

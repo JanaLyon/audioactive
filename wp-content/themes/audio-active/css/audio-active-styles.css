@@ -199,7 +199,9 @@ a.bottom-bar-links {
     padding: 8px 20px 7px 20px; } }
 
 .drawer-menu .drawer-dropdown-menu {
-  background-color: #222; }
+  background-color: #2a2a2a; }
+  .drawer-menu .drawer-dropdown-menu > .item > .drawer-menu-item {
+    background-color: #2a2a2a; }
 
 .drawer-menu > .item > .drawer-menu-item:hover {
   overflow: hidden;
@@ -215,10 +217,11 @@ a.bottom-bar-links {
     right: 0;
     border-color: #3f3f3f #3f3f3f transparent transparent; }
 
-.drawer-menu > .drawer-dropdown > .drawer-menu-item:hover, .drawer-menu > .drawer-dropdown > .drawer-menu-item:focus {
+.drawer-menu > .drawer-dropdown > .drawer-menu-item.active-drawer {
+  background-color: #2a2a2a;
   overflow: hidden;
   position: relative; }
-  .drawer-menu > .drawer-dropdown > .drawer-menu-item:hover::after, .drawer-menu > .drawer-dropdown > .drawer-menu-item:focus::after {
+  .drawer-menu > .drawer-dropdown > .drawer-menu-item.active-drawer::after {
     content: '';
     position: absolute;
     height: 0;
@@ -229,13 +232,31 @@ a.bottom-bar-links {
     right: 0;
     border-color: #3f3f3f #3f3f3f transparent transparent; }
 
+.drawer-menu > .drawer-dropdown > .drawer-menu-item:hover {
+  overflow: hidden;
+  position: relative; }
+  .drawer-menu > .drawer-dropdown > .drawer-menu-item:hover::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-width: 10px;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    border-color: #3f3f3f #3f3f3f transparent transparent; }
+
+.drawer-hamburger {
+  transition: right 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translate3d(0, 0, 0); }
+
 .drawer--right.drawer-open .drawer-hamburger {
   right: calc(100% - 40px); }
-  .drawer--right.drawer-open .drawer-hamburger:focus {
+  .drawer--right.drawer-open .drawer-hamburger.active-burger {
     background-color: #3f3f3f; }
-    .drawer--right.drawer-open .drawer-hamburger:focus > .drawer-hamburger-icon::before {
+    .drawer--right.drawer-open .drawer-hamburger.active-burger > .drawer-hamburger-icon::before {
       background-color: #0afff9; }
-    .drawer--right.drawer-open .drawer-hamburger:focus > .drawer-hamburger-icon::after {
+    .drawer--right.drawer-open .drawer-hamburger.active-burger > .drawer-hamburger-icon::after {
       background-color: #0afff9; }
   .drawer--right.drawer-open .drawer-hamburger:hover > .drawer-hamburger-icon {
     background-color: #3f3f3f; }
@@ -246,13 +267,16 @@ a.bottom-bar-links {
     .drawer--right.drawer-open .drawer-hamburger {
       right: 365px; } }
 
-.drawer-nav {
+.drawer--right .drawer-nav {
+  right: calc(0px - 100% + 40px);
   width: calc(100% - 40px); }
   @media only screen and (min-width: 350px) {
-    .drawer-nav {
+    .drawer--right .drawer-nav {
+      right: -293px;
       width: 293px; } }
   @media only screen and (min-width: 480px) {
-    .drawer-nav {
+    .drawer--right .drawer-nav {
+      right: -365px;
       width: 365px; } }
 
 .drawer-hamburger:visited {
@@ -263,6 +287,12 @@ a.bottom-bar-links {
 
 .drawer-hamburger:hover {
   background-color: #3f3f3f; }
+
+.arrow-gap {
+  display: inline-block;
+  margin-left: 10px; }
+  .arrow-gap .fa {
+    color: #0afff9; }
 
 .carousel-col-md-12 {
   position: relative;
@@ -513,22 +543,24 @@ a.bottom-bar-links {
       padding-left: 20px;
       padding-right: 20px; } }
 
-.page-image {
-  overflow: hidden;
-  position: relative; }
-  .page-image::after {
-    content: '';
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-width: 30px;
-    border-style: solid;
-    top: 0;
-    right: 0;
-    border-color: #ebebeb #ebebeb transparent transparent; }
-  .page-image img {
-    width: 100%;
-    height: auto; }
+@media only screen and (min-width: 992px) {
+  .page-image {
+    overflow: hidden;
+    position: relative; }
+    .page-image::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 30px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #ebebeb #ebebeb transparent transparent; } }
+
+.page-image img {
+  width: 100%;
+  height: auto; }
 
 .no-padding-header {
   padding-left: 0px;
@@ -656,6 +688,9 @@ article p {
     margin-top: 20px;
     padding-left: 0px;
     padding-right: 0px; }
+  @media only screen and (max-width: 992px) {
+    .latest-articles-post .article-module {
+      margin-bottom: 20px; } }
   @media only screen and (max-width: 768px) {
     .latest-articles-post .article-module {
       margin-bottom: 20px; } }

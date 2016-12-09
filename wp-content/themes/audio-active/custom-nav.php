@@ -15,7 +15,7 @@ function startDrawer($_title){
 			role="button" 
 			aria-expanded="false">'.
 				$_title
-				.'<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				.'<div class="arrow-gap"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
 			</a>
 			<ul class="drawer-dropdown-menu">';
 }

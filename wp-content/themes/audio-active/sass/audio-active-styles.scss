@@ -58,6 +58,8 @@ $bg-neon-cta-hover: #09e5e0;
 $bg-light-blue: $bg-neon-cta;
 $bg-light-grey:$line-grey;
 
+$menu-hover: #2a2a2a;
+
 /* Text links */
 $textlink-inactive: #c3fff9;
 $textlink-hover: #2b0ea0;
@@ -333,7 +335,10 @@ a {
     }
   }
   .drawer-dropdown-menu {
-    background-color: #222;
+    background-color: $menu-hover;
+    > .item > .drawer-menu-item {
+      background-color: $menu-hover;
+    }
   }
   > .item > .drawer-menu-item{
     &:hover{
@@ -341,14 +346,23 @@ a {
     }
   }
   > .drawer-dropdown > .drawer-menu-item {
-    &:hover, &:focus{
+    &.active-drawer{
+      background-color: $menu-hover;
+      @include cut-corner($small-cut-corner, $bg-dark-grey, "top");
+    }
+    &:hover {
       @include cut-corner($small-cut-corner, $bg-dark-grey, "top");
     }
   }
 }
-
+.drawer-hamburger {
+  -webkit-transition: right .6s cubic-bezier(.190, 1.000, .220, 1.000);
+  transition: right .6s cubic-bezier(.190, 1.000, .220, 1.000);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
 .drawer--right.drawer-open .drawer-hamburger {
-  &:focus {
+  &.active-burger {
     background-color: $bg-dark-grey;
     > .drawer-hamburger-icon{
       &::before{
@@ -373,12 +387,15 @@ a {
   }
 }
 
-.drawer-nav {
+.drawer--right .drawer-nav {
+  right: calc(0px - 100% + 40px);
   width: calc(100% - 40px);
   @media only screen and (min-width: 350px){
+    right: -293px;
     width: 293px;
   }
   @media only screen and (min-width: $xsmall-device) {
+    right: -365px;
     width: 365px;
   }
 }
@@ -392,6 +409,13 @@ a {
   }
   &:hover {
     background-color: $bg-dark-grey;
+  }
+}
+.arrow-gap{
+  display: inline-block;
+  margin-left: 10px;
+  & .fa{
+    color: $bg-neon-cta;
   }
 }
 
@@ -646,7 +670,9 @@ a {
 
 //page template
 .page-image{
-  @include cut-corner($large-cut-corner, $bg-light-grey, "top");
+  @media only screen and (min-width: $medium-device){
+    @include cut-corner($large-cut-corner, $bg-light-grey, "top");
+  }
   img{
     width:100%;
     height: auto;
@@ -756,6 +782,9 @@ article p{
     padding-right: 0px;
   }
   & .article-module {
+    @media only screen and (max-width: $medium-device) {
+      margin-bottom: 20px;
+    }
     @media only screen and (max-width: $small-device-min) {
       margin-bottom: 20px;
     }
