@@ -8,7 +8,6 @@
  */
 get_header();
 ?>
-	<style>.breadcrumbs {display: none;}</style>
 
 	<section id="primary" class="content-area">
 		<div id="content" role="main">
@@ -33,3 +32,4 @@ get_header();
 
 <?php
 get_footer();
+?>
