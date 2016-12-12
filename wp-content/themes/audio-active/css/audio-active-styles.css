@@ -200,6 +200,7 @@ a.bottom-bar-links {
     padding: 8px 20px 7px 20px; } }
 
 .drawer-menu .drawer-dropdown-menu {
+  display: block;
   background-color: #2a2a2a; }
   .drawer-menu .drawer-dropdown-menu > .item > .drawer-menu-item {
     background-color: #2a2a2a; }

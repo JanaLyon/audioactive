@@ -339,6 +339,7 @@ a {
     }
   }
   .drawer-dropdown-menu {
+    display: block;
     background-color: $menu-hover;
     > .item > .drawer-menu-item {
       background-color: $menu-hover;
