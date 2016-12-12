@@ -55,9 +55,11 @@ $bg-charcoal-grey: #595959;
 $bg-light-grey: #f5f5f5;
 $bg-neon-cta: #0afff9;
 $bg-neon-cta-hover: #09e5e0;
+$bg-quote-block: #a4fff6;
+$bg-quote-mobile: #c3fff9;
 $bg-light-blue: $bg-neon-cta;
 $bg-light-grey:$line-grey;
-
+$content-bg-color: #ffffff;
 $menu-hover: #2a2a2a;
 
 /* Text links */
@@ -157,7 +159,7 @@ body{
   background-color: $bg-light-grey;
 }
 .content-bg{
-  background-color: #ffffff;
+  background-color: $content-bg-color;
 }
 hr {
   margin-top: 50px;
@@ -217,7 +219,9 @@ hr {
   }
 }
 .site-content{
-  padding-top: 50px;
+  @media only screen and (min-width: $small-device-min) {
+    padding-top: 50px;
+  }
 }
 a {
   &.top-bar-links {
@@ -470,12 +474,12 @@ a {
     width: 100%;
     height: 100%;
     @media only screen and (max-width: $small-device-max) {
-      background-color: $bg-charcoal-grey;
+      background-color: $carousel-bg-text;
       opacity: 1;
     }
   }
   .carousel-text {
-    padding: 15px 40px 40px 40px;
+    padding: 15px 25px 40px 25px;
     color: white;
     @media only screen and (max-width: $small-device-max) {
       padding-left: 5px;
@@ -501,6 +505,14 @@ a {
     width: 100%;
     height: auto;
   }
+  .carousel-text {
+    padding: 15px 40px 40px 40px;
+    color: white;
+    @media only screen and (max-width: $small-device-max) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
 }
 .carousel-indicators {
   @media only screen and (max-width: $small-device-max) {
@@ -508,7 +520,9 @@ a {
   }
 }
 .carousel-cut-corner {
-  @include cut-corner($large-cut-corner, $bg-light-grey, "top");
+  @media only screen and (min-width: $small-device-min) {
+    @include cut-corner($large-cut-corner, $bg-light-grey, "top");
+  }
 }
 
 .fa-chevron-left, .glyphicon-menu-left {
@@ -562,7 +576,7 @@ a {
   & .fa, .glyphicon{
     width: 40px;
     height: 40px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 50%;
     color: $bg-neon-cta;
     opacity: 1;
@@ -572,7 +586,7 @@ a {
 .glyphicon-menu-left:before {
   position: absolute;
   top: 6px;
-  left: 7px;
+  left: 4px;
 }
 .glyphicon-menu-right:before {
   position: absolute;
@@ -692,6 +706,12 @@ a {
   margin-left: 25px;
   @media only screen and (max-width: $medium-device) {
     margin-left: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  @media only screen and (max-width: $small-device-min) {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -699,6 +719,12 @@ a {
   margin-right: 25px;
   @media only screen and (max-width: $medium-device) {
     margin-right: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  @media only screen and (max-width: $small-device-min) {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -764,7 +790,10 @@ article p{
     margin-top: 30px;
   }
 }
-
+.category-news .entry-content{
+  margin-left: 5px;
+  margin-right: 5px;
+}
 //latest articles post page - 4 blocks
 .latest-articles-post {
   position: relative;
@@ -811,7 +840,7 @@ article p{
     margin-bottom: 0;
     & a {
       margin-bottom: 0;
-      color: #252525;
+      color: $bg-black;
       text-decoration: none;
     }
   }
@@ -888,7 +917,7 @@ article p{
 .quote-block {
   @include cut-corner($large-cut-corner, white, "top");
   position: relative;
-  background-color: $bg-light-blue;
+  background-color: $bg-quote-block;
   text-align: center;
   padding: 35px 15px;
   margin: 40px 25px;
@@ -896,8 +925,8 @@ article p{
     @include cut-corner($medium-cut-corner, white, "top");
     padding: 10px 20px 0px 20px;
     padding-bottom: 40px;
-    background-color: $bg-light-blue;
-    margin: 0px 5px 40px 5px;
+    background-color: $bg-quote-mobile;
+    margin: 0px -15px 0px -15px;
   }
   & .fp-quote {
     font-size: 24px;
@@ -911,7 +940,7 @@ article p{
     }
   }
   & .fb-signature {
-    color: #252525;
+    color: $bg-black;
     font-size: 18px;
     @media only screen and (max-width: $small-device-max) {
       font-size: 14px;
@@ -922,6 +951,15 @@ article p{
 //article or post page
 article .entry-header {
   margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  @media only screen and (min-width: $small-device-min) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  @media only screen and (min-width: $medium-device) {
+    margin-left: 25px;
+  }
   & .post-image-container {
     @include cut-corner($large-cut-corner, white, "top");
   }
@@ -1043,16 +1081,32 @@ img {
   }
   .ourwork-articles-button{
     padding-bottom: 20px;
-    border-bottom: solid 1px #ebebeb;
+    border-bottom: solid 1px $line-grey;
   }
 }
 
+//category our work
+.category-our-work .entry-content {
+  margin-left: 5px;
+  margin-right: 5px;
+  @media only screen and (min-width: $small-device-min) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  @media only screen and (min-width: $medium-device) {
+    margin-left: 25px;
+  }
+}
 //get-invovled
 .get-involved-block{
   margin-top: 40px;
   margin-bottom: 10px;
   padding-left: 25px;
   padding-right: 25px;
+  @media only screen and (max-width: $small-device-min) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   & .three-col-articles{
     & .article-module {
       & .image-container {
@@ -1105,7 +1159,7 @@ img {
 .panel-ourwork:visited .panel-ourwork:active, .panel-ourwork:focus {
   overflow: hidden;
   position: relative;
-  border-top: solid 2px #0afff9;
+  border-top: solid 2px $bg-neon-cta;
 }
 /************************************/
 
@@ -1309,5 +1363,5 @@ img {
 
 //contact us page
 .contact-us-links{
-  color:#252525;
+  color: $bg-black;
 }

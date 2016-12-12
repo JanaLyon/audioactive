@@ -79,9 +79,17 @@ function is_first_active_post($counter)
 <script>
 	//js for active element
 	(function () {
+		$('.panel-group .active-panel i').css({"transform": "rotate(180deg)"});
 		$('.panel-group .panel-ourwork a').click(function () {
-			$('.panel-group .active-panel').toggleClass('active-panel');
-			$(this).parent().parent().parent().toggleClass("active-panel");
+			if( $(this).is('.panel-group .active-panel .panel-heading a') ){
+				TweenMax.to('.panel-group .active-panel i', 0.5, {rotation: 0});
+				$('.panel-group .active-panel').toggleClass('active-panel');
+			} else {
+				TweenMax.to('.panel-group .active-panel i', 0.5, {rotation: 0});
+				$('.panel-group .active-panel').toggleClass('active-panel');
+				$(this).parent().parent().parent().toggleClass("active-panel");
+				TweenMax.to('.panel-group .active-panel i', 0.5, {rotation: 180});
+			}
 		});
 	})();
 </script>

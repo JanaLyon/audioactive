@@ -3,6 +3,8 @@
  */
 (function () {
 
+    //get the drawer function
+    $('.drawer-nav').drawer();
 
     //menu button animations
     var isMenuActivated = false;
@@ -21,7 +23,6 @@
 
     $('.drawer-menu > .drawer-dropdown').click(function () {
         if(!isSubMenuActivated){
-            TweenMax.set('.drawer-dropdown-menu', {display: "block"});
             $('.drawer-dropdown > .drawer-menu-item').toggleClass("active-drawer");
             if(window.innerWidth > 480) {
                 TweenMax.to('.drawer-dropdown-menu', 0.5, {height: 150});
@@ -29,7 +30,7 @@
                 TweenMax.to('.drawer-dropdown-menu', 0.5, {height: 120});
             }
             TweenMax.to('.arrow-gap > .fa-chevron-down', 0.5, {rotation: 180, onComplete: function () {
-                $('.drawer-nav').drawer();
+                $('.drawer-nav').drawer('refresh');
             }});
             TweenMax.staggerTo('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item', 0.5,
                 {
@@ -40,8 +41,7 @@
             $('.drawer-dropdown > .drawer-menu-item').toggleClass("active-drawer");
             TweenMax.set('.drawer-dropdown-menu', {display: "block"});
             TweenMax.to('.drawer-dropdown-menu', 0.5, {overflow: "hidden", height: 0, onComplete: function () {
-                TweenMax.set('.drawer-dropdown-menu', {display: "none"});
-                $('.drawer-nav').drawer();
+                $('.drawer-nav').drawer('refresh');
             }});
             TweenMax.to('.arrow-gap > .fa-chevron-down', 0.5, {rotation: 0});
             TweenMax.staggerTo('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item', 0.5,
@@ -56,10 +56,9 @@
             $('.drawer-dropdown > .drawer-menu-item').toggleClass("active-drawer");
         }
         TweenMax.set('.arrow-gap > .fa-chevron-down', {rotation: 0});
-        TweenMax.set('.drawer-dropdown-menu', {overflow: "hidden", height: 0, display: "none"});
-        TweenMax.set('.drawer-dropdown-menu', {display: "none"});
+        TweenMax.set('.drawer-dropdown-menu', {overflow: "hidden", height: 0});
         TweenMax.set('.drawer-dropdown > .drawer-dropdown-menu > .item > .drawer-menu-item', {marginLeft: "100%"});
-        $('.drawer-nav').drawer();
+        $('.drawer-nav').drawer('refresh');
         isSubMenuActivated = false;
     });
 })();

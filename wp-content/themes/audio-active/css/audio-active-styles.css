@@ -106,8 +106,9 @@ hr {
       .site-branding img {
         width: 152px; } }
 
-.site-content {
-  padding-top: 50px; }
+@media only screen and (min-width: 768px) {
+  .site-content {
+    padding-top: 50px; } }
 
 a.top-bar-links {
   padding: 5px 5px 0;
@@ -339,10 +340,10 @@ a.bottom-bar-links {
     height: 100%; }
     @media only screen and (max-width: 767px) {
       .carousel-text-container .carousel-text-background {
-        background-color: #595959;
+        background-color: #515151;
         opacity: 1; } }
   .carousel-text-container .carousel-text {
-    padding: 15px 40px 40px 40px;
+    padding: 15px 25px 40px 25px;
     color: white; }
     @media only screen and (max-width: 767px) {
       .carousel-text-container .carousel-text {
@@ -365,24 +366,32 @@ a.bottom-bar-links {
   .carousel-inner img {
     width: 100%;
     height: auto; }
+  .carousel-inner .carousel-text {
+    padding: 15px 40px 40px 40px;
+    color: white; }
+    @media only screen and (max-width: 767px) {
+      .carousel-inner .carousel-text {
+        padding-left: 5px;
+        padding-right: 5px; } }
 
 @media only screen and (max-width: 767px) {
   .carousel-indicators {
     display: none; } }
 
-.carousel-cut-corner {
-  overflow: hidden;
-  position: relative; }
-  .carousel-cut-corner::after {
-    content: '';
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-width: 30px;
-    border-style: solid;
-    top: 0;
-    right: 0;
-    border-color: #ebebeb #ebebeb transparent transparent; }
+@media only screen and (min-width: 768px) {
+  .carousel-cut-corner {
+    overflow: hidden;
+    position: relative; }
+    .carousel-cut-corner::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-width: 30px;
+      border-style: solid;
+      top: 0;
+      right: 0;
+      border-color: #ebebeb #ebebeb transparent transparent; } }
 
 .fa-chevron-left, .glyphicon-menu-left {
   left: 0; }
@@ -430,7 +439,7 @@ a.bottom-bar-links {
   .carousel-control .fa, .carousel-control .glyphicon {
     width: 40px;
     height: 40px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 50%;
     color: #0afff9;
     opacity: 1; }
@@ -438,7 +447,7 @@ a.bottom-bar-links {
 .glyphicon-menu-left:before {
   position: absolute;
   top: 6px;
-  left: 7px; }
+  left: 4px; }
 
 .glyphicon-menu-right:before {
   position: absolute;
@@ -585,13 +594,25 @@ a.bottom-bar-links {
     border-color: #ebebeb #ebebeb transparent transparent; }
   @media only screen and (max-width: 992px) {
     .page-content-corner {
-      margin-left: 0px; } }
+      margin-left: 0px;
+      margin-left: 25px;
+      margin-right: 25px; } }
+  @media only screen and (max-width: 768px) {
+    .page-content-corner {
+      margin-left: 5px;
+      margin-right: 5px; } }
 
 .widget-area {
   margin-right: 25px; }
   @media only screen and (max-width: 992px) {
     .widget-area {
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-left: 25px;
+      margin-right: 25px; } }
+  @media only screen and (max-width: 768px) {
+    .widget-area {
+      margin-left: 5px;
+      margin-right: 5px; } }
 
 article p {
   margin-bottom: 1rem; }
@@ -662,6 +683,10 @@ article p {
   border-top: 1px solid #ebebeb; }
   .latest-arrow-bottom a.btn-action {
     margin-top: 30px; }
+
+.category-news .entry-content {
+  margin-left: 5px;
+  margin-right: 5px; }
 
 .latest-articles-post {
   position: relative;
@@ -792,7 +817,7 @@ article p {
   overflow: hidden;
   position: relative;
   position: relative;
-  background-color: #0afff9;
+  background-color: #a4fff6;
   text-align: center;
   padding: 35px 15px;
   margin: 40px 25px; }
@@ -812,8 +837,8 @@ article p {
       position: relative;
       padding: 10px 20px 0px 20px;
       padding-bottom: 40px;
-      background-color: #0afff9;
-      margin: 0px 5px 40px 5px; }
+      background-color: #c3fff9;
+      margin: 0px -15px 0px -15px; }
       .quote-block::after {
         content: '';
         position: absolute;
@@ -842,7 +867,16 @@ article p {
         font-size: 14px; } }
 
 article .entry-header {
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px; }
+  @media only screen and (min-width: 768px) {
+    article .entry-header {
+      margin-left: 25px;
+      margin-right: 25px; } }
+  @media only screen and (min-width: 992px) {
+    article .entry-header {
+      margin-left: 25px; } }
   article .entry-header .post-image-container {
     overflow: hidden;
     position: relative; }
@@ -1028,11 +1062,26 @@ img {
     padding-bottom: 20px;
     border-bottom: solid 1px #ebebeb; }
 
+.category-our-work .entry-content {
+  margin-left: 5px;
+  margin-right: 5px; }
+  @media only screen and (min-width: 768px) {
+    .category-our-work .entry-content {
+      margin-left: 25px;
+      margin-right: 25px; } }
+  @media only screen and (min-width: 992px) {
+    .category-our-work .entry-content {
+      margin-left: 25px; } }
+
 .get-involved-block {
   margin-top: 40px;
   margin-bottom: 10px;
   padding-left: 25px;
   padding-right: 25px; }
+  @media only screen and (max-width: 768px) {
+    .get-involved-block {
+      padding-left: 5px;
+      padding-right: 5px; } }
   .get-involved-block .three-col-articles .article-module .image-container {
     overflow: hidden;
     position: relative;
