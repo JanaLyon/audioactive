@@ -717,7 +717,7 @@ a {
 }
 
 .widget-area{
-  margin-right: 25px;
+  //margin-right: 25px;
   @media only screen and (max-width: $medium-device) {
     margin-right: 0px;
     margin-left: 25px;
@@ -817,6 +817,18 @@ article p{
     }
     @media only screen and (max-width: $small-device-min) {
       margin-bottom: 20px;
+    }
+    & .text-container{
+        font-size: 15px;
+      & .article-date{
+        font-size: 13px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      & .article-title{
+        margin: 0;
+      }
     }
     & .image-container {
       @include cut-corner($small-cut-corner, white, "top");
@@ -955,11 +967,11 @@ article .entry-header {
   margin-left: 5px;
   margin-right: 5px;
   @media only screen and (min-width: $small-device-min) {
-    margin-left: 25px;
-    margin-right: 25px;
+   // margin-left: 25px;
+   // margin-right: 25px;
   }
   @media only screen and (min-width: $medium-device) {
-    margin-left: 25px;
+   // margin-left: 25px;
   }
   & .post-image-container {
     @include cut-corner($large-cut-corner, white, "top");
@@ -1091,11 +1103,11 @@ img {
   margin-left: 5px;
   margin-right: 5px;
   @media only screen and (min-width: $small-device-min) {
-    margin-left: 25px;
-    margin-right: 25px;
+    //margin-left: 25px;
+    //margin-right: 25px;
   }
   @media only screen and (min-width: $medium-device) {
-    margin-left: 25px;
+    //margin-left: 25px;
   }
 }
 //get-invovled
@@ -1365,4 +1377,79 @@ img {
 //contact us page
 .contact-us-links{
   color: $bg-black;
+}
+
+//pagination override
+.pagination {
+  border-radius: 50%;
+
+  > li {
+    > a,
+    > span {
+      font-weight: bold;
+      color: $bg-dark-grey;
+      background-color: white;
+      border: 1px solid white;
+      margin-left: -1px;
+      font-size:15px;
+      margin: 0 1px;
+      width: 37px;
+      height: 37px;
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        border-radius: 0;
+        border:none;
+        width: auto;
+        height: auto;
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        border-radius: 0;
+        border:none;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      color: $bg-dark-grey;
+      background-color: white;
+      border-color: $bg-neon-cta;
+      border-radius: 50%;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      color: $bg-dark-grey;
+      background-color: $bg-neon-cta;
+      border-color: $bg-neon-cta;
+      border-radius: 50%;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: #acacac;
+      background-color: white;
+      border-color: white;
+    }
+  }
 }

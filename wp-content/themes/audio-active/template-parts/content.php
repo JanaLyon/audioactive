@@ -29,7 +29,7 @@
 					?>
 				</header><!-- .entry-header -->
 
-				<div class="entry-content">
+				<div class="entry-content latest-articles-post">
 					<?php
 					the_content();
 					//get 4 latest news blocks

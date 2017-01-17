@@ -38,7 +38,7 @@ $counter = 0;
 		<div class="hero-module">
 			<div class="row">
 				<div class="col-xs-12">
-					<?php get_template_part('template-parts/image_element', 'post'); ?>
+					<?php get_template_part('template-parts/image_element', 'carousel'); ?>
 					<?php get_template_part('template-parts/text_element', 'carousel'); ?>
 				</div>
 			</div>

@@ -603,17 +603,16 @@ a.bottom-bar-links {
       margin-left: 5px;
       margin-right: 5px; } }
 
-.widget-area {
-  margin-right: 25px; }
-  @media only screen and (max-width: 992px) {
-    .widget-area {
-      margin-right: 0px;
-      margin-left: 25px;
-      margin-right: 25px; } }
-  @media only screen and (max-width: 768px) {
-    .widget-area {
-      margin-left: 5px;
-      margin-right: 5px; } }
+@media only screen and (max-width: 992px) {
+  .widget-area {
+    margin-right: 0px;
+    margin-left: 25px;
+    margin-right: 25px; } }
+
+@media only screen and (max-width: 768px) {
+  .widget-area {
+    margin-left: 5px;
+    margin-right: 5px; } }
 
 article p {
   margin-bottom: 1rem; }
@@ -720,6 +719,15 @@ article p {
   @media only screen and (max-width: 768px) {
     .latest-articles-post .article-module {
       margin-bottom: 20px; } }
+  .latest-articles-post .article-module .text-container {
+    font-size: 15px; }
+    .latest-articles-post .article-module .text-container .article-date {
+      font-size: 13px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      font-weight: bold; }
+    .latest-articles-post .article-module .text-container .article-title {
+      margin: 0; }
   .latest-articles-post .article-module .image-container {
     overflow: hidden;
     position: relative; }
@@ -871,13 +879,6 @@ article .entry-header {
   margin-top: 30px;
   margin-left: 5px;
   margin-right: 5px; }
-  @media only screen and (min-width: 768px) {
-    article .entry-header {
-      margin-left: 25px;
-      margin-right: 25px; } }
-  @media only screen and (min-width: 992px) {
-    article .entry-header {
-      margin-left: 25px; } }
   article .entry-header .post-image-container {
     overflow: hidden;
     position: relative; }
@@ -1066,13 +1067,6 @@ img {
 .category-our-work .entry-content {
   margin-left: 5px;
   margin-right: 5px; }
-  @media only screen and (min-width: 768px) {
-    .category-our-work .entry-content {
-      margin-left: 25px;
-      margin-right: 25px; } }
-  @media only screen and (min-width: 992px) {
-    .category-our-work .entry-content {
-      margin-left: 25px; } }
 
 .get-involved-block {
   margin-top: 40px;
@@ -1320,3 +1314,54 @@ img {
 
 .contact-us-links {
   color: #252525; }
+
+.pagination {
+  border-radius: 50%; }
+  .pagination > li > a,
+  .pagination > li > span {
+    font-weight: bold;
+    color: #3f3f3f;
+    background-color: white;
+    border: 1px solid white;
+    margin-left: -1px;
+    font-size: 15px;
+    margin: 0 1px;
+    width: 37px;
+    height: 37px; }
+  .pagination > li:first-child > a,
+  .pagination > li:first-child > span {
+    margin-left: 0;
+    border-radius: 0;
+    border: none;
+    width: auto;
+    height: auto; }
+  .pagination > li:last-child > a,
+  .pagination > li:last-child > span {
+    border-radius: 0;
+    border: none;
+    width: auto;
+    height: auto; }
+  .pagination > li > a:hover, .pagination > li > a:focus,
+  .pagination > li > span:hover,
+  .pagination > li > span:focus {
+    color: #3f3f3f;
+    background-color: white;
+    border-color: #0afff9;
+    border-radius: 50%; }
+  .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+  .pagination > .active > span,
+  .pagination > .active > span:hover,
+  .pagination > .active > span:focus {
+    color: #3f3f3f;
+    background-color: #0afff9;
+    border-color: #0afff9;
+    border-radius: 50%; }
+  .pagination > .disabled > span,
+  .pagination > .disabled > span:hover,
+  .pagination > .disabled > span:focus,
+  .pagination > .disabled > a,
+  .pagination > .disabled > a:hover,
+  .pagination > .disabled > a:focus {
+    color: #acacac;
+    background-color: white;
+    border-color: white; }

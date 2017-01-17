@@ -29,29 +29,29 @@
 								<div class="footer-gap visible-xs visible-sm hidden-md hidden-lg"></div>
 								<!-- gap space -->
 								<div class="col-xs-12 col-sm-7 col-md-7 col-lg-3 block-margin">
-									<a class="" href="">
+									<a class="" href="/">
 										Home <i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</a><br>
-									<a class="" href="">
+									<a class="" href="/about-us/">
 										About us <i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</a><br>
-									<a class="" href="">
+									<a class="" href="/contact-us-2/">
 										Contact us <i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</a><br>
-									<a class="" href="">
+									<a class="" href="https://mydonate.bt.com/donation/donate.html?charity=audioactive">
 										Make a donation <i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</a>
 								</div><!-- .col -->
 								<div class="col-xs-12 custom-breakpoint col-sm-6 col-md-7 col-lg-3">
-									<a class="" href="">
+									<a class="" href="/the-simon-dsouza-award/">
 										The Simon D'Souza Award <i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</a><br>
-									<a class="" href="">
+									<a class="" href="/category/news/">
 										News <i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</a><br>
-									<a class="" href="">
+									<!--a class="" href="/projects/">
 										Projects <i class="fa fa-chevron-right" aria-hidden="true"></i>
-									</a>
+									</a-->
 								</div><!-- .col -->
 
 								<div class="footer-gap hidden-xs visible-sm hidden-md hidden-lg"></div>
